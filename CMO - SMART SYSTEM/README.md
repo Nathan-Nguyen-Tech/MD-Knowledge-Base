@@ -20,7 +20,7 @@ Individual holistic medical orders with **ONE action per card**:
 - Follow universal template (WHO-WHAT-WHEN-WHERE-WHY-HOW-MEASURE-TARGET-SAFETY-FOLLOW-UP)
 - Two-sided: Patient-facing (6th-8th grade) + Full Clinical View
 - Evidence-graded (A/B/C) with feasibility scoring (0-100%)
-- ~1,000 cards across 10 card types
+- ~1,000 cards across 12 card types
 
 ### SMART Decks
 Clusters of cards achieving a common clinical goal:
@@ -31,8 +31,9 @@ Clusters of cards achieving a common clinical goal:
 ### SMART Card Library
 Hierarchical organization of all cards:
 - **2 Tiers**: Medical Cards + Behavioral Cards
-- **10 Card Types**: Medications, Labs, Imaging, Procedures, Referrals, Nutrition, Movement, Recovery, Mind-Body, Micro-Learning
+- **12 Card Types**: Medications, Diagnostic Testing, Imaging, Procedures, DME, Referrals, Nutrition, Movement, Recovery, Mind-Body, Environmental/Social, Micro-Learning
 - **Tag System**: Flexible cross-cutting organization
+- **See**: `LIBRARY_TIER_STRUCTURE.md` for complete tier definitions
 
 ### SMART Deck Library
 Pre-built condition-based decks replacing traditional patient education:

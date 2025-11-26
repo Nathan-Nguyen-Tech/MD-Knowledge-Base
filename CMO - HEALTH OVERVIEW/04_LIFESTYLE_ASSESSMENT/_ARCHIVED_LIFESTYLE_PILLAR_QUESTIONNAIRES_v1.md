@@ -1,8 +1,19 @@
-# Lifestyle Pillar Assessment Questionnaires v1.0
+# ⚠️ ARCHIVED - Lifestyle Pillar Assessment Questionnaires v1.0
 
-**Document Version:** 1.0
+**ARCHIVE NOTICE:** This document has been superseded by v2.0. Do not use for new implementations.
+
+**Document Version:** 1.0 (ARCHIVED)
 **Last Updated:** 2025-11-20
-**Purpose:** Comprehensive lifestyle assessment questionnaires across 5 pillars for patient self-reflection and clinical care planning
+**Archived Date:** 2025-11-24
+**Superseded By:** LIFESTYLE_PILLAR_QUESTIONNAIRES_v2.md
+
+**Original Purpose:** Comprehensive lifestyle assessment questionnaires across 5 pillars for patient self-reflection and clinical care planning
+
+**Why Archived:**
+- v2.0 reduces redundancy (100 → 85 questions)
+- v2.0 uses patient-friendly language instead of medical jargon
+- v2.0 implements frequency tiers (Every Visit, Quarterly, Semi-Annual, Annual)
+- v2.0 embeds education within questions
 
 ---
 

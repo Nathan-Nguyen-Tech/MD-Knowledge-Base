@@ -30,7 +30,7 @@ The SMART Card Library is a comprehensive, evidence-based health action system d
 ### SMART Card Library
 - **Hierarchical categorical system** organizing all individual cards
 - 2-tier structure: Medical Cards + Behavioral Cards
-- 10 card types: Medications, Labs, Imaging, Procedures, Referrals, Nutrition, Movement, Recovery, Mind-Body, Micro-Learning
+- **12 card types** (see LIBRARY_TIER_STRUCTURE.md for complete list)
 - ~1,000 total cards across all categories
 
 ### SMART Deck Library

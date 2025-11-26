@@ -74,7 +74,289 @@ These are fully-worked examples showing what excellent SMART Cards look like.
 ╚════════════════════════════════════════╝
 ```
 
-**See File 02 (Universal Card Template) for complete structured content following this mockup.**
+---
+
+### COMPLETE CARD CONTENT (Following Universal Template)
+
+#### PATIENT-FACING VIEW
+
+**WHAT YOU'RE DOING**
+Take Lisinopril to lower your blood pressure.
+
+**WHY THIS MATTERS TO YOU**
+This helps protect your heart and kidneys from damage caused by high blood pressure. It can help you stay active and healthy for your family.
+
+**HOW TO DO IT**
+- Take one 10mg pill by mouth every morning
+- Swallow the pill whole with a glass of water
+- You can take it with or without food
+- Don't skip days, even if you feel fine
+- Set a daily alarm to help you remember
+
+**WHEN TO DO IT**
+Once daily in the morning | You may see your blood pressure improve in 1-2 weeks
+
+**WHAT TO WATCH FOR**
+- Swelling in your face, lips, or throat - call 911
+- Bad cough that won't go away - call your doctor
+- Extreme dizziness or fainting - call your doctor
+
+---
+
+#### FULL CLINICAL VIEW
+
+**WHAT**
+- **Card Name**: Lisinopril 10mg Daily
+- **Card Type**: Medication (Tier 2) > Prescription Medications (Tier 3) > ACE Inhibitors (Tier 4)
+- **Generic Name**: Lisinopril
+- **Brand Names**: Prinivil, Zestril
+- **Dose**: 10 mg
+- **Formulation**: Oral tablet
+- **Route**: PO (oral)
+- **Frequency**: Once daily
+- **Duration**: Ongoing (chronic therapy)
+
+**WHO**
+- **Primary Actor**: Patient (self-administers)
+- **Support Actors**:
+  - MD/NP/PA (prescribes, adjusts dose)
+  - Pharmacist (dispenses, counsels)
+  - Caregiver/Family (reminds, monitors)
+- **Target Population**: Adults with hypertension
+
+**Special Considerations**:
+- Geriatric: Start at lower dose (2.5-5mg), monitor for orthostatic hypotension
+- Renal Impairment: Reduce dose if CrCl <30 mL/min; monitor K+ closely
+- Hepatic Impairment: No adjustment needed
+- Pregnancy: Category D - CONTRAINDICATED (causes fetal harm)
+- Breastfeeding: Use with caution; consider alternatives
+
+**WHEN**
+- **Frequency**: Once daily
+- **Duration**: Ongoing (lifelong for most patients)
+- **Best Time**: Morning (consistent timing more important than specific time)
+- **Missed Dose**: Take as soon as remembered; skip if close to next dose; never double up
+- **Start Date**: [Per clinician order]
+
+**Titration Tiers** (within same card):
+- Tier 1: 5mg daily (starting dose for sensitive patients)
+- Tier 2: 10mg daily (standard starting dose) - CURRENT
+- Tier 3: 20mg daily (if BP not at goal after 2-4 weeks)
+- Tier 4: 40mg daily (maximum dose)
+
+**WHERE**
+- **Setting**: Home (daily self-administration)
+- **Location-Specific**: Store at room temperature, away from moisture
+- **Access**: Any pharmacy with valid prescription
+
+**WHY**
+
+**Clinical Goal** (Performance Medicine Framework):
+- **Cardiovascular System: Reduce Risk**
+- Secondary: Filtration/Urinary System: Protect Function (nephroprotection)
+
+**Patient's Personal Goal**:
+"I want to avoid a stroke like my father had. I want to stay healthy for my grandchildren."
+
+**Connection**:
+Controlling blood pressure directly reduces stroke risk by 35-40%. By taking this medication consistently, you're protecting yourself from the same fate as your father.
+
+**Mechanism of Action**:
+Lisinopril blocks angiotensin-converting enzyme (ACE), which reduces angiotensin II production. This causes blood vessels to relax and widen, lowering blood pressure. It also reduces strain on the heart and protects kidney function.
+
+**Evidence**:
+- Source: ACC/AHA 2017 Hypertension Guidelines, updated 2023
+- Grade: **A** (Multiple high-quality RCTs, consistent findings)
+- Summary: ACE inhibitors reduce cardiovascular events by 20-25% in hypertensive patients; first-line therapy for patients with diabetes, CKD, or heart failure.
+
+**Expected Timeline (Time-to-Benefit)**:
+You should notice: Blood pressure improvement in about 1-2 weeks. Maximum effect in 4-6 weeks.
+
+**DISCLAIMER**: These timelines are based on average patient outcomes. Your individual results may vary based on adherence, your body's response, other health conditions, medications, and lifestyle factors. If you're not seeing improvement in the expected timeframe, contact your care team.
+
+**HOW**
+
+**Detailed Step-by-Step Instructions**:
+1. Take one 10mg tablet by mouth every morning
+2. Swallow whole with a full glass of water (8 oz)
+3. May take with or without food (food does not affect absorption)
+4. Take at the same time each day for best results
+5. Do not crush, chew, or break the tablet
+6. Store at room temperature (68-77°F), away from moisture and heat
+
+**Synergy Tips** (Do This WITH...):
+- Pair with: Home BP Monitoring card (check BP before taking medication)
+- Stacks well with: DASH Diet card (dietary changes amplify medication effect)
+- Time-Saving Combo: Take with breakfast routine for consistency
+
+**MEASURE**
+
+**Tracking Method**:
+- Primary: Blood pressure (systolic/diastolic in mmHg)
+- Secondary: Heart rate, symptoms (dizziness, cough), adherence
+
+**Frequency**:
+- BP: Daily (morning before medication) for first month, then 2-3x/week
+- Labs: BMP at baseline, 4 weeks, then every 6 months
+
+**Tools Needed**:
+- Upper arm blood pressure cuff (validated device, ~$30-50)
+- BP tracking app or logbook
+- Pill organizer (optional but recommended)
+
+**TARGET**
+
+**Primary Goal**:
+- Systolic BP: <130 mmHg
+- Diastolic BP: <80 mmHg
+
+**Timeline**: Achieve goal BP within 3 months of starting therapy
+
+**Success Criteria**:
+- BP at goal on ≥80% of readings
+- No significant side effects
+- Labs remain stable (K+ 3.5-5.0, Cr stable)
+- Patient reports good adherence
+
+**SAFETY**
+
+**🟡 YELLOW - Common Side Effects** (Monitor, usually can continue):
+- Dry cough (5-10%) - may persist; switch to ARB if intolerable
+- Dizziness (3-5%) - usually improves; rise slowly from sitting
+- Headache (3-4%) - usually mild and temporary
+- Fatigue (2-3%) - often improves after first few weeks
+
+**🟠 ORANGE - Stop/Hold & Contact Care Team If**:
+- **Cardiovascular Signs**: Severe dizziness, fainting, chest pain, rapid heartbeat
+- **Filtration/Urinary Signs**: Decreased urination, blood in urine, significant swelling
+- **Immune/Allergic Signs**: Rash, hives, itching (non-emergency allergic reaction)
+- **Metabolic Signs**: Severe nausea, muscle weakness (may indicate high potassium)
+
+**🔴 RED - Emergency - Call 911 Immediately**:
+- Angioedema: Swelling of face, lips, tongue, or throat (rare but serious)
+- Severe allergic reaction with difficulty breathing
+- Loss of consciousness
+- Chest pain with shortness of breath
+
+**App Button Actions**:
+- [🚨 Emergency Help] → Call 911
+- [📞 Contact My Team] → Message care team
+- [⚠️ Report Side Effect] → Log adverse event
+
+**When to Contact Provider**:
+- **Routine**: Questions about medication, minor side effects → next scheduled visit
+- **Urgent**: Persistent cough affecting quality of life, swelling in legs → call within 24 hours
+- **Emergency**: Facial/throat swelling, difficulty breathing, fainting → call 911
+
+**Contraindications**:
+- Absolute: History of angioedema with ACE inhibitors, pregnancy, bilateral renal artery stenosis
+- Relative: Hyperkalemia (K+ >5.5), severe aortic stenosis, concurrent use with aliskiren in diabetics
+
+**Drug Interactions**:
+- Major: Potassium supplements, potassium-sparing diuretics (hyperkalemia risk), NSAIDs (reduced efficacy, kidney risk)
+- Moderate: Lithium (increased levels), other antihypertensives (additive hypotension)
+
+**FOLLOW-UP**
+
+**Review Timeline**:
+- When: Week 2 (phone), Week 4 (office visit + labs), Month 3, then every 6 months
+- What: BP readings, side effects, lab values (BMP)
+- Who: MD/NP/PA reviews; RN may conduct phone check-ins
+- Where: Clinic visit or telehealth
+
+**Monitoring Schedule**:
+- Week 2: Phone call to assess tolerance, review home BP readings
+- Week 4: Office visit + BMP lab; consider dose adjustment if not at goal
+- Month 3: Office visit; assess if BP at goal; review lifestyle changes
+- Every 6 months: Routine monitoring, labs, medication review
+
+**Action Based on Results**:
+- At goal (BP <130/80): Continue current dose, maintain lifestyle changes
+- Above goal: Consider titrating to 20mg if tolerated; review adherence and lifestyle
+- Below goal with symptoms: Consider reducing dose; evaluate for causes
+
+**NOTES**
+
+**Evidence**:
+- Source: ACC/AHA 2017/2023 Hypertension Guidelines
+- Grade: A
+- Summary: ACE inhibitors are first-line for hypertension, especially with comorbid diabetes, CKD, or HF. Reduce cardiovascular events by 20-25%.
+
+**Feasibility/Actionability Score**: **85%**
+
+Base Score: 100%
+- Deductions:
+  - Requires prescription: 0% (expected for medication)
+  - Cost (~$10-15/month generic): 0% (affordable)
+  - Daily timing requirement: -5%
+  - Monitoring required (BP + labs): -10%
+- Additions:
+  - Low time burden (<1 min/day): +10%
+  - Can do at home: +10%
+  - Generic widely available: +5%
+  - High evidence grade: +5%
+
+**Final Score: 85%** - Highly feasible, recommend strongly
+
+**Patient Confidence Score**: [Ask patient: "On a scale of 0-10, how confident are you that you can take this medication every day?" Target: ≥7]
+
+**Barriers Checklist**:
+- [ ] Cost/affordability - Generic ~$10-15/month; patient assistance available
+- [ ] Forgetfulness - Recommend pill organizer + phone alarm
+- [ ] Side effects concern - Educate on common vs serious; reassure most are manageable
+- [ ] Medication skepticism - Explain mechanism and evidence; address concerns
+
+**Success Tips**:
+- Set a daily alarm on your phone for the same time each morning
+- Keep your medication by your toothbrush or coffee maker
+- Use a weekly pill organizer to track if you took your dose
+- Tell a family member so they can help remind you
+
+**Access Information**:
+- Cost: $ (Generic: $10-15/month)
+- Insurance: Usually covered; Tier 1 generic
+- Where to Get: Any pharmacy with prescription
+- Alternative Options: If cough intolerable, ARBs (losartan, valsartan) are alternatives
+
+**Community Feedback** (Patient Reviews):
+- ⭐ Average Rating: 4.2/5 (based on 1,247 reviews)
+- Adherence Rate: 78% (patients who stuck with it >30 days)
+- Target Achievement: 72% (patients who met BP goals within 3 months)
+
+Top Patient Comments:
+- "Easy to take, no major issues. BP came down in 3 weeks." - Maria, 62
+- "Had a dry cough for a month but it went away. Worth it for my numbers." - James, 55
+- "Wish I'd started this sooner. Feel better knowing I'm protecting my heart." - Susan, 48
+
+Patient-Generated Tags: #Easy (892) #Affordable (756) #WorkedForMe (623)
+
+---
+
+#### METADATA
+
+**Tags**:
+- #ChronicManagement
+- #ACC_AHA_GradeA
+- #Home
+- #Adult
+- #Geriatric
+- #Hypertension
+- #Cardiovascular
+- #Affordable
+- #Easy
+
+**Evidence Grade**: A
+
+**Feasibility Score**: 85%
+
+**Version**: v1.0
+
+**Last Updated**: 2024-11-23
+
+**Next Review**: 2025-05-23
+
+**Version History**:
+- v1.0 (2024-11-23): Initial complete card creation following universal template
 
 ---
 
