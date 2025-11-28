@@ -514,8 +514,125 @@ When making ANY change to ANY section:
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 2.0 | 2025-11-26 | Consolidated cross-project update checklist and version control protocol as appendices | Claude |
 | 1.1 | 2025-11-26 | Revised to reflect four-section workflow, added workflow rules, clarified SMART card lifecycle | Claude |
 | 1.0 | 2025-11-26 | Initial integration architecture created | Claude |
+
+---
+
+## APPENDIX A: CROSS-PROJECT UPDATE CHECKLIST
+
+### Quick Decision Tree
+
+**Ask yourself:** "Does my change affect..."
+
+- ✅ **Data that flows between projects?** → Update all 3 projects
+- ✅ **Shared terminology or definitions?** → Update all 3 projects + this document
+- ✅ **Clinical logic or scoring?** → Update HEALTH OVERVIEW + SMART SYSTEM
+- ✅ **Care planning methodology?** → Update PERFORMANCE MEDICINE + SMART SYSTEM
+- ✅ **Patient workflows?** → Update all 3 projects
+- ❌ **Only implementation details within one project?** → Update that project only
+
+### Checklist When Updating HEALTH OVERVIEW
+
+**If you changed:**
+- [ ] **Diagnosis library** → Update SMART SYSTEM card triggers + PERFORMANCE MEDICINE care templates
+- [ ] **Parameter definitions** → Update PERFORMANCE MEDICINE assessments + SMART SYSTEM cards
+- [ ] **Scoring algorithms** → Update SMART SYSTEM thresholds + PERFORMANCE MEDICINE criteria
+- [ ] **Lifestyle questionnaires** → Update SMART SYSTEM behavioral cards + PERFORMANCE MEDICINE pillars
+- [ ] **Patient intake form** → Update PERFORMANCE MEDICINE methodology + verify SMART SYSTEM data support
+
+### Checklist When Updating SMART SYSTEM
+
+**If you changed:**
+- [ ] **Card library** → Verify HEALTH OVERVIEW collects needed data + update PERFORMANCE MEDICINE templates
+- [ ] **Card types/categories** → Update PERFORMANCE MEDICINE prescription format + HEALTH OVERVIEW data collection
+- [ ] **Recommendation algorithms** → Verify HEALTH OVERVIEW provides inputs + update PERFORMANCE MEDICINE workflow
+- [ ] **Deck structures** → Update PERFORMANCE MEDICINE quarterly guides
+
+### Checklist When Updating PERFORMANCE MEDICINE
+
+**If you changed:**
+- [ ] **Clinical protocols/guidelines** → Update HEALTH OVERVIEW scoring + SMART SYSTEM evidence grades
+- [ ] **Care planning templates** → Update SMART SYSTEM deck structures
+- [ ] **Evidence base** → Update SMART SYSTEM card grades + HEALTH OVERVIEW parameters
+- [ ] **Life-stage goals** → Update HEALTH OVERVIEW targets + SMART SYSTEM recommendations
+
+---
+
+## APPENDIX B: VERSION CONTROL & FILE DEPENDENCIES
+
+### Document Dependency Principles
+
+**Every significant file must declare:**
+1. What it depends on (upstream dependencies)
+2. What depends on it (downstream impacts)
+3. Version number and last updated date
+
+### Update Workflow (6 Steps)
+
+**When updating ANY file:**
+
+1. **Check dependencies BEFORE editing**
+   - Look up file in dependency registry
+   - Identify upstream (what it depends on) and downstream (what depends on it)
+
+2. **Make your changes**
+   - Edit target file
+   - Increment version number
+   - Update "Last Updated" date
+
+3. **Update downstream files**
+   - For each file listed in "Updates Required In"
+   - Make necessary alignment updates
+   - Increment their versions too
+
+4. **Update this integration document**
+   - Document changes in Version History below
+   - Update dependency mappings if changed
+
+5. **Validate integration**
+   - Review data flows still work
+   - Check no broken dependencies
+   - Test critical chains
+
+6. **Commit to git**
+   - Commit all updated files together
+   - Clear commit message noting all files changed
+
+### Critical Dependency Chains
+
+**Chain 1: Diagnosis → Cards**
+```
+MEDICAL_HISTORY_TIER1_LIBRARY.md
+  ↓ (diagnosis codes + score modifiers)
+INTEGRATION_ARCHITECTURE.md (this doc)
+  ↓ (diagnosis → card mappings)
+SMART SYSTEM card library
+  ↓ (individual cards)
+AI recommendation logic
+```
+
+**Chain 2: Parameters → Scoring → Dashboard → Recommendations**
+```
+PARAMETER_NORMALIZATION_v2.md
+  ↓ (parameter definitions)
+SYSTEM_DOMAIN_SCORING_v2.md
+  ↓ (24-cell scores)
+DASHBOARD specs
+  ↓ (visualization)
+SMART SYSTEM AI
+  ↓ (recommendations)
+```
+
+**Chain 3: Lifestyle Pillars → Behavioral Cards**
+```
+LIFESTYLE_PILLAR_QUESTIONNAIRES_v2.1.md
+  ↓ (questions + scoring)
+INTEGRATION_ARCHITECTURE.md
+  ↓ (pillar → card mappings)
+SMART SYSTEM behavioral cards
+```
 
 ---
 
@@ -528,6 +645,7 @@ When making ANY change to ANY section:
 **SMART SYSTEM:**
 - [ARCHITECTURE.md](CMO - SMART SYSTEM/ARCHITECTURE.md)
 - [LIBRARY_TIER_STRUCTURE.md](CMO - SMART SYSTEM/LIBRARY_TIER_STRUCTURE.md)
+- [MULTI_AGENT_AI_SYSTEM_ARCHITECTURE.md](CMO - SMART SYSTEM/MULTI_AGENT_AI_SYSTEM_ARCHITECTURE.md)
 
 **PERFORMANCE MEDICINE:**
 - [health-matrix-framework.md](CMO - PERFORMANCE MEDICINE/architecture/health-matrix-framework.md)
