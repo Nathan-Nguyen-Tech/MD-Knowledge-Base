@@ -1,12 +1,22 @@
-# MULTI-AGENT AI SYSTEM ARCHITECTURE FOR CMO PLATFORM
-**Version:** 1.0
+# MULTI-AGENT AI PLATFORM ARCHITECTURE
+**Version:** 2.0
 **Date:** 2025-11-26
-**Section:** 3 (SMART Card/Deck System) + Cross-Platform
-**Status:** Active
+**Scope:** PLATFORM-WIDE (All 4 Sections)
+**Status:** Active - Master Level Specification
 
 ---
 
-**Purpose:** Define a multi-agent AI system (similar to BMAD framework) that handles card prescription, management, de-prescribing, and clinical oversight with minimal human intervention while maximizing patient self-direction.
+**Purpose:** Define a multi-agent AI system (similar to BMAD framework) that oversees the ENTIRE CMO PLATFORM across all four sections.
+
+**Why Platform-Wide (Not Just SMART SYSTEM):**
+The 5 AI agents work across ALL sections, not just Section 3:
+- **Dr. ADAPT** analyzes Section 1 (clinical data) + Section 2 (dashboard scores) to prescribe Section 3 (cards)
+- **DataWatch** continuously monitors Section 2 (dashboard) to trigger Section 3 actions
+- **PharmaSafe** validates Section 1 (medication input) AND Section 3 (medication cards)
+- **CoachAI** uses Section 1 (lifestyle questionnaires) to manage Section 3 (behavioral cards)
+- **PatientPal** interfaces with patients across ALL sections (data entry, dashboard viewing, card management)
+
+**Critical Correction:** This specification was initially placed in SMART SYSTEM folder but has been moved to master level because the multi-agent system is platform-wide infrastructure.
 
 ---
 
