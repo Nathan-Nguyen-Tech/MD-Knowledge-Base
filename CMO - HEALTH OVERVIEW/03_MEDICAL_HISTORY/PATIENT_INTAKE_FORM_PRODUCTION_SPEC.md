@@ -300,6 +300,283 @@ switch(risk_level) {
 
 ---
 
+#### Table: `intake_obgyn_menstrual` (Female Patients Only)
+
+Stores menstrual status and history for female patients
+
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| `form_id` | UUID | FOREIGN KEY, PRIMARY KEY | Links to form |
+| `menstrual_status` | ENUM | NOT NULL | 'regular_periods', 'irregular_periods', 'perimenopause', 'postmenopausal_natural', 'surgical_menopause', 'pregnant', 'breastfeeding' |
+| `age_menarche` | ENUM | NULL | 'under_10', '10-11', '12-13', '14-15', '16_plus' |
+| `cycle_length` | ENUM | NULL | 'less_than_21', '21-35', '36-45', 'over_45' |
+| `flow_amount` | ENUM | NULL | 'light', 'normal', 'heavy', 'very_heavy' |
+| `dysmenorrhea_severity` | ENUM | NULL | 'none', 'mild', 'moderate', 'severe' |
+| `age_menopause` | ENUM | NULL | 'under_40', '40-44', '45-50', '51-55', 'over_55' |
+| `postmenopausal_bleeding` | BOOLEAN | NULL | True if bleeding after menopause (RED ALERT) |
+| `postmenopausal_bleeding_notes` | TEXT | NULL | Description of postmenopausal bleeding |
+| `surgical_menopause_type` | VARCHAR(100)[] | NULL | Array: ['hysterectomy', 'oophorectomy', 'both', 'ablation'] |
+| `surgical_menopause_age` | ENUM | NULL | 'under_40', '40-45', '46-50', 'over_50' |
+| `currently_pregnant` | BOOLEAN | NULL | True if currently pregnant |
+| `pregnancy_trimester` | ENUM | NULL | 'first', 'second', 'third', 'unknown' |
+| `prenatal_care_status` | ENUM | NULL | 'regular', 'started_recently', 'not_yet' |
+| `current_pregnancy_complications` | VARCHAR(100)[] | NULL | Array of current pregnancy complications |
+| `expansion_data` | JSONB | NULL | Additional expansion answers |
+
+**Clinical Triggers:**
+
+| Finding | Alert | Action |
+|---------|-------|--------|
+| `postmenopausal_bleeding = true` | 🔴 RED ALERT | Immediate GYN referral (rule out endometrial cancer) |
+| `age_menopause = 'under_40'` | ⚠️ WARNING | Early menopause - CVD risk, bone density screening |
+| `currently_pregnant = true` | ℹ️ PREGNANCY CONTEXT | All medications flagged for pregnancy safety |
+| `dysmenorrhea_severity = 'severe'` | ℹ️ INFO | Evaluate for endometriosis |
+
+---
+
+#### Table: `intake_obgyn_pregnancy_history` (Female Patients Only)
+
+Stores obstetric history for female patients
+
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| `form_id` | UUID | FOREIGN KEY, PRIMARY KEY | Links to form |
+| `ever_pregnant` | BOOLEAN | NOT NULL | Has patient ever been pregnant |
+| `total_pregnancies` | INT | NULL, CHECK (0-20) | Gravida (G) - total pregnancies |
+| `live_births` | INT | NULL, CHECK (>=0) | Number of live births |
+| `miscarriages` | INT | NULL, CHECK (>=0) | Spontaneous losses <20 weeks |
+| `ectopic_pregnancies` | INT | NULL, CHECK (>=0) | Ectopic pregnancies |
+| `stillbirths` | INT | NULL, CHECK (>=0) | Losses ≥20 weeks |
+| `terminations` | INT | NULL, CHECK (>=0) | Elective terminations |
+| `vaginal_deliveries` | INT | NULL, CHECK (>=0) | Vaginal delivery count |
+| `cesarean_sections` | INT | NULL, CHECK (>=0) | C-section count |
+| `expansion_data` | JSONB | NULL | Additional pregnancy details |
+
+**Calculated Fields (GTPAL notation):**
+```sql
+-- Gravida = total_pregnancies
+-- Para = live_births + stillbirths (deliveries after 20 weeks)
+```
+
+---
+
+#### Table: `intake_obgyn_pregnancy_complications` (Female Patients Only)
+
+Junction table for pregnancy complication history
+
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| `id` | SERIAL | PRIMARY KEY | Auto-increment ID |
+| `form_id` | UUID | FOREIGN KEY, NOT NULL | Links to form |
+| `complication_code` | VARCHAR(20) | NOT NULL | 'OB-GDM', 'OB-PREEC', 'OB-PRETERM', etc. |
+| `expansion_data` | JSONB | NULL | Details about the complication |
+| `severity` | ENUM | NULL | 'mild', 'moderate', 'severe' |
+
+**Complication Codes:**
+
+| Code | Complication | Score Impact | Clinical Action |
+|------|--------------|--------------|-----------------|
+| `OB-GDM` | Gestational Diabetes | -8 Metabolic-Risk | Screen for T2DM every 1-3 years |
+| `OB-PREEC` | Preeclampsia | -10 Cardiovascular-Risk | Annual BP monitoring, consider aspirin in future pregnancies |
+| `OB-PREEC-EARLY` | Early Preeclampsia (<34 wks) | -15 Cardiovascular-Risk | Cardiology referral recommended |
+| `OB-PRETERM` | Preterm Delivery | -6 Cardiovascular-Risk | CVD risk factor modification |
+| `OB-PPD` | Postpartum Depression | -8 Neurological-Function | Mental health screening |
+| `OB-CLOT` | Blood Clots in Pregnancy | -8 Cardiovascular-Risk | Hematology evaluation |
+| `OB-PPH` | Postpartum Hemorrhage | -4 Metabolic-Function | Check hemoglobin |
+| `OB-MACRO` | Macrosomia (baby >9 lbs) | -4 Metabolic-Risk | Screen for diabetes |
+| `OB-IUGR` | Small Baby (<5.5 lbs) | -4 Cardiovascular-Risk | Monitor for metabolic issues |
+
+---
+
+#### Table: `intake_obgyn_conditions` (Female Patients Only)
+
+Junction table for gynecologic conditions
+
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| `id` | SERIAL | PRIMARY KEY | Auto-increment ID |
+| `form_id` | UUID | FOREIGN KEY, NOT NULL | Links to form |
+| `condition_code` | VARCHAR(20) | NOT NULL | 'GYN-FIBROID', 'GYN-ENDO', 'GYN-PCOS', etc. |
+| `expansion_data` | JSONB | NULL | Condition-specific follow-up answers |
+| `severity` | ENUM | NULL | 'mild', 'moderate', 'severe' |
+| `treatment_status` | ENUM | NULL | 'none', 'medical', 'surgical', 'resolved' |
+| `is_free_text` | BOOLEAN | DEFAULT FALSE | True if from "Other" field |
+| `free_text_description` | TEXT | NULL | Patient-entered description |
+
+**Condition Codes:**
+
+| Code | Condition | Score Impact |
+|------|-----------|--------------|
+| `GYN-FIBROID` | Uterine Fibroids | -2 to -8 Reproductive-Function |
+| `GYN-ENDO` | Endometriosis | -10 Reproductive-Function |
+| `GYN-PCOS` | PCOS | -10 Endocrine-Function, -8 Metabolic-Risk |
+| `GYN-OVCYST` | Ovarian Cysts | -3 Reproductive-Function |
+| `GYN-ABNPAP` | Abnormal Pap/Dysplasia | -5 Reproductive-Risk |
+| `GYN-PID` | Pelvic Inflammatory Disease | -8 Reproductive-Risk |
+| `GYN-PELVPAIN` | Chronic Pelvic Pain | -8 Neurological-Function |
+| `GYN-INCONT` | Urinary Incontinence | -8 to -10 Reproductive-Function |
+| `GYN-PROLAPSE` | Pelvic Organ Prolapse | -10 Reproductive-Function |
+| `GYN-INFERT` | Infertility | -5 Reproductive-Function |
+| `GYN-VULVODYNIA` | Vulvodynia | -6 Reproductive-Function |
+| `GYN-POI` | Premature Ovarian Insufficiency | -8 Endocrine-Function, -10 Cardiovascular-Risk |
+
+---
+
+#### Table: `intake_obgyn_surgeries` (Female Patients Only)
+
+Junction table for gynecologic surgical procedures
+
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| `id` | SERIAL | PRIMARY KEY | Auto-increment ID |
+| `form_id` | UUID | FOREIGN KEY, NOT NULL | Links to form |
+| `procedure_code` | VARCHAR(20) | NOT NULL | 'GYNSURG-HYST', 'GYNSURG-OOPH', etc. |
+| `expansion_data` | JSONB | NULL | Surgery-specific details |
+| `when_performed` | ENUM | NULL | '<1_year', '1-5_years', '5-10_years', '10+_years' |
+| `linked_diagnoses` | VARCHAR(20)[] | NULL | Auto-linked medical conditions |
+| `is_free_text` | BOOLEAN | DEFAULT FALSE | True if from "Other" field |
+| `free_text_description` | TEXT | NULL | Patient-entered description |
+
+**Procedure Codes:**
+
+| Code | Procedure | Auto-Linked Diagnoses | Clinical Impact |
+|------|-----------|----------------------|-----------------|
+| `GYNSURG-HYST` | Hysterectomy | Depends on indication | Updates Pap screening need |
+| `GYNSURG-OOPH` | Oophorectomy | Surgical menopause | CVD risk, bone loss if <45 |
+| `GYNSURG-MYOM` | Myomectomy | GYN-FIBROID | - |
+| `GYNSURG-CSEC` | C-Section | - | Future delivery planning |
+| `GYNSURG-TUBAL` | Tubal Ligation | - | Contraception status |
+| `GYNSURG-LEEP` | LEEP/Cone Biopsy | GYN-ABNPAP | Enhanced Pap surveillance |
+| `GYNSURG-LAP` | Laparoscopy | Varies | - |
+| `GYNSURG-DNC` | D&C | - | - |
+| `GYNSURG-HYSC` | Hysteroscopy | - | - |
+| `GYNSURG-BREASTBX` | Breast Biopsy | - | Enhanced mammogram surveillance |
+| `GYNSURG-LUMP` | Lumpectomy | Cancer history | Oncology follow-up |
+| `GYNSURG-MAST` | Mastectomy | Cancer history | Oncology follow-up |
+
+**Example Hysterectomy Expansion Data:**
+```json
+{
+  "form_id": "a8f9d2b3-...",
+  "procedure_code": "GYNSURG-HYST",
+  "expansion_data": {
+    "type": "total",  // or "partial"
+    "ovaries_removed": "both",  // or "one", "none", "unknown"
+    "indication": ["fibroids", "heavy_bleeding"],
+    "when_performed": "5-10_years"
+  },
+  "linked_diagnoses": ["GYN-FIBROID"],
+  "clinical_implications": {
+    "needs_pap_smear": false,  // cervix removed
+    "surgical_menopause": true  // ovaries removed
+  }
+}
+```
+
+---
+
+#### Table: `intake_obgyn_menopause` (Female Patients Only)
+
+Stores menopausal symptoms and hormone therapy status
+
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| `form_id` | UUID | FOREIGN KEY, PRIMARY KEY | Links to form |
+| `menopause_symptoms` | VARCHAR(100)[] | NULL | Array: ['hot_flashes', 'vaginal_dryness', 'sleep_issues', 'mood_changes', 'memory_issues', 'joint_pain', 'decreased_libido', 'weight_gain'] |
+| `hrt_status` | ENUM | NULL | 'current', 'never', 'past', 'interested' |
+| `hrt_type` | VARCHAR(100)[] | NULL | Array: ['estrogen_only', 'estrogen_progesterone', 'vaginal_estrogen', 'bioidentical'] |
+| `hrt_duration` | ENUM | NULL | '<1_year', '1-5_years', '5+_years' |
+| `osteoporosis_status` | ENUM | NULL | 'osteoporosis', 'osteopenia', 'no', 'not_tested' |
+| `expansion_data` | JSONB | NULL | Additional details |
+
+**Score Modifiers:**
+
+| Finding | Score Impact |
+|---------|--------------|
+| 3+ menopausal symptoms | -6 Neurological-Function |
+| Early menopause (<40) + no HRT | -10 Cardiovascular-Risk, -12 Musculoskeletal-Risk |
+| HRT >5 years | Monitoring flag (breast/CVD) |
+| Osteoporosis | -12 Musculoskeletal-Structure (links to MSK library) |
+
+---
+
+#### Table: `intake_obgyn_screening` (Female Patients Only)
+
+Tracks preventive screening dates for care gap identification
+
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| `form_id` | UUID | FOREIGN KEY, PRIMARY KEY | Links to form |
+| `last_pap` | ENUM | NULL | '<1_year', '1-3_years', '>3_years', 'never', 'not_needed', 'unknown' |
+| `last_mammogram` | ENUM | NULL | '<1_year', '1-2_years', '>2_years', 'never', 'unknown' |
+| `last_dexa` | ENUM | NULL | '<2_years', '2-5_years', '>5_years', 'never', 'unknown' |
+| `hpv_vaccine_status` | ENUM | NULL | 'complete', 'partial', 'no', 'unknown' |
+| `care_gaps_identified` | VARCHAR(100)[] | NULL | Auto-calculated: ['pap_overdue', 'mammogram_overdue', 'dexa_needed'] |
+
+**Care Gap Rules:**
+
+| Screening | Age Range | Overdue Threshold | Alert |
+|-----------|-----------|-------------------|-------|
+| Pap Smear | 21-65 | >3 years (or >5 with HPV co-test) | ⚠️ CARE GAP |
+| Mammogram | 40-74 | >2 years | ⚠️ CARE GAP |
+| DEXA | 65+ OR postmenopausal | Never tested | ⚠️ CARE GAP |
+| HPV Vaccine | ≤45 | Incomplete | ℹ️ INFO |
+
+**Logic Example:**
+```javascript
+function calculate_care_gaps(patient_age, screening_data, menstrual_status) {
+  const gaps = [];
+
+  // Pap smear gap
+  if (patient_age >= 21 && patient_age <= 65) {
+    if (screening_data.last_pap === '>3_years' || screening_data.last_pap === 'never') {
+      // Check if hysterectomy with cervix removed
+      if (screening_data.last_pap !== 'not_needed') {
+        gaps.push('pap_overdue');
+      }
+    }
+  }
+
+  // Mammogram gap
+  if (patient_age >= 40 && patient_age <= 74) {
+    if (screening_data.last_mammogram === '>2_years' || screening_data.last_mammogram === 'never') {
+      gaps.push('mammogram_overdue');
+    }
+  }
+
+  // DEXA gap
+  if (patient_age >= 65 || menstrual_status.includes('menopause')) {
+    if (screening_data.last_dexa === 'never') {
+      gaps.push('dexa_needed');
+    }
+  }
+
+  return gaps;
+}
+```
+
+---
+
+#### Table: `obgyn_conditions_library` (Reference Table)
+
+Pre-populated reference table for all OBGYN conditions
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `condition_code` | VARCHAR(20) | PRIMARY KEY (e.g., 'GYN-ENDO') |
+| `patient_label` | VARCHAR(200) | Patient-friendly name |
+| `clinical_name` | VARCHAR(200) | Clinical name |
+| `icd10_codes` | VARCHAR(50)[] | Array of ICD-10 codes |
+| `category` | ENUM | 'menstrual', 'pregnancy', 'gyn_condition', 'gyn_surgery', 'menopause', 'screening' |
+| `intake_priority` | INT | 1 (always visible), 2 (expandable) |
+| `has_smart_expansion` | BOOLEAN | True if expansion questions exist |
+| `expansion_schema` | JSONB | Defines expansion question structure |
+| `base_score_modifiers` | JSONB | Score adjustments by domain |
+| `linked_to_medical_library` | VARCHAR(20) | Links to medical_conditions_library code if applicable |
+| `clinical_actions` | TEXT[] | Recommended follow-up actions |
+
+---
+
 #### Table: `intake_surgical_history`
 
 Junction table for surgical procedures

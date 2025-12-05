@@ -68,7 +68,8 @@ Progress: [████░░░░░░░░░░░░░░░░] 5% Comp
                                             [Save & Resume]
 ═══════════════════════════════════════════════════════════
 
-SECTION 1 OF 7: BASIC INFORMATION
+SECTION 1 OF 8: BASIC INFORMATION
+(8 sections for female patients, 7 for male patients)
 
 First Name: [_______________]
 Last Name:  [_______________]
@@ -99,7 +100,7 @@ Progress: [████████░░░░░░░░░░] 15% Complete
                                             [Save & Resume]
 ═══════════════════════════════════════════════════════════
 
-SECTION 2 OF 7: LIFESTYLE & WELLNESS
+SECTION 2 OF 8: LIFESTYLE & WELLNESS
 
 These questions help us understand your daily habits.
 Use the scale below for each question (0 = Never, 10 = Always)
@@ -204,7 +205,7 @@ Progress: [████████████░░░░░░] 35% Complete
                                             [Save & Resume]
 ═══════════════════════════════════════════════════════════
 
-SECTION 3 OF 7: MEDICAL HISTORY
+SECTION 3 OF 8: MEDICAL HISTORY
 
 Do you have any of these medical conditions?
 (Check all that apply)
@@ -461,6 +462,313 @@ Do you have any of these medical conditions?
 
 ---
 
+## SECTION 3B: OBGYN HISTORY (Female Patients Only)
+
+**Note:** This section ONLY appears if patient selected "Female" in Section 1 (Basic Information). Male patients skip directly to Section 4: Family History.
+
+```
+═══════════════════════════════════════════════════════════
+Progress: [██████████████░░░░] 42% Complete
+                                            [Save & Resume]
+═══════════════════════════════════════════════════════════
+
+SECTION 3B OF 8: OBGYN HISTORY
+
+This section helps us understand your reproductive health.
+
+───────────────────────────────────────────────────────────
+🌸 MENSTRUAL STATUS
+───────────────────────────────────────────────────────────
+
+What best describes your current menstrual status?
+
+○ I still have regular periods
+○ I still have periods but they're irregular
+○ I'm going through menopause (periods stopping)
+○ I no longer have periods (menopause complete)
+○ I had surgery that stopped my periods
+○ I'm currently pregnant
+○ I'm currently breastfeeding
+
+
+───────────────────────────────────────────────────────────
+🤰 PREGNANCY HISTORY
+───────────────────────────────────────────────────────────
+
+Have you ever been pregnant?
+
+○ Yes
+○ No
+○ Prefer not to answer
+
+
+───────────────────────────────────────────────────────────
+👩‍⚕️ GYNECOLOGIC CONDITIONS
+───────────────────────────────────────────────────────────
+
+Do you have any of these conditions?
+(Check all that apply)
+
+□ Uterine fibroids
+□ Endometriosis
+□ PCOS (polycystic ovary syndrome)
+□ Ovarian cysts
+□ Abnormal Pap smear or cervical dysplasia
+□ Pelvic inflammatory disease (PID)
+□ Chronic pelvic pain
+□ Urinary incontinence (leaking urine)
+□ Pelvic organ prolapse
+□ Infertility
+
+          [▼ Click here to see other GYN conditions]
+
+☑️ I do not have any gynecologic conditions
+
+
+───────────────────────────────────────────────────────────
+🏥 GYNECOLOGIC SURGERIES
+───────────────────────────────────────────────────────────
+
+Have you had any of these surgeries or procedures?
+
+□ Hysterectomy (uterus removal)
+□ Oophorectomy (ovary removal)
+□ C-section
+□ Tubal ligation (tubes tied)
+□ D&C (dilation and curettage)
+□ LEEP or cone biopsy
+□ Laparoscopy
+□ Breast biopsy
+□ Lumpectomy or mastectomy
+
+☑️ I have not had any GYN surgeries
+
+
+───────────────────────────────────────────────────────────
+📋 SCREENING HISTORY
+───────────────────────────────────────────────────────────
+
+When was your last Pap smear?
+○ Within the last year
+○ 1-3 years ago
+○ More than 3 years ago
+○ Never had one
+○ Don't need one (hysterectomy)
+
+When was your last mammogram? (if 40 or older)
+○ Within the last year
+○ 1-2 years ago
+○ More than 2 years ago
+○ Never had one
+
+
+                  [← BACK]    [NEXT SECTION →]
+
+═══════════════════════════════════════════════════════════
+```
+
+### 🔄 SMART EXPANSION EXAMPLE: Menstrual Status - Regular Periods
+
+**What happens when patient selects "I still have regular periods":**
+
+```
+═══════════════════════════════════════════════════════════
+
+● I still have regular periods
+
+   ┌──────────────────────────────────────────────────────┐
+   │ A few more questions about your periods:             │
+   │                                                      │
+   │ 1. How old were you when you got your first period?  │
+   │    ○ Under 10  ○ 10-11  ○ 12-13  ○ 14-15  ○ 16+     │
+   │                                                      │
+   │ 2. How many days is your typical cycle?              │
+   │    ○ Less than 21 days                               │
+   │    ○ 21-35 days (normal)                             │
+   │    ○ 36-45 days                                      │
+   │    ○ More than 45 days or unpredictable              │
+   │                                                      │
+   │ 3. Are your periods:                                 │
+   │    ○ Light  ○ Normal  ○ Heavy  ○ Very heavy         │
+   │                                                      │
+   │ 4. Do you have significant pain with periods?        │
+   │    ○ No pain  ○ Mild  ○ Moderate  ○ Severe          │
+   │                                                      │
+   └──────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════
+```
+
+---
+
+### 🔄 SMART EXPANSION EXAMPLE: Pregnancy History - Yes
+
+**What happens when patient selects "Yes" for pregnancy history:**
+
+```
+═══════════════════════════════════════════════════════════
+
+● Yes (I have been pregnant)
+
+   ┌──────────────────────────────────────────────────────┐
+   │ Please tell us about your pregnancy history:         │
+   │                                                      │
+   │ 1. How many times have you been pregnant (total)?    │
+   │    [__] total pregnancies                            │
+   │                                                      │
+   │ 2. How many live births have you had?                │
+   │    [__] live births                                  │
+   │                                                      │
+   │ 3. Have you had any:                                 │
+   │    Miscarriages: [__]                                │
+   │    C-sections: [__]                                  │
+   │                                                      │
+   │ 4. During any pregnancy, did you have:               │
+   │    □ Gestational diabetes                            │
+   │    □ Preeclampsia / high blood pressure              │
+   │    □ Preterm labor (before 37 weeks)                 │
+   │    □ Postpartum depression                           │
+   │    □ None of these                                   │
+   │                                                      │
+   └──────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════
+```
+
+**Why Pregnancy Complications Matter (for Business Team):**
+- **Gestational diabetes** → 7x higher risk of developing Type 2 diabetes later
+- **Preeclampsia** → 2x higher risk of heart disease and stroke
+- This information helps predict future health risks on the dashboard
+
+---
+
+### 🔄 SMART EXPANSION EXAMPLE: Endometriosis
+
+**What happens when patient checks "Endometriosis":**
+
+```
+═══════════════════════════════════════════════════════════
+
+☑️ Endometriosis
+
+   ┌──────────────────────────────────────────────────────┐
+   │ About your endometriosis:                            │
+   │                                                      │
+   │ 1. What are your main symptoms?                      │
+   │    □ Severe period pain                              │
+   │    □ Pain during sex                                 │
+   │    □ Chronic pelvic pain                             │
+   │    □ Bowel/bladder symptoms with periods             │
+   │    □ Infertility                                     │
+   │    □ Minimal symptoms now                            │
+   │                                                      │
+   │ 2. Current treatment:                                │
+   │    □ None                                            │
+   │    □ Birth control (pills, IUD, etc.)                │
+   │    □ GnRH medication (Lupron, Orilissa)              │
+   │    □ Had surgery for endometriosis                   │
+   │                                                      │
+   └──────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════
+```
+
+---
+
+### 🔄 SMART EXPANSION EXAMPLE: Hysterectomy
+
+**What happens when patient checks "Hysterectomy":**
+
+```
+═══════════════════════════════════════════════════════════
+
+☑️ Hysterectomy (uterus removal)
+
+   ┌──────────────────────────────────────────────────────┐
+   │ About your hysterectomy:                             │
+   │                                                      │
+   │ 1. What type of hysterectomy?                        │
+   │    ○ Total (uterus and cervix removed)               │
+   │    ○ Partial (uterus only, cervix left)              │
+   │    ○ Not sure                                        │
+   │                                                      │
+   │ 2. Were your ovaries removed too?                    │
+   │    ○ Both ovaries removed                            │
+   │    ○ One ovary removed                               │
+   │    ○ Ovaries were left in                            │
+   │    ○ Not sure                                        │
+   │                                                      │
+   │ 3. Why did you need the hysterectomy?                │
+   │    □ Fibroids                                        │
+   │    □ Heavy bleeding                                  │
+   │    □ Endometriosis                                   │
+   │    □ Cancer or precancer                             │
+   │    □ Other                                           │
+   │                                                      │
+   │ 4. When was the surgery?                             │
+   │    ○ Less than 1 year ago                            │
+   │    ○ 1-5 years ago                                   │
+   │    ○ 5-10 years ago                                  │
+   │    ○ More than 10 years ago                          │
+   │                                                      │
+   └──────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════
+```
+
+**Why Hysterectomy Details Matter (for Business Team):**
+- If cervix was removed → Patient doesn't need Pap smears anymore
+- If ovaries were removed before age 45 → Increased risk of heart disease and osteoporosis
+- These details automatically update screening recommendations
+
+---
+
+### 🔄 CARE GAP ALERT EXAMPLE: Overdue Pap Smear
+
+**What happens when patient selects "More than 3 years ago" for Pap smear:**
+
+```
+═══════════════════════════════════════════════════════════
+
+When was your last Pap smear?
+● More than 3 years ago
+
+   ┌──────────────────────────────────────────────────────┐
+   │ ⚠️  CARE GAP IDENTIFIED                              │
+   │                                                      │
+   │ You may be overdue for cervical cancer screening.    │
+   │ We recommend scheduling a Pap smear soon.            │
+   │                                                      │
+   │ Would you like us to help you schedule this?         │
+   │    ○ Yes, please contact me to schedule              │
+   │    ○ I'll schedule it myself                         │
+   │    ○ I have one already scheduled                    │
+   │                                                      │
+   └──────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════
+```
+
+---
+
+**OBGYN Section Key Points (For Business Team):**
+
+1. **Only shown to female patients** - Male patients skip this section entirely
+2. **Captures critical reproductive health data** including:
+   - Menstrual history and menopausal status
+   - Pregnancy history and complications
+   - Gynecologic conditions (fibroids, endometriosis, PCOS, etc.)
+   - GYN surgeries (hysterectomy, C-section, etc.)
+   - Preventive screening dates (Pap smear, mammogram)
+
+3. **Identifies care gaps** - Overdue Pap smears and mammograms trigger alerts
+4. **Links to future health risks** - Pregnancy complications predict cardiovascular and metabolic risks
+5. **Updates screening needs** - Hysterectomy type determines if Pap smears are still needed
+
+**Time Impact:** Adds approximately 2-3 minutes for female patients with significant GYN history; 1 minute for those with minimal history.
+
+---
+
 ## SECTION 4: FAMILY HISTORY
 
 ```
@@ -469,7 +777,8 @@ Progress: [████████████████░░] 50% Complete
                                             [Save & Resume]
 ═══════════════════════════════════════════════════════════
 
-SECTION 4 OF 7: FAMILY HEALTH HISTORY
+SECTION 4 OF 8: FAMILY HEALTH HISTORY
+(Section 5 OF 7 for male patients)
 
 Has anyone in your immediate family (parents, siblings) had
 any of these conditions?
@@ -584,7 +893,8 @@ Progress: [████████████████████] 65% Com
                                             [Save & Resume]
 ═══════════════════════════════════════════════════════════
 
-SECTION 5 OF 7: SURGICAL HISTORY
+SECTION 5 OF 8: SURGICAL HISTORY
+(Section 6 OF 7 for male patients)
 
 Have you had any of these surgeries or procedures?
 (Check all that apply)
@@ -712,7 +1022,8 @@ Progress: [███████████████████████
                                             [Save & Resume]
 ═══════════════════════════════════════════════════════════
 
-SECTION 6 OF 7: ALLERGIES & REACTIONS
+SECTION 6 OF 8: ALLERGIES & REACTIONS
+(Section 7 OF 7 for male patients)
 
 This is important for your safety. Do you have allergies to
 any of these medications or substances?
@@ -853,7 +1164,8 @@ Progress: [███████████████████████
                                             [Save & Resume]
 ═══════════════════════════════════════════════════════════
 
-SECTION 7 OF 7: CURRENT MEDICATIONS
+SECTION 7 OF 8: CURRENT MEDICATIONS
+(Final section for male patients)
 
 This section is optional but helpful. What medications are
 you currently taking?
@@ -1170,6 +1482,22 @@ Current progress: 35% complete (Section 3 of 6)
 
 ## 📊 COMPLETION TIME BREAKDOWN (For Business Planning)
 
+### Female Patients (8 Sections):
+
+| Section | # of Questions | Time Required | Notes |
+|---------|----------------|---------------|-------|
+| **1. Basic Info** | 5 fields | 30 seconds | Name, DOB, sex, height, weight |
+| **2. Lifestyle** | 11 questions | 2-3 minutes | Simple 0-10 sliders, no typing |
+| **3. Medical History** | ~40 checkboxes + expansions | 2-3 minutes | Smart expansion adds 15-30 sec per checked condition |
+| **3B. OBGYN History** | ~25 checkboxes + expansions | 1-3 minutes | **Female patients only** - Menstrual, pregnancy, GYN conditions, screening |
+| **4. Family History** | ~15 checkboxes + expansions | 1-2 minutes | Most patients have 0-2 family conditions |
+| **5. Surgical History** | ~30 checkboxes + expansions | 1 minute | Most patients have 0-3 surgeries |
+| **6. Allergies** | ~25 checkboxes + expansions | 1-2 minutes | Most patients have 0-2 allergies |
+| **7. Medications (optional)** | Photo upload OR typing | 10 sec - 3 min | Photo = 10 sec, Typing = 3-5 min |
+| **TOTAL (Female)** | ~110-130 interactions | **6-12 minutes** | Healthy: 6 min, Complex GYN history: 12 min |
+
+### Male Patients (7 Sections):
+
 | Section | # of Questions | Time Required | Notes |
 |---------|----------------|---------------|-------|
 | **1. Basic Info** | 5 fields | 30 seconds | Name, DOB, sex, height, weight |
@@ -1178,14 +1506,14 @@ Current progress: 35% complete (Section 3 of 6)
 | **4. Family History** | ~15 checkboxes + expansions | 1-2 minutes | Most patients have 0-2 family conditions |
 | **5. Surgical History** | ~30 checkboxes + expansions | 1 minute | Most patients have 0-3 surgeries |
 | **6. Allergies** | ~25 checkboxes + expansions | 1-2 minutes | Most patients have 0-2 allergies |
-| **Medications (optional)** | Photo upload OR typing | 10 sec - 3 min | Photo = 10 sec, Typing = 3-5 min |
-| **TOTAL** | ~85-100 interactions | **5-10 minutes** | Healthy patient: 5 min, Complex: 10 min |
+| **7. Medications (optional)** | Photo upload OR typing | 10 sec - 3 min | Photo = 10 sec, Typing = 3-5 min |
+| **TOTAL (Male)** | ~85-100 interactions | **5-10 minutes** | Healthy patient: 5 min, Complex: 10 min |
 
 ---
 
 ## 🎯 PATIENT EXPERIENCE BY HEALTH STATUS
 
-### Scenario 1: Healthy 30-Year-Old (Minimal History)
+### Scenario 1: Healthy 30-Year-Old Male (Minimal History)
 
 **What they check:**
 - ✅ Lifestyle questions (11 sliders) - 2 minutes
@@ -1196,6 +1524,25 @@ Current progress: 35% complete (Section 3 of 6)
 - Skip medications
 
 **Total time: ~5 minutes**
+
+---
+
+### Scenario 1B: Healthy 30-Year-Old Female (Minimal History)
+
+**What they check:**
+- ✅ Lifestyle questions (11 sliders) - 2 minutes
+- ☑️ "I do not have any of these conditions" - 5 seconds
+- ✅ OBGYN: "Regular periods" + 4 quick follow-ups - 45 seconds
+- ✅ OBGYN: "Never pregnant" - 5 seconds
+- ☑️ OBGYN: "No GYN conditions" - 5 seconds
+- ☑️ OBGYN: "No GYN surgeries" - 5 seconds
+- ✅ OBGYN: Last Pap smear, mammogram (if 40+) - 15 seconds
+- ☑️ "No significant family history" - 5 seconds
+- ☑️ "I have not had any surgeries" - 5 seconds
+- ☑️ "I do not have any allergies" - 5 seconds
+- Skip medications
+
+**Total time: ~6 minutes**
 
 ---
 
@@ -1234,13 +1581,43 @@ Current progress: 35% complete (Section 3 of 6)
 
 ---
 
+### Scenario 4: 45-Year-Old Female with Complex GYN History
+
+**What they check:**
+- ✅ Lifestyle questions - 2 minutes
+- ☑️ PCOS → Expansion (3 questions) - 30 seconds
+- ☑️ Type 2 diabetes (from PCOS insulin resistance) → 30 seconds
+- ✅ OBGYN: "Irregular periods" + follow-ups - 45 seconds
+- ✅ OBGYN: 3 pregnancies, 2 live births, 1 miscarriage - 45 seconds
+- ☑️ OBGYN: Gestational diabetes in 2nd pregnancy → 30 seconds
+- ☑️ OBGYN: Preeclampsia history → 20 seconds
+- ☑️ OBGYN: Endometriosis → Expansion - 30 seconds
+- ☑️ OBGYN: C-section x2 - 10 seconds
+- ☑️ OBGYN: Tubal ligation - 5 seconds
+- ☑️ OBGYN: Last Pap 2 years ago, mammogram 1 year ago - 10 seconds
+- ☑️ Family history: Mother breast cancer → Expansion - 20 seconds
+- ☑️ Penicillin allergy - 15 seconds
+- 📸 Photo of 4 medication bottles - 10 seconds
+
+**Total time: ~10-12 minutes**
+
+**Why This Patient's Data Matters:**
+- Gestational diabetes + PCOS → High risk for Type 2 diabetes (already developed)
+- Preeclampsia history → 2x cardiovascular risk (dashboard will flag)
+- Family history breast cancer → Enhanced mammogram screening
+- All captured efficiently through smart expansion
+
+---
+
 ## 💡 KEY SELLING POINTS (For Business Development Team)
 
 ### For Patients:
 
-1. **"This will only take 5-10 minutes"**
+1. **"This will only take 5-12 minutes"**
    - Most forms take 20-30 minutes; ours is optimized
    - Smart expansion = only answer relevant questions
+   - Female patients: 6-12 minutes (includes OBGYN section)
+   - Male patients: 5-10 minutes
 
 2. **"No typing medication names"**
    - Just take a photo of your bottles
@@ -1281,6 +1658,12 @@ Current progress: 35% complete (Section 3 of 6)
 5. **"Feeds directly into Health Overview Dashboard"**
    - Automatic score calculations
    - Immediate clinical insights
+
+6. **"Comprehensive women's health capture"** (NEW)
+   - Dedicated OBGYN section for female patients
+   - Captures pregnancy complications that predict future health risks
+   - Identifies care gaps (overdue Pap smears, mammograms)
+   - Links GYN history to cardiovascular and metabolic risk
 
 ---
 
@@ -1377,7 +1760,7 @@ When the IT team builds this form, ensure:
 
 ## 🎉 CONCLUSION
 
-This patient intake form mockup demonstrates the complete patient experience for a **5-10 minute comprehensive health intake** that feeds into the Health Overview Dashboard.
+This patient intake form mockup demonstrates the complete patient experience for a **5-12 minute comprehensive health intake** that feeds into the Health Overview Dashboard.
 
 **Key Innovations:**
 1. ✅ **Smart Expansion** - Detailed data capture without overwhelming patients
@@ -1386,25 +1769,30 @@ This patient intake form mockup demonstrates the complete patient experience for
 4. ✅ **Pre-Population** - Returning patients update in 2-3 minutes
 5. ✅ **Progress Indicator** - Reduces abandonment, sets expectations
 6. ✅ **Save & Resume** - Accommodates interruptions
+7. ✅ **Sex-Specific Sections** - OBGYN section for female patients captures critical reproductive health data
 
 **Business Benefits:**
-- 📈 Higher completion rates (5-10 min vs. 30+ min traditional forms)
+- 📈 Higher completion rates (5-12 min vs. 30+ min traditional forms)
 - 📉 Reduced clinic time spent on intake (patients complete before visit)
 - 📊 Comprehensive data for accurate dashboard scoring
 - 🔄 Scalable to any patient complexity (simple to complex)
 - 📱 Platform-agnostic (works on any device)
+- 👩‍⚕️ **NEW:** Complete women's health capture with OBGYN section
+- ⚠️ **NEW:** Care gap identification (overdue Pap smears, mammograms)
+- ❤️ **NEW:** Pregnancy complications linked to future cardiovascular risk
 
 **Next Steps:**
 1. Share this mockup with business development team for patient communication training
-2. Use the 4 library files (Medical History, Family History, Surgical History, Allergies) as the data foundation
+2. Use the 5 library files (Medical History, Family History, Surgical History, Allergies, **OBGYN History**) as the data foundation
 3. Send complete package to IT/dev team when ready for technical build
+4. Create Vietnamese translation for OBGYN section
 
 ---
 
-**Document Status:** ✅ Complete
-**Last Updated:** November 25, 2025
+**Document Status:** ✅ Complete (v2.1 - OBGYN Added)
+**Last Updated:** December 4, 2025
 **Created By:** Clinical Design Team
 
 ---
 
-*This mockup provides a complete patient-facing view of the intake form, demonstrating how smart expansion, skip logic, and other features create a quick, comprehensive, and user-friendly experience for patients of all health literacy levels.*
+*This mockup provides a complete patient-facing view of the intake form, demonstrating how smart expansion, skip logic, and other features create a quick, comprehensive, and user-friendly experience for patients of all health literacy levels. The addition of the OBGYN section ensures comprehensive reproductive health capture for female patients while maintaining an efficient patient experience.*
