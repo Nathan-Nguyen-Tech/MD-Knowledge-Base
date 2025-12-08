@@ -1,709 +1,552 @@
 # UNIVERSAL SMART CARD TEMPLATE
 
-**Version:** 2.0
-**Updated:** 2025-12-05
+**Version:** 4.0
+**Updated:** 2025-12-08
 
 **Related Documents:**
 - [CARD_LIFECYCLE_AND_AI_PARAMETERS.md](CARD_LIFECYCLE_AND_AI_PARAMETERS.md) - AI bracket notation & lifecycle phases
 - [CARD_TYPE_SPECIFICATIONS.md](03_CARD_TYPE_SPECIFICATIONS.md) - 12 card type details
+- [AUTONOMY_AND_AI_AGENT_SPECIFICATION.md](AUTONOMY_AND_AI_AGENT_SPECIFICATION.md) - 4-tier autonomy system
+- [EVIDENCE_SECTION_SPECIFICATION.md](EVIDENCE_SECTION_SPECIFICATION.md) - Evidence grading A/B/C
 - [CARD_DEPRESCRIBING_AND_AI_OVERSIGHT_SPEC.md](../../CARD_DEPRESCRIBING_AND_AI_OVERSIGHT_SPEC.md) - Exit criteria
 
----
-
-## Template Structure
-
-Every SMART Card follows this architecture with standardized sections:
-1. **Patient-Facing View** - Simple, actionable guidance (6th-8th grade reading level)
-2. **Full Clinical View** - Complete clinical details (expandable)
-3. **AI-Modifiable Parameters** - Fields with bracket `[ ]` notation for customization
-4. **Lifecycle Phases** - Initiation → Maintenance → De-loading guides
+**Reference Implementation:** [MED_DM_BIG_001_Metformin_IR.md](../../tier5_cards/medications/MED_DM_BIG_001_Metformin_IR.md)
 
 ---
 
-## 📱 PATIENT-FACING VIEW (Front)
-*6th-8th Grade Reading Level*
+## Template Structure (v4.0)
 
-### WHAT YOU'RE DOING
+Every SMART Card follows this architecture:
+
+```
+1. AT-A-GLANCE (20 seconds)   ← NEW in v4.0
+2. CONDENSED VIEW             ← Patient everyday use
+3. EXPANDED VIEW              ← Full details for all users
+4. EVIDENCE                   ← Trust-building citations
+5. NOTES                      ← Clinician reference
+6. AI METADATA (hidden)       ← Machine-readable YAML
+```
+
+---
+
+# 📱 AT-A-GLANCE (20 seconds)
+
+> Ultra-condensed quick reference. Fits on one mobile screen.
+
+```
+[CARD NAME] | [DOSE/ACTION] | [FREQUENCY] | [KEY REQUIREMENT]
+─────────────────────────────────────────────────────────────
+[Action line 1]
+[Action line 2]
+
+[Visual progression ladder if titratable]
+🟢 [Starting level]
+🟡 [Building level]
+🟣 [Target level]
+
+Watch: [Normal early effects]
+Stop & call: [Red flags - brief]
+
+Labs/Tracking: [What to measure]
+Goal: [Target outcome + timeline]
+─────────────────────────────────────────────────────────────
+```
+
+**Design Principles:**
+- Viewable in <20 seconds
+- One-thumb scrollable on mobile
+- Color-coded progression
+- No scrolling required for essentials
+
+---
+
+# 📱 CONDENSED VIEW
+
+> Essentials for everyday use. 6th-8th grade reading level.
+
+## WHAT YOU'RE DOING
 [Simple action statement - 1 sentence]
-*Note: This expands from the WHAT section in full-view*
 
-### WHY THIS MATTERS TO YOU
-[Patient's personal goal in their own words - pulled from "Chief Concerns" in medical chart]
-*Note: This expands from the WHY section in full-view*
+## WHY THIS MATTERS
+**Your goal:** [Patient's own words - captured at intake]
 
-### HOW TO DO IT
-[3-5 simple bullet points, active voice, short sentences]
-*Note: This expands from the HOW section in full-view*
-- [Step 1 - action verb, simple language]
-- [Step 2 - specific, measurable]
-- [Step 3 - practical detail]
+**Why prescribed:** [1-2 sentence clinical rationale in plain language]
 
-### WHEN TO DO IT
-[Frequency] | [Expected benefit timeline]
-*Note: This expands from the WHEN section in full-view*
+**Evidence:** Grade [A/B/C] - [One sentence plain-language summary]
 
-### WHAT TO WATCH FOR
-[Top 2-3 red flags only - when to call doctor]
-*Note: This expands from the SAFETY section in full-view*
-- [Red flag #1]
-- [Red flag #2]
-- [Red flag #3]
+## HOW TO DO IT
+1. [Step 1 - action verb, simple language]
+2. [Step 2 - specific, measurable]
+3. [Step 3 - practical detail]
+4. [Step 4 if needed]
 
----
+**Tip:** [One practical habit anchor]
 
-## 📋 FULL CLINICAL VIEW (Back/Expandable)
+## DOSE PROGRESSION (if titratable)
 
-### WHAT
-**Card Name**: [The action or topic]
-
-[Complete detailed action/prescription]
-
-**Card Type-Specific Details:**
-- **MEDICATION CARDS**: Generic name, brand name, dose, unit, formulation
-- **LAB CARDS**: Test name, CPT code, specimen type
-- **NUTRITION CARDS**: Specific dietary change, portions, food examples
-- **EXERCISE CARDS**: Type, intensity (RPE/HR/METs), duration, equipment
-
-### WHO
-**Primary Actor**: [Patient / Clinician / Nurse / Pharmacist / Nutritionist / Therapist]
-**Support Actors**: [Caregiver / Family - specific role]
-**Roles**: [Specific responsibilities for each actor]
-
-**Target Population**: [Demographics - adult, pediatric, geriatric]
-
-**Special Considerations**:
-- Geriatric: [adjustments]
-- Renal impairment: [adjustments]
-- Hepatic impairment: [adjustments]
-- Pregnancy: Category [X] - [guidance]
-- Breastfeeding: [guidance]
-
-### WHEN
-- **Frequency**: [Daily, BID, TID, weekly, etc.]
-- **Duration**: [Ongoing, 30 days, 3 months, until goal achieved]
-- **Best Time**: [Morning, bedtime, with meals, before exercise]
-- **Missed Dose**: [Instructions if applicable]
-- **Start Date**: [Specific date or "immediately"]
-
-**For Titratable Cards - Progression Tiers** (within same card):
 ```
-Tier 0 (Recovery/Maintenance): [Autopilot mode during illness]
-Tier 1 (Beginner): [Starting level]
-  Advance if: [Criteria]
-Tier 2 (Intermediate): [Next level]
-  Advance if: [Criteria]
-Tier 3 (Advanced): [Highest level]
+🟢 [Phase 1] → [Starting dose/level]   (starting)
+🟡 [Phase 2] → [Intermediate level]    (building)
+🟣 [Phase 3] → [Target level]          (target)
 ```
+*Advance only when tolerating well.*
 
-### WHERE
-- **Setting**: [Home / Clinic / Lab / Gym / Outdoors]
-- **Location-Specific Instructions**: [Details about where to perform]
-- **Access Information**: [Where to obtain supplies, find facilities]
+## WHAT TO WATCH FOR
 
-### WHY
+| Level | Signs | Action |
+|-------|-------|--------|
+| 🟡 Normal | [Expected early effects] | [Wait X time, improves] |
+| 🟠 Call doctor | [Warning signs] | [Schedule visit] |
+| 🔴 Emergency | [Critical symptoms] | Call 911 |
 
-**Clinical Goal** (Performance Medicine Framework):
-- [Primary System]: [Action Verb] [Domain]
-- Example: "Cardiovascular System: Reduce Risk"
+## DIFFICULTY
+[⭐⭐☆☆☆] **[Easy/Moderate/Hard]** - [Brief descriptor]
 
-*Note: See File 01 for complete Performance Medicine Framework (8 Systems, 3 Domains)*
+## CHECK-INS
 
-**Patient's Personal Goal**:
-- [Patient's own words/motivation - their intrinsic "why"]
-- Example: "I want to play with my grandchildren without getting tired"
+| When | What We'll Ask |
+|------|----------------|
+| [Day X] | [Question] |
+| [Day Y] | [Question] |
+| [Month X] | [Assessment] |
 
-**Connection**:
-- [How clinical goal serves patient's personal goal]
-
-**Mechanism of Action**:
-- [How this intervention works physiologically]
-
-**Evidence**:
-- Source: [Guideline name, year]
-- Grade: [A / B / C] (See File 04 for grading criteria)
-- Summary: [1 sentence on entity, evidence quality, findings]
-
-**Expected Timeline (Time-to-Benefit)**:
-You should notice: [benefit] in about [timeframe]
-
-**DISCLAIMER** (Include on every card):
-"These timelines are based on average patient outcomes. Your individual results may vary based on adherence, your body's response, other health conditions, medications, and lifestyle factors. If you're not seeing improvement in the expected timeframe, contact your care team."
-
-### HOW
-
-**Detailed Step-by-Step Instructions**:
-[Complete protocol specific to card type]
-
-**Synergy Tips** (Do This WITH...):
-*Only sync with ACTIVE cards in patient's plan*
-- Pair with: [Related card for habit stacking]
-- Stacks well with: [Complementary cards]
-- Time-Saving Combo: [How to bundle actions]
-
-**Card Type-Specific Protocol**:
-- **MEDICATION**: Route, timing, with/without food, swallow/chew, storage
-- **LAB**: Fasting requirements, preparation, what to bring
-- **NUTRITION**: Meal ideas, prep tips, substitutions, portions
-- **EXERCISE**: Technique cues, form guidance, equipment setup, modifications
-
-### MEASURE
-
-**Tracking Method**: [How to monitor success]
-- Primary: [Main metric - most important outcome]
-- Secondary: [Additional metrics if relevant]
-
-**Frequency**: [How often to measure]
-
-**Tools Needed**: [Specific devices, apps, methods]
-
-**Target Range**: [Specific values]
-
-*Note: MEASURE focuses on WHAT to track, not specific values*
-
-### TARGET
-
-**Primary Goal**: [Specific value/threshold for success on PRIMARY measure]
-- Example: Systolic BP 120-130 mmHg
-
-**Timeline**: [Realistic timeframe to achieve goal]
-
-**Success Criteria**: [How to know it's working]
-
-*Note: TARGET defines specific values to achieve for each MEASURE*
-
-### SAFETY
-
-**Organized by Health System** (display only applicable systems):
-
-**Common Side Effects** (Monitor, usually can continue) - 🟡 YELLOW:
-- [2-3 most common, typically mild effects with percentages]
-
-**Stop/Hold & Contact Your Care Team If** - 🟠 ORANGE:
-
-- **Cardiovascular Signs**: [Chest pain, severe palpitations, BP/HR warnings]
-- **Respiratory Signs**: [Severe SOB, wheezing, unable to speak]
-- **Neurological Signs**: [Severe headache, confusion, vision changes, weakness]
-- **Metabolic Signs**: [Severe nausea/vomiting, extreme thirst, blood sugar warnings]
-- **Filtration/Urinary Signs**: [Blood in urine, inability to urinate, severe pain]
-- **Musculoskeletal Signs**: [Severe muscle pain/weakness, inability to bear weight]
-- **Immune/Allergic Signs**: [Rash, facial swelling, hives]
-
-**Emergency - Call 911 Immediately** - 🔴 RED:
-- Loss of consciousness
-- Chest pain with shortness of breath
-- Sudden weakness/numbness one side of body
-- Severe allergic reaction (tongue/throat swelling)
-- Severe bleeding
-- Suicidal thoughts with plan to harm self
-
-**App Button Actions**:
-- [🚨 Emergency Help] → Call 911
-- [📞 Contact My Team] → Message care team
-- [⚠️ Report Side Effect] → Log adverse event
-
-**When to Contact Provider**:
-- **Routine**: [Scenarios that can wait for scheduled visit]
-- **Urgent**: [Call within 24 hours scenarios]
-- **Emergency**: [Call 911 scenarios]
-
-**Contraindications**:
-- Absolute: [List - card not offered if present]
-- Relative: [List - offered with warning/modification]
-
-**Drug/Food/Activity Interactions** (if applicable):
-- Major: [Critical interactions]
-- Moderate: [Important interactions]
-
-### FOLLOW-UP
-
-**Review Timeline**:
-- When: [Specific date or timeframe]
-- What: [This is the MEASURE and TARGET defined above]
-- Who: [Responsible Party - MD, RN, PharmD, Patient self-report]
-- Where: [Clinic, Telehealth, Lab, Home]
-
-**Monitoring Schedule**:
-- [Checkpoint 1]: [Specific timing and assessment]
-- [Checkpoint 2]: [Specific timing and assessment]
-- [Checkpoint 3]: [Specific timing and assessment]
-
-**Action Based on Results**:
-- At goal: [Continue current plan]
-- Above goal: [Intensify therapy]
-- Below goal with issues: [Consider de-escalation]
-
-### NOTES
-
-**Evidence**:
-- Source: [Leading journal/institution/guideline body and year]
-- Grade: [A / B / C]
-- Summary: [1 sentence on findings]
-
-**Feasibility/Actionability Score** (AI-Generated): [0-100%]
-
-*Note: See File 04 for detailed feasibility scoring methodology*
-
-Base Score: 100%
-
-**Deductions** (Objective Barriers):
-- No insurance coverage: -25%
-- High cost (>$100/month OOP): -20%
-- Requires equipment patient lacks: -15%
-- Transportation barriers: -15%
-- Time intensive (>30 min/day): -10%
-- Complex instructions (>5 steps): -10%
-- Language barriers (no translation): -15%
-- Literacy mismatch: -10%
-- Contraindication/allergy: -100% (Card not offered)
-
-**Additions** (Feasibility Boosters):
-- Previously succeeded with similar card: +15%
-- Patient specifically requested: +20%
-- Low time burden (<10 min/day): +10%
-- Free or fully covered: +10%
-- Can do at home: +10%
-- Strong social support: +10%
-- High community satisfaction (>4 stars): +5%
-
-**Final Score Interpretation**:
-- 90-100%: Highly feasible - recommend strongly
-- 70-89%: Feasible with support - discuss barriers
-- 50-69%: Challenging - need barrier mitigation plan
-- <50%: Low feasibility - consider alternatives
-
-**Patient Confidence Score**: [0-10 scale]
-
-Asked during clinical encounter:
-"On a scale of 0 to 10, how confident are you that you can [complete this action] consistently?"
-
-- 8-10: High confidence - patient ready
-- 5-7: Moderate confidence - may need support
-- 0-4: Low confidence - explore barriers
-
-If <7: "What would need to change for you to feel more confident?"
-
-**Barriers Checklist** (Interactive checkboxes):
-
-Physical Barriers:
-- ☐ Mobility limitations
-- ☐ Chronic pain interfering
-- ☐ Vision/hearing impairment
-- ☐ Dexterity issues
-- ☐ Fatigue/low energy
-
-Cognitive/Psychological Barriers:
-- ☐ Depression/anxiety interfering
-- ☐ Low motivation
-- ☐ Forgetfulness/memory issues
-- ☐ Health literacy mismatch
-- ☐ Fear/anxiety about action
-
-Social/Environmental Barriers:
-- ☐ Lack of social support
-- ☐ Caregiver burden
-- ☐ Unsafe home environment
-- ☐ Food insecurity
-- ☐ Housing instability
-
-Financial Barriers:
-- ☐ Cost too high
-- ☐ No insurance coverage
-- ☐ Transportation costs
-- ☐ Missing work for appointments
-
-Logistical Barriers:
-- ☐ Time constraints (work/family)
-- ☐ No transportation
-- ☐ Pharmacy access issues
-- ☐ Requires equipment patient lacks
-- ☐ Language barriers
-
-Cultural/Personal Barriers:
-- ☐ Religious/cultural conflicts
-- ☐ Personal preferences misaligned
-- ☐ Previous bad experience
-- ☐ Distrust of medical system
-
-*For each checked barrier → link to solutions/workarounds/alternatives*
-
-**Success Tips**:
-- [Tip 1 - practical habit formation]
-- [Tip 2 - environmental setup]
-- [Tip 3 - social support utilization]
-
-**Access Information**:
-- Cost: [Free / $ / $$ / $$$]
-- Insurance: [Usually/Sometimes/Rarely/Not covered]
-- Where to Get: [Specific locations, websites, resources]
-- Alternative Options: [If cost/access barriers exist]
-
-**Community Feedback** (Patient Reviews):
-
-⭐ Average Rating: [X.X/5] (based on [X] reviews)
-
-Adherence Rate: [X%] (patients who stuck with it >30 days)
-
-Target Achievement: [X%] (patients who met goals within timeline)
-
-Top Patient Comments (Moderated):
-- "[Quote]" - [First name, Age]
-- "[Quote]" - [First name, Age]
-
-Patient-Generated Tags (Most Common):
-- #Easy (X) #Affordable (X) #WorkedForMe (X)
-
-**Personalization Applied**:
-- Age-Based: [Modifications for pediatric/adult/geriatric]
-- Pregnancy/Lactation: [Category and guidance]
-- Organ Dysfunction: [Renal/hepatic/cardiac adjustments]
-- Language/Culture: [Available translations, cultural considerations]
-- Social Determinants: [Low income accommodations, transportation alternatives]
+## COMMUNITY
+⭐ [X.X]/5 | [X]% still doing at [timeframe] | [X]% reached their goal
 
 ---
 
-## 🏷️ METADATA
+# 📋 EXPANDED VIEW
 
-**Tags**: [Select 3-10 tags]
-- Clinical Intent: [e.g., #PreventiveCare]
-- Evidence: [e.g., #USPSTF_GradeA]
-- Setting: [e.g., #Home]
-- Condition: [e.g., #Hypertension]
-- System: [e.g., #Cardiovascular]
-- Population: [e.g., #Adult]
-- Community: [e.g., #Easy #Affordable]
-
-**Evidence Grade**: [A / B / C]
-
-**Feasibility Score**: [X/10]
-
-**Version**: v[X.X]
-
-**Last Updated**: [Date]
-
-**Next Review**: [Date]
-
-**Version History**:
-- v[X.X] ([Date]): [Description of changes]
+> Full details for clinicians, advanced users, and curious patients.
 
 ---
 
-## 📊 BARRIERS CHECKLIST
-- [ ] Cost/affordability - [Details]
-- [ ] Time commitment - [Details]
-- [ ] Access to resources - [Details]
-- [ ] Physical ability - [Details]
-- [ ] Knowledge/education needed - [Details]
-- [ ] Social support needed - [Details]
-- [ ] Transportation - [Details]
-- [ ] Language barrier - [Details]
+## WHO
+
+| Role | Responsibility |
+|------|----------------|
+| Patient | [Primary responsibilities] |
+| [Role 2] | [Responsibilities] |
+| [Role 3] | [Responsibilities] |
+| Family | [Support role] |
 
 ---
 
-## 💬 COMMUNITY FEEDBACK
-[To be added: Patient reviews, adherence rates, reported barriers]
+## WHAT
+
+| Field | Value |
+|-------|-------|
+| [Name field] | [Value] |
+| [Class/Type] | [Value] |
+| [Starting] | [Value] |
+| [Target] | [Value] |
+| [Maximum] | [Value] |
+| [Form] | [Value] |
 
 ---
 
-## 🔧 AI-MODIFIABLE PARAMETERS
+## WHEN
 
-> **Bracket `[ ]` Notation:** Fields that AI or clinicians can customize per patient use bracket notation with modification guidance.
-
-### **WHEN Parameters:**
-
-```yaml
-frequency: "[DEFAULT | Options: OPTION_LIST | Increase if: CRITERIA | Decrease if: CRITERIA]"
-# Example: "[Once daily | Options: Once daily → Twice daily → Three times daily | Increase if: inadequate response after 2 weeks | Decrease if: side effects, elderly]"
-
-duration: "[DEFAULT | Range: MIN-MAX UNITS | Adjust based on: FACTORS]"
-# Example: "[20 minutes | Range: 10-60 min | Adjust based on: fitness level, time availability, cardiac status]"
-
-intensity: "[DEFAULT | Tier 1: LOW | Tier 2: MED | Tier 3: HIGH | Advance if: CRITERIA]"
-# Example: "[RPE 4-5 (Moderate) | Tier 1: RPE 2-4 | Tier 2: RPE 4-6 | Tier 3: RPE 6-8 | Advance after 2 weeks sustained adherence]"
-
-timing: "[DEFAULT | Options: OPTION_LIST | Align with: PATIENT_FACTORS]"
-# Example: "[Morning | Options: Morning, Bedtime, With meals | Align with: patient schedule, optimal absorption]"
-```
-
-### **TARGET Parameters:**
-
-```yaml
-primary_goal: "[STANDARD_VALUE | Adjust for: PATIENT_FACTORS]"
-# Example: "[Systolic BP 120-130 mmHg | Adjust for: age >75 (target 140), diabetes (target 130), frailty (individualize)]"
-
-timeline: "[STANDARD_DURATION | Range: MIN-MAX | Depends on: FACTORS]"
-# Example: "[3 months | Range: 1-6 months | Depends on: baseline severity, adherence, individual response]"
-```
-
-### **FOLLOW-UP Parameters:**
-
-```yaml
-initial_check: "[TIMING | Adjust for: RISK_LEVEL]"
-# Example: "[7 days | Adjust for: high-risk patient (3 days), stable patient (14 days)]"
-
-routine_interval: "[INTERVAL | Range: MIN-MAX | Based on: STABILITY]"
-# Example: "[Monthly | Range: 2 weeks - 3 months | Based on: parameter stability, adherence pattern]"
-```
-
-### **Static Fields (NO Brackets):**
-- Mechanism of action, Evidence citations, Contraindications, Drug interactions, Critical alert thresholds, Technique instructions
-
-*See [CARD_LIFECYCLE_AND_AI_PARAMETERS.md](CARD_LIFECYCLE_AND_AI_PARAMETERS.md) for complete AI parameter specification.*
+**Schedule:** [Frequency and timing]
+**Duration:** [Ongoing/limited course]
+**Missed dose/session:** [Recovery instructions]
 
 ---
 
-## 🚀 INITIATION GUIDE
+## WHERE
 
-> **Phase 1: Getting Started** (Days 1-14)
+**Setting:** [Location]
+**Storage:** [If applicable]
 
-### **Prerequisites:**
-- [ ] [Required tests or clearances completed]
-- [ ] [Equipment or supplies obtained]
-- [ ] [Related Micro-Learning card completed for foundational knowledge]
+---
 
-### **Getting Started:**
+## WHY (Mechanism)
 
-**Day 1:**
-- Read card completely (takes ~3 minutes)
-- Gather any needed equipment/supplies
-- Complete first session today
-- Log completion in app
+1. **[Action 1]** [description]
+2. **[Action 2]** [description]
+3. **[Action 3]** [description]
 
-**Days 2-7:**
-- Focus on consistency over perfection
-- Anchor to existing habit (after morning coffee, before dinner)
-- Don't worry about optimization yet
+**Benefits:** [Key benefits in plain language]
 
-**Days 8-14:**
-- Notice how you feel
-- Build routine timing
-- Celebrate consistency - you're building a habit!
+---
 
-### **Starting Parameters (Conservative):**
-- Frequency: [Start with lower frequency, build up]
-- Duration: [Start with minimum effective dose]
-- Intensity: [Start at Tier 1 - Beginner]
+## HOW
 
-### **Common Early Challenges:**
+**Instructions:**
+1. [Detailed step 1]
+2. [Detailed step 2]
+3. [Detailed step 3]
 
-| Challenge | Solution |
+**If [common issue]:**
+- [Solution 1]
+- [Solution 2]
+- [Escalation if needed]
+
+---
+
+## MEASURE
+
+| Test/Metric | Frequency | Purpose |
+|-------------|-----------|---------|
+| [Metric 1] | [Frequency] | [Purpose] |
+| [Metric 2] | [Frequency] | [Purpose] |
+| [Metric 3] | [Frequency] | [Purpose] |
+
+**What you may notice:** [Subjective improvements]
+
+---
+
+## TARGET
+
+| Metric | Goal | Timeline |
+|--------|------|----------|
+| [Primary] | [Value] | [Timeframe] |
+| [Secondary] | [Value] | [Timeframe] |
+
+---
+
+## SAFETY
+
+### Common Side Effects (Temporary)
+- [Effect 1] ([percentage])
+- [Effect 2]
+- [Effect 3]
+
+### Hold/Stop If:
+| Situation | Action |
+|-----------|--------|
+| [Situation 1] | [Action] |
+| [Situation 2] | [Action] |
+
+### Interactions:
+| Substance | Guidance |
 |-----------|----------|
-| [Forgetting] | [Set phone reminder, link to existing habit] |
-| [Too hard] | [Start with even smaller version] |
-| [No time] | [5 minutes is better than 0; schedule like appointment] |
-| [Not seeing results] | [Takes 2-4 weeks minimum; trust the process] |
-
-### **Contact Your Care Team If:**
-- [Specific concerning symptom occurs]
-- [You're unsure how to proceed]
-- [Barrier feels insurmountable]
+| [Item 1] | [Guidance] |
+| [Item 2] | [Guidance] |
 
 ---
 
-## ⚙️ MAINTENANCE GUIDE
-
-> **Phase 2: Staying on Track** (Day 15 - Goal Achievement)
-
-### **Daily Actions:**
-1. Complete session per prescribed parameters
-2. Log completion in app
-3. Note any concerns or observations
-
-### **AI Monitoring (Automatic):**
-- Adherence tracking (target: 80%+ over rolling 14 days)
-- Dashboard parameter trends
-- Barrier pattern detection
-
-### **Adjustment Triggers:**
-
-**Ready to Increase If:**
-- Adherence >80% for 2+ weeks
-- No significant side effects or barriers
-- Feeling ready for more challenge
-- Parameters improving but not yet at goal
-
-**Consider Decreasing If:**
-- Side effects limiting tolerability
-- Life circumstances changed (stress, illness, travel)
-- Adherence dropping significantly
-
-**Hold Steady If:**
-- Currently optimized and stable
-- Recent adjustment still being evaluated
-- Life temporarily demanding more flexibility
-
-### **Progression Pathway (Tierable Cards):**
+## DECISION PATHWAY
 
 ```
-Tier 1 (Beginner) → 2 weeks sustained adherence → Tier 2 (Intermediate)
-Tier 2 (Intermediate) → 2 weeks sustained adherence → Tier 3 (Advanced)
-
-Regression: Step back if prolonged break, illness recovery, or significant barrier
+START: [Initial state]
+         │
+         ▼
+    ┌─────────────────────────────────────────┐
+    │     [CHECKPOINT]: [Assessment]          │
+    └─────────────────────────────────────────┘
+         │
+    ┌────┴────┐
+    ▼         ▼
+ [OUTCOME A]  [OUTCOME B]
+    │            │
+    ▼            ▼
+[Action A]   [Action B]
+    │
+    ▼
+    ┌─────────────────────────────────────────┐
+    │     ONGOING MONITORING                  │
+    └─────────────────────────────────────────┘
+    │
+    ├── [Trigger 1]? → [Response 1]
+    ├── [Trigger 2]? → [Response 2]
+    └── [Trigger 3]? → [Response 3]
 ```
-
-### **Scheduled Reviews:**
-- **Weekly:** AI adherence check + encouragement
-- **Monthly:** Parameter effectiveness review
-- **Quarterly:** Comprehensive goal assessment
-
-### **Troubleshooting:**
-
-**If Struggling with Adherence:**
-- AI asks: "What's getting in the way?"
-- AI offers: Simpler version, different timing, alternative approach
-- Patient can request: Pause, switch, or consultation
-
-**If No Improvement Despite Good Adherence:**
-- AI reviews: Has adequate trial period occurred?
-- AI considers: Is this the right intervention?
-- AI action: Escalate or offer alternative
-
-### **Synergy Tips (Habit Stacking):**
-- Consider pairing with: [Related active cards]
-- Time-saving combo: [How to bundle actions]
 
 ---
 
-## 🎯 DE-LOADING / DE-PRESCRIBING GUIDE
+## FOLLOW-UP SCHEDULE
 
-> **Phase 3: Completing Your Journey** (When Criteria Met)
+### Phase 1: Initiation (Days 1-14)
+| Day | Method | Focus |
+|-----|--------|-------|
+| [X] | [Method] | [Focus] |
+| [Y] | [Method] | [Focus] |
 
-### **Three Exit Pathways:**
+### Phase 2: Titration/Building (Weeks 3-12)
+| When | Method | Focus |
+|------|--------|-------|
+| [X] | [Method] | [Focus] |
+| [Y] | [Method] | [Focus] |
 
-#### **🎓 PATHWAY A: GRADUATION**
-*"You achieved your goal!"*
-
-**Criteria:**
-- [ ] Goal achieved (specific metric met)
-- [ ] Behavior sustained 90 days (behavioral cards)
-- [ ] Treatment course completed (medical cards)
-- [ ] Diagnosis resolved (applicable medical cards)
-
-**Outcome:** Card moves to "Completed Successfully" with celebration badge
-
-**What Happens:**
-1. AI or patient recognizes criteria met
-2. Celebration message acknowledges achievement
-3. Card archived in "Graduated" section
-4. Optional: Next-level card recommended
+### Phase 3: Maintenance (Month 4+)
+| When | Method | Focus |
+|------|--------|-------|
+| [X] | [Method] | [Focus] |
+| [Y] | [Method] | [Focus] |
 
 ---
 
-#### **🔄 PATHWAY B: TRANSITION**
-*"Time for something different"*
+## IF YOU'RE STRUGGLING
 
-**Advance to Higher Level If:**
-- Current level too easy
-- Ready for more challenge
-- Plateaued at current level
+**Missed [short time]?** [Recovery instruction]
+**Missed [longer time]?** [Recovery instruction]
 
-**Step Down to Simpler Version If:**
-- Current level too difficult
-- Life circumstances changed
-- Need to rebuild after break
+### Common Barriers & Solutions
 
-**Switch to Alternative If:**
-- Different approach preferred
-- Current method not resonating
-- Better option discovered
-
-**Outcome:** Current card replaced with new card (begins in Initiation phase)
+| Barrier | Solution |
+|---------|----------|
+| [Barrier 1] | [Solution] |
+| [Barrier 2] | [Solution] |
+| [Barrier 3] | [Solution] |
+| [Barrier 4] | [Solution] |
 
 ---
 
-#### **⏹️ PATHWAY C: DISCONTINUATION**
-*"This isn't right for you"*
+## YOUR PROGRESS
 
-**Criteria:**
-- Adverse event or intolerable side effect
-- Ineffective after adequate trial (typically 4-12 weeks)
-- Contraindication developed
-- Informed patient decision to stop
+**Baseline:** [Metric]: _____ | Date started: _____
 
-**Outcome:** Card archived with outcome note
-
-**Safety Checks:**
-- **Medical Cards:** May require clinician approval, tapering protocol
-- **Behavioral Cards:** Generally patient self-directed
+**Milestones:**
+- [ ] [Milestone 1]
+- [ ] [Milestone 2]
+- [ ] [Milestone 3]
+- [ ] [Milestone 4]
 
 ---
 
-### **Autonomy by Card Type:**
+## EVIDENCE
 
-| Card Type | Who Can Initiate Exit? |
-|-----------|------------------------|
-| **Behavioral** (Nutrition, Movement, Recovery, Mind-Body, Environmental/Social) | Patient fully self-directed |
-| **Micro-Learning** | Auto-completes upon consumption |
-| **Diagnostic Testing** | Completes when test done |
-| **Low-Risk Medical** | Patient requests, AI approves |
-| **Chronic Disease Meds** | Clinician approval required |
-| **DME** (CPAP, CGM, etc.) | Clinician approval required |
-| **Procedures** | Clinician-directed throughout |
+### Summary
+[2-3 sentence plain-language summary accessible to patients]
 
----
+### Grade: [A/B/C] ([Strongest/Good/Limited])
 
-### **Patient Self-Directed Exit Process:**
+### Grading Criteria Met
+- [x] [Criterion 1]
+- [x] [Criterion 2]
+- [x] [Criterion 3]
 
-**Step 1: Request to Stop/Change**
-- Tap [⏸ Request to Stop/Change] on any card
+### Key Studies
 
-**Step 2: Select Reason**
-- ☐ I achieved my goal
-- ☐ I'm experiencing side effects
-- ☐ This is too difficult for me
-- ☐ I prefer a different approach
-- ☐ I have questions
-- ☐ Other
+| Study | Finding |
+|-------|---------|
+| **[Study 1]** ([details]) | [Key finding] |
+| **[Study 2]** ([details]) | [Key finding] |
+| **[Guideline]** | [Recommendation] |
 
-**Step 3: AI Evaluates**
-- If behavioral card: AI can often approve immediately
-- If medical card: AI may escalate to clinician
-- If safety concern: AI escalates immediately
+**NNT/NNH:** [If applicable]
 
-**Step 4: Resolution**
-- Graduation, transition, or discontinuation processed
-- Appropriate messaging delivered
-- Card status updated
+### Evidence Gaps
+- [Gap 1]
+- [Gap 2]
+
+**Last Reviewed:** [Month Year]
+
+*See [EVIDENCE_SECTION_SPECIFICATION.md](EVIDENCE_SECTION_SPECIFICATION.md) for detailed grading criteria.*
 
 ---
 
-### **De-Loading Messaging Templates:**
+## NOTES
 
-**Graduation Message:**
+### Feasibility Score: [X]/100 (Clinician Reference)
+| Factor | Impact |
+|--------|--------|
+| Base | 100 |
+| [Deduction 1] | -X |
+| [Deduction 2] | -X |
+| [Booster 1] | +X |
+| [Booster 2] | +X |
+
+### Patient Confidence Assessment
+*Ask at prescribing:* "On a scale of 0-10, how confident are you that you can [action] consistently?"
+
+| Score | Interpretation | Action |
+|-------|----------------|--------|
+| 8-10 | Ready | Proceed |
+| 5-7 | Uncertain | Explore barriers |
+| 0-4 | Concerned | Address before starting |
+
+### Version History
+| Version | Date | Changes |
+|---------|------|---------|
+| [X.X] | [Date] | [Changes] |
+
+---
+
+# 🔧 AI METADATA
+
+<!--
+Hidden from user interface.
+Parsed by AI agents for decision-making.
+Clinician override via interface dropdown.
+-->
+
+```yaml
+# === IDENTIFIERS ===
+card_id: [CARD_ID]
+name: [Name]
+class: [Class/Category]
+path: [Hierarchy > Path > To > Card]
+
+# === AUTONOMY ===
+# See AUTONOMY_AND_AI_AGENT_SPECIFICATION.md for tier definitions
+autonomy:
+  tier: [1-4]  # 1=Protocol-Approved, 2=AI-Guided, 3=AI-Assisted, 4=Clinician-Directed
+  responsible_agent: [AI_Agent_Name]
+  specialist_consult: [Specialist_Agent if applicable]
+  approval_type: [protocol|batch|individual]
+  patient_can_initiate: [true|false]
+  patient_can_adjust: [true|false]
+  patient_can_pause: [true|false]
+  patient_can_discontinue: [true|false]
+
+# === TAGS ===
+tags:
+  clinical: [tag1, tag2, tag3]
+  evidence: [grade_A, guideline_recommended, etc.]
+  properties: [oral, BID, chronic, etc.]
+  systems: [metabolic, cardiovascular, etc.]
+
+# === RELATED CARDS ===
+related:
+  alternative: [CARD_ID]  # If this doesn't work
+  add_on:
+    - [CARD_ID]  # Complementary cards
+  synergy:
+    - [CARD_ID]  # Cards that enhance effect
+  prerequisite: [CARD_ID or none]
+  leads_to: [CARD_IDs]  # Next steps if inadequate
+
+# === PARAMETERS (Card-Type Specific) ===
+# Include relevant parameters for card type:
+# - dosing (medications)
+# - frequency/duration/intensity (behavioral)
+# - test_details (diagnostic)
+# - equipment (DME)
+
+# === CONTRAINDICATIONS ===
+contraindications:
+  - [condition1]
+  - [condition2]
+
+# === ADJUSTMENTS ===
+adjustments:
+  [factor]:
+    - condition: [condition]
+      action: [adjustment]
+
+# === HOLD CONDITIONS (if applicable) ===
+hold:
+  - condition: [condition]
+    action: [action]
+    auto_resume: [yes|no]
+
+# === INTERACTIONS (if applicable) ===
+interactions:
+  - item: [item]
+    severity: [low|moderate|high]
+    action: [action]
+
+# === MONITORING ===
+monitoring:
+  [metric1]: {initial: [freq], stable: [freq]}
+  [metric2]: [frequency]
+
+# === ALERTS ===
+alerts:
+  efficacy:
+    - condition: [condition]
+      action: [action]
+      urgency: [routine|soon|urgent]
+  safety:
+    - condition: [condition]
+      action: [action]
+      urgency: [routine|soon|urgent]
+  adherence:
+    - condition: [condition]
+      action: [action]
+      urgency: [routine|soon|urgent]
+
+# === PROACTIVE CHECK-INS ===
+checkins:
+  initiation:
+    - day: [X]
+      questions: [question_ids]
+      escalate_if: [condition]
+  maintenance:
+    - interval: [frequency]
+      focus: [focus_area]
+
+# === LIFECYCLE ===
+lifecycle:
+  initiation:
+    duration: [timeframe]
+    focus: [focus]
+    success: [criteria]
+  maintenance:
+    adherence_target: [percentage]
+    review: [schedule]
+  de_loading:
+    graduation:
+      criteria: [criteria]
+      action: [action]
+    transition:
+      criteria: [criteria]
+      action: [action]
+    discontinue:
+      criteria: [criteria]
+      action: [action]
+
+# === EVIDENCE (AI Reference) ===
+evidence:
+  grade: [A|B|C]
+  last_reviewed: [YYYY-MM]
+  primary_guideline: [guideline_name]
+  key_trials: [trial_names]
+  evidence_gaps: [gaps]
+
+# === FEASIBILITY ===
+feasibility:
+  score: [0-100]
+  difficulty: [easy|moderate|hard]
+  deductions: {factor: -X}
+  boosters: {factor: +X}
 ```
-🎓 Congratulations! You've successfully completed your [CARD_NAME] card!
 
-Your Achievement:
-- [Specific outcome]
-- [Metric improvement]
+---
 
-What's Next?
-- This behavior is now a habit - keep it up!
-- [Optional next card recommendation]
-```
+**END OF TEMPLATE**
 
-**Transition Message:**
-```
-🔄 Time for a change!
+---
 
-Your [CURRENT_CARD] has served its purpose. Based on your progress,
-I recommend transitioning to [NEW_CARD].
+## Quick Reference: v4.0 Changes from v3.0
 
-Why? [Rationale]
+| Section | v3.0 | v4.0 |
+|---------|------|------|
+| **New: AT-A-GLANCE** | N/A | 20-second quick card with visual dose ladder |
+| **CONDENSED VIEW** | Separate sections | Added DOSE PROGRESSION with color coding |
+| **EXPANDED VIEW** | Paragraph-heavy | Converted to tables for scannability |
+| **New: DECISION PATHWAY** | Buried in FOLLOW-UP | Promoted to visual ASCII flowchart |
+| **EVIDENCE** | Verbose citations | Condensed to table + key stats |
+| **NOTES** | Inline in EVIDENCE | Separate section with Feasibility breakdown |
+| **AI METADATA** | Basic YAML | Complete YAML with autonomy tiers, alerts, lifecycle |
 
-[Accept New Card] [See Other Options] [Stay with Current]
-```
+---
 
-**Discontinuation Message:**
-```
-⏹️ Stopping [CARD_NAME]
+## Template Usage Guidelines
 
-Reason: [Reason]
+### For Card Authors:
+1. Start with the AT-A-GLANCE - if it doesn't fit in 20 seconds, the card is too complex
+2. Use tables over paragraphs for scannability
+3. Color-code progression with 🟢🟡🟣 emoji
+4. Include ASCII decision pathway for any titratable card
+5. ALWAYS cite evidence with specific studies/NNT
 
-What We Learned: [Insight about what didn't work]
+### For AI Agents:
+- Parse YAML metadata for decision-making
+- Respect autonomy tier for patient actions
+- Use checkins schedule for proactive outreach
+- Reference alerts for safety monitoring
+- Follow lifecycle for de-loading decisions
 
-Alternative: [Suggestion for different approach]
+### For Clinicians:
+- NOTES section contains Feasibility Score for prescribing decisions
+- Patient Confidence Assessment guides readiness
+- Decision Pathway shows escalation triggers
+- Evidence section provides citation backup
 
-[Try Alternative] [Take a Break] [Talk to Care Team]
-```
+---
 
-*See [CARD_LIFECYCLE_AND_AI_PARAMETERS.md](CARD_LIFECYCLE_AND_AI_PARAMETERS.md) for complete lifecycle specification.*
+*Template: Universal Card Template v4.0*
+*Reference: MED_DM_BIG_001_Metformin_IR.md*
