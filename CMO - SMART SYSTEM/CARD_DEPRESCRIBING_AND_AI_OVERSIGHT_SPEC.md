@@ -1,21 +1,25 @@
 # SMART CARD DE-PRESCRIBING & AI CLINICAL OVERSIGHT SPECIFICATION
-**Version:** 1.0
-**Date:** 2025-11-26
+**Version:** 1.1
+**Date:** 2025-12-05
 **Section:** 3 (SMART Card/Deck System)
 **Status:** Active
 
 ---
 
 **Depends On:**
-- INTEGRATION_ARCHITECTURE.md v1.1
-- UNIVERSAL_CARD_TEMPLATE.md
+- INTEGRATION_ARCHITECTURE.md v2.0
+- UNIVERSAL_CARD_TEMPLATE.md v2.0
 - CARD_TYPE_SPECIFICATIONS.md v2.0
-- AI_AGENT_WORKFLOW.md
+- CARD_LIFECYCLE_AND_AI_PARAMETERS.md v1.0 (NEW)
 
-**Updates Required In:**
-- AI_AGENT_WORKFLOW.md (add de-prescribing logic)
-- Card type specifications (add exit criteria)
-- Patient app specifications (add de-loading UI)
+**Related Documents:**
+- [CARD_LIFECYCLE_AND_AI_PARAMETERS.md](docs/core/CARD_LIFECYCLE_AND_AI_PARAMETERS.md) - Complete lifecycle phases & AI bracket notation
+- [UNIVERSAL_CARD_TEMPLATE.md](docs/core/02_UNIVERSAL_CARD_TEMPLATE.md) - Template with lifecycle sections
+
+**Updates in v1.1:**
+- Added 3 missing card types (Imaging Studies, DME, Environmental & Social Health) - now covers all 12
+- Added reference to CARD_LIFECYCLE_AND_AI_PARAMETERS.md for complete lifecycle spec
+- Aligned terminology with self-directed healthcare model
 
 ---
 
@@ -381,6 +385,124 @@ AI clinical agent that serves as the primary "clinician" for routine SMART Card 
 #### **Patient Self-Directed Actions:**
 - ✅ Patient can complete referral appointment
 - ❌ Cannot cancel referral without clinician discussion
+
+---
+
+### **10. IMAGING STUDIES CARDS (X-Ray, CT, MRI, Ultrasound)**
+
+#### **Graduation Criteria:**
+- Imaging completed successfully
+- Results reviewed by clinician
+- Findings communicated to patient
+- Follow-up plan established based on findings
+
+#### **Discontinuation Criteria:**
+- Imaging no longer indicated (diagnosis established by other means)
+- Contraindication identified (e.g., pregnancy for CT, metal implants for MRI)
+- Patient declined after informed discussion
+- Alternative study preferred
+
+#### **AI Autonomous Decisions:**
+- ✅ Mark study complete once results in system
+- ✅ Recommend follow-up based on findings
+- ✅ Flag if study ordered but not completed after reasonable period
+
+#### **Human Clinician Required:**
+- ❌ Cancel imaging without review (especially cancer screening/workup)
+- ❌ Interpret complex findings
+- ❌ Order contrast studies for patients with kidney disease or allergies
+
+#### **Patient Self-Directed Actions:**
+- ✅ Patient can complete study and update status
+- ✅ Patient can request postponement (AI reviews reason)
+- ❌ Cannot cancel without clinician discussion
+
+---
+
+### **11. ENVIRONMENTAL & SOCIAL HEALTH CARDS**
+
+#### **Graduation Criteria:**
+- Environmental modification implemented (e.g., ergonomic setup complete)
+- Social goal sustained 90 days (e.g., regular community engagement)
+- Substance use goal achieved (e.g., smoke-free for 90 days)
+- Financial/resource navigation completed
+
+#### **Transition Criteria:**
+- Ready for more advanced goal (e.g., tobacco-free → healthier lifestyle overall)
+- Need different approach (e.g., NRT → varenicline for smoking cessation)
+- Barrier identified requiring different intervention
+
+#### **Discontinuation Criteria:**
+- Goal achieved and sustained
+- Intervention not effective for this patient
+- Patient preference for different approach
+- Circumstances changed (e.g., job change, relocation)
+
+#### **AI Autonomous Decisions:**
+- ✅ Graduate card after 90-day sustained behavior (social, substance use goals)
+- ✅ Mark one-time tasks complete (ergonomic assessment, resource navigation)
+- ✅ Recommend alternatives if struggling
+
+#### **Human Clinician Involvement:**
+- 💬 Optional for most cards
+- ❌ Required for substance use disorder treatment (MAT, detox referrals)
+- ❌ Required for crisis situations (domestic violence, housing emergency)
+
+#### **Patient Self-Directed Actions:**
+- ✅ Fully self-directed for most environmental/social cards
+- ✅ Patient can graduate, pause, or switch approaches
+- ✅ Patient can access crisis resources directly
+
+---
+
+### **12. MICRO-LEARNING CARDS (Educational)**
+
+#### **Graduation Criteria:**
+- Content consumed (read, watched, or listened)
+- Optional: Knowledge check passed
+- Card automatically marks complete
+
+#### **Transition Criteria:**
+- N/A - Micro-Learning cards don't transition, they complete
+
+#### **Discontinuation Criteria:**
+- N/A - Micro-Learning cards are brief and complete upon consumption
+
+#### **AI Role:**
+- ✅ Track completion status
+- ✅ Recommend related action cards after learning card completes
+- ✅ Sequence learning cards appropriately within decks
+
+#### **Human Clinician Involvement:**
+- None required
+
+#### **Patient Self-Directed Actions:**
+- ✅ Fully self-directed
+- ✅ Patient can complete at own pace
+- ✅ Patient can skip if already knowledgeable (with acknowledgment)
+
+---
+
+## DE-PRESCRIBING SUMMARY: ALL 12 CARD TYPES
+
+| # | Card Type | Patient Autonomy | AI Role | Clinician Role |
+|---|-----------|------------------|---------|----------------|
+| 1 | Medications | Request only | Recommend, escalate | Approve stops/changes |
+| 2 | Diagnostic Testing | Request timing | Complete, recommend | Cancel screenings |
+| 3 | Imaging Studies | Request timing | Complete, recommend | Cancel/interpret |
+| 4 | Procedures | None | Facilitate | All decisions |
+| 5 | DME | Request troubleshooting | Graduate, recommend | Approve discontinuation |
+| 6 | Referrals | Complete appointment | Schedule, track | Cancel, integrate recs |
+| 7 | Nutrition | **Full autonomy** | Graduate, offer alternatives | Optional consult |
+| 8 | Movement/Exercise | **Full autonomy** | Graduate, progress | Post-injury return |
+| 9 | Recovery | **Full autonomy** | Graduate, recommend | Sleep disorders |
+| 10 | Mind-Body | **Full autonomy** | Graduate, suggest | Mental health concerns |
+| 11 | Environmental/Social | **Full autonomy** | Graduate, resources | SUD treatment, crisis |
+| 12 | Micro-Learning | **Full autonomy** | Track completion | None |
+
+**Key Insight:**
+- Behavioral cards (7-12): Patient self-directed, clinician optional
+- Medical cards (1-6): Patient requests, clinician approves
 
 ---
 
@@ -837,15 +959,29 @@ CARDS NEEDING ATTENTION (low adherence/completion):
 
 **This specification provides:**
 
-✅ **Concrete de-loading processes** for all 9 card types
+✅ **Concrete de-loading processes** for all **12 card types** (v1.1 update)
 ✅ **AI agent (Dr. ADAPT) architecture** for autonomous oversight
 ✅ **Clear escalation criteria** (when human clinician required)
 ✅ **Patient self-directed workflows** for requesting card changes
 ✅ **Decision algorithms** for AI to determine when to stop cards
 ✅ **Safety mechanisms** to prevent premature or unsafe stopping
+✅ **Self-directed healthcare model** with patient autonomy by card type
 
 **Key Innovation:**
 > AI handles 80% of routine card lifecycle decisions autonomously, escalating only when safety, complexity, or patient preference requires human clinical judgment.
+
+**Self-Directed Healthcare Philosophy:**
+> Patients are the primary healthcare providers for themselves. Clinicians are guidance counselors who guide, counsel, and redirect as needed. Behavioral cards (7-12) are fully patient self-directed; Medical cards (1-6) require appropriate clinical oversight.
+
+**Related Documentation:**
+- [CARD_LIFECYCLE_AND_AI_PARAMETERS.md](docs/core/CARD_LIFECYCLE_AND_AI_PARAMETERS.md) - Complete lifecycle phases (Initiation → Maintenance → De-loading) and AI bracket `[ ]` parameter notation
+- [UNIVERSAL_CARD_TEMPLATE.md](docs/core/02_UNIVERSAL_CARD_TEMPLATE.md) v2.0 - Template with embedded lifecycle sections
+
+---
+
+**VERSION HISTORY**
+- v1.1 (2025-12-05): Added 3 missing card types, linked to lifecycle spec, 12-type summary table
+- v1.0 (2025-11-26): Initial specification with 9 card types
 
 ---
 

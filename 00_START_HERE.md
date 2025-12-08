@@ -1,7 +1,7 @@
 # CMO PLATFORM - START HERE
 **Welcome to the Comprehensive Medical Optimization Platform**
 
-**Last Updated:** 2025-11-26
+**Last Updated:** 2025-12-07
 
 ---
 
@@ -36,8 +36,8 @@ Writing SMART Cards, building database, piloting with real patients.
 
 ### If you're a **DEVELOPER**:
 1. Read [INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md)
-2. Review [Project Specification](CMO - HEALTH OVERVIEW/00_PROJECT_MASTER/PROJECT_SPECIFICATION_v2.md)
-3. Check [Database Schema](CMO - HEALTH OVERVIEW/03_MEDICAL_HISTORY/PATIENT_INTAKE_FORM_PRODUCTION_SPEC.md)
+2. Review [Project Specification](CMO - DATA INPUT/00_PROJECT_MASTER/PROJECT_SPECIFICATION_v2.md)
+3. Check [Database Schema](CMO - DATA INPUT/03_MEDICAL_HISTORY/PATIENT_INTAKE_FORM_PRODUCTION_SPEC.md)
 
 ### If you're a **CONTENT CREATOR** (writing SMART Cards):
 1. Read [Universal Card Template](CMO - SMART SYSTEM/docs/core/02_UNIVERSAL_CARD_TEMPLATE.md)
@@ -51,8 +51,8 @@ Writing SMART Cards, building database, piloting with real patients.
 
 ### If you're **PROJECT MANAGER**:
 1. Read [MASTER_ROADMAP.md](MASTER_ROADMAP.md)
-2. Use [CROSS_PROJECT_UPDATE_CHECKLIST.md](CROSS_PROJECT_UPDATE_CHECKLIST.md)
-3. Review [INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md)
+2. Review [INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md)
+3. Use [CLAUDE.md](CLAUDE.md) for Claude-assisted project management
 
 ---
 
@@ -80,15 +80,15 @@ Writing SMART Cards, building database, piloting with real patients.
 **What it does:** Provides personalized, evidence-based intervention cards
 
 **Key Features:**
-- ~1,014 enumerated intervention cards (medical + behavioral)
+- 531 behavioral + ~500 medical intervention cards (v2.1)
 - AI-powered card/deck recommendations
 - Progressive unlocking to prevent overwhelm
-- Adherence tracking
-- Community reviews and ratings
+- Card lifecycle: Initiation → Maintenance → De-loading
+- Adherence tracking with AI agent (Dr. ADAPT)
 
 **Output:** Personalized action plans with trackable, measurable interventions
 
-**Status:** Architecture complete, content creation beginning (0/1,014 cards written)
+**Status:** Architecture complete, behavioral libraries v2.1 ready, medical libraries enumerated
 
 ---
 
@@ -143,16 +143,16 @@ Writing SMART Cards, building database, piloting with real patients.
 
 ### Master Planning:
 - **[MASTER_ROADMAP.md](MASTER_ROADMAP.md)** - Unified development roadmap
-- **[INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md)** - How projects connect
-- **[CROSS_PROJECT_UPDATE_CHECKLIST.md](CROSS_PROJECT_UPDATE_CHECKLIST.md)** - Maintaining consistency
+- **[INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md)** - How projects connect (includes update checklist)
+- **[SOURCE_DOCUMENT_REGISTRY.md](SOURCE_DOCUMENT_REGISTRY.md)** - Canonical source tracking
 
 ### Project Specifications:
-- **[HEALTH OVERVIEW Spec](CMO - HEALTH OVERVIEW/00_PROJECT_MASTER/PROJECT_SPECIFICATION_v2.md)**
+- **[HEALTH OVERVIEW Spec](CMO - DATA INPUT/00_PROJECT_MASTER/PROJECT_SPECIFICATION_v2.md)**
 - **[SMART SYSTEM Architecture](CMO - SMART SYSTEM/ARCHITECTURE.md)**
 - **[PERFORMANCE MEDICINE Framework](CMO - PERFORMANCE MEDICINE/architecture/health-matrix-framework.md)**
 
 ### Implementation Guides:
-- **[Patient Intake Form Spec](CMO - HEALTH OVERVIEW/03_MEDICAL_HISTORY/PATIENT_INTAKE_FORM_PRODUCTION_SPEC.md)**
+- **[Patient Intake Form Spec](CMO - DATA INPUT/03_MEDICAL_HISTORY/PATIENT_INTAKE_FORM_PRODUCTION_SPEC.md)**
 - **[Universal Card Template](CMO - SMART SYSTEM/docs/core/02_UNIVERSAL_CARD_TEMPLATE.md)**
 - **[Care Planning Methodology](CMO - PERFORMANCE MEDICINE/clinical-protocols/comprehensive-care-planning-methodology.md)**
 
@@ -166,15 +166,17 @@ Writing SMART Cards, building database, piloting with real patients.
 - Patient intake system specification
 - Parameter libraries (150 MVP parameters)
 - Medical history library (132 diagnoses)
-- Lifestyle assessment questionnaires
+- Lifestyle assessment questionnaires v2.1
 - Dashboard specifications (3 levels)
-- SMART Card structure (~1,014 cards enumerated)
+- Behavioral card libraries v2.1 (531 atomic cards)
+- Medical card libraries enumerated (~500 cards)
 - Care planning templates (9 life stages)
 - Evidence base and clinical protocols
 - Integration architecture
+- Claude-assisted project management (9 slash commands)
 
 ❌ **Not Yet Built (0%):**
-- Actual SMART Card content (only enumerated)
+- Medical SMART Card content (only enumerated)
 - Database implementation
 - Frontend dashboard
 - Mobile/web apps
@@ -194,7 +196,7 @@ Writing SMART Cards, building database, piloting with real patients.
 
 2. **Build Database Schema**
    - PostgreSQL setup
-   - Implement tables from [Production Spec](CMO - HEALTH OVERVIEW/03_MEDICAL_HISTORY/PATIENT_INTAKE_FORM_PRODUCTION_SPEC.md)
+   - Implement tables from [Production Spec](CMO - DATA INPUT/03_MEDICAL_HISTORY/PATIENT_INTAKE_FORM_PRODUCTION_SPEC.md)
    - Test data seeding
 
 3. **Plan Pilot Program**
@@ -245,7 +247,7 @@ Writing SMART Cards, building database, piloting with real patients.
 
 **Project Integration:**
 - Read [INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md)
-- Use [CROSS_PROJECT_UPDATE_CHECKLIST.md](CROSS_PROJECT_UPDATE_CHECKLIST.md)
+- Use [SOURCE_DOCUMENT_REGISTRY.md](SOURCE_DOCUMENT_REGISTRY.md)
 
 **Clinical Content:**
 - Review individual project documentation
@@ -268,32 +270,48 @@ C:\Users\taylo\Desktop\CMO - HEALTH OVERVIEW\
 ├── 00_START_HERE.md (👈 You are here)
 ├── MASTER_ROADMAP.md
 ├── INTEGRATION_ARCHITECTURE.md
-├── CROSS_PROJECT_UPDATE_CHECKLIST.md
+├── SOURCE_DOCUMENT_REGISTRY.md
+├── MULTI_AGENT_AI_PLATFORM_ARCHITECTURE.md
+├── CLAUDE.md (Project context for Claude - read at session start)
+├── VERSION_UPDATE_2025-12-05.md (Team meeting notes)
 │
-├── CMO - HEALTH OVERVIEW/
+├── .claude/ (Claude Code configuration)
+│   └── commands/ (9 slash commands: /audit, /sync, /find-card, etc.)
+│
+├── SESSION_LOGS/ (Cross-conversation continuity logs)
+│
+├── CMO - DATA INPUT/
 │   ├── 00_PROJECT_MASTER/ (Foundation docs)
 │   ├── 01_CLINICAL_LOGIC/ (Scoring algorithms)
 │   ├── 02_PARAMETER_LIBRARIES/ (Labs, vitals, imaging)
 │   ├── 03_MEDICAL_HISTORY/ (Diagnoses, intake form)
-│   ├── 04_LIFESTYLE_ASSESSMENT/ (5-pillar questionnaires)
+│   ├── 04_LIFESTYLE_ASSESSMENT/ (5-pillar questionnaires v2.1)
 │   ├── 05_ALERTS_SAFETY/ (Critical alerts, decision rules)
 │   ├── 06_DASHBOARD_SPECS/ (3-level UI specifications)
 │   └── 07_IMPLEMENTATION_SUPPORT/ (Validation, strategy)
 │
 ├── CMO - SMART SYSTEM/
+│   ├── .claude/ (Legacy instructions)
 │   ├── docs/
-│   │   ├── core/ (6 essential documents)
-│   │   └── reference/ (11 supporting documents)
+│   │   ├── core/ (Card templates, specifications)
+│   │   └── reference/ (Supporting documents)
 │   ├── library/
-│   │   ├── medical/ (~780 cards enumerated)
-│   │   └── behavioral/ (~234 cards enumerated)
-│   └── templates/
+│   │   ├── medical/ (~500 cards enumerated)
+│   │   │   ├── medications/, diagnostic_testing/, imaging/
+│   │   │   ├── procedures/, dme/, referrals/
+│   │   └── behavioral/ (531 atomic cards v2.1)
+│   │       ├── movement/, nutrition/, recovery/
+│   │       ├── mind_body/, environmental_social/, micro_learning/
+│   ├── templates/
+│   └── tier5_cards/ (Additional card storage)
 │
 └── CMO - PERFORMANCE MEDICINE/
-    ├── architecture/ (6 framework documents)
-    ├── clinical-protocols/ (8 implementation guides)
+    ├── architecture/ (Framework documents)
+    ├── clinical-protocols/ (Implementation guides)
+    ├── domains/ (Domain-specific content)
     ├── evidence-base/ (Primary sources)
-    └── stakeholder-guides/ (3 audience-specific guides)
+    ├── stakeholder-guides/ (Audience-specific guides)
+    └── use-cases/ (Use case documentation)
 ```
 
 ---
@@ -303,6 +321,7 @@ C:\Users\taylo\Desktop\CMO - HEALTH OVERVIEW\
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2025-11-26 | Initial START HERE document created |
+| 1.1 | 2025-12-07 | Updated card counts (531 behavioral v2.1), added Claude management, removed obsolete references |
 
 ---
 
@@ -318,7 +337,7 @@ C:\Users\taylo\Desktop\CMO - HEALTH OVERVIEW\
 **Key Examples:**
 - [84-Year-Old Care Plan](CMO - PERFORMANCE MEDICINE/example-care-plan-84yo-female.md)
 - [Demo Case Presentation](CMO - SMART SYSTEM/DEMO_CASE_PRESENTATION.md)
-- [Patient Intake Form Mockup](CMO - HEALTH OVERVIEW/03_MEDICAL_HISTORY/PATIENT_INTAKE_FORM_MOCKUP.md)
+- [Patient Intake Form Mockup](CMO - DATA INPUT/03_MEDICAL_HISTORY/PATIENT_INTAKE_FORM_MOCKUP.md)
 
 ---
 

@@ -1,8 +1,22 @@
 # UNIVERSAL SMART CARD TEMPLATE
 
+**Version:** 2.0
+**Updated:** 2025-12-05
+
+**Related Documents:**
+- [CARD_LIFECYCLE_AND_AI_PARAMETERS.md](CARD_LIFECYCLE_AND_AI_PARAMETERS.md) - AI bracket notation & lifecycle phases
+- [CARD_TYPE_SPECIFICATIONS.md](03_CARD_TYPE_SPECIFICATIONS.md) - 12 card type details
+- [CARD_DEPRESCRIBING_AND_AI_OVERSIGHT_SPEC.md](../../CARD_DEPRESCRIBING_AND_AI_OVERSIGHT_SPEC.md) - Exit criteria
+
+---
+
 ## Template Structure
 
-Every SMART Card follows this two-sided architecture with standardized sections.
+Every SMART Card follows this architecture with standardized sections:
+1. **Patient-Facing View** - Simple, actionable guidance (6th-8th grade reading level)
+2. **Full Clinical View** - Complete clinical details (expandable)
+3. **AI-Modifiable Parameters** - Fields with bracket `[ ]` notation for customization
+4. **Lifecycle Phases** - Initiation → Maintenance → De-loading guides
 
 ---
 
@@ -387,3 +401,309 @@ Patient-Generated Tags (Most Common):
 
 ## 💬 COMMUNITY FEEDBACK
 [To be added: Patient reviews, adherence rates, reported barriers]
+
+---
+
+## 🔧 AI-MODIFIABLE PARAMETERS
+
+> **Bracket `[ ]` Notation:** Fields that AI or clinicians can customize per patient use bracket notation with modification guidance.
+
+### **WHEN Parameters:**
+
+```yaml
+frequency: "[DEFAULT | Options: OPTION_LIST | Increase if: CRITERIA | Decrease if: CRITERIA]"
+# Example: "[Once daily | Options: Once daily → Twice daily → Three times daily | Increase if: inadequate response after 2 weeks | Decrease if: side effects, elderly]"
+
+duration: "[DEFAULT | Range: MIN-MAX UNITS | Adjust based on: FACTORS]"
+# Example: "[20 minutes | Range: 10-60 min | Adjust based on: fitness level, time availability, cardiac status]"
+
+intensity: "[DEFAULT | Tier 1: LOW | Tier 2: MED | Tier 3: HIGH | Advance if: CRITERIA]"
+# Example: "[RPE 4-5 (Moderate) | Tier 1: RPE 2-4 | Tier 2: RPE 4-6 | Tier 3: RPE 6-8 | Advance after 2 weeks sustained adherence]"
+
+timing: "[DEFAULT | Options: OPTION_LIST | Align with: PATIENT_FACTORS]"
+# Example: "[Morning | Options: Morning, Bedtime, With meals | Align with: patient schedule, optimal absorption]"
+```
+
+### **TARGET Parameters:**
+
+```yaml
+primary_goal: "[STANDARD_VALUE | Adjust for: PATIENT_FACTORS]"
+# Example: "[Systolic BP 120-130 mmHg | Adjust for: age >75 (target 140), diabetes (target 130), frailty (individualize)]"
+
+timeline: "[STANDARD_DURATION | Range: MIN-MAX | Depends on: FACTORS]"
+# Example: "[3 months | Range: 1-6 months | Depends on: baseline severity, adherence, individual response]"
+```
+
+### **FOLLOW-UP Parameters:**
+
+```yaml
+initial_check: "[TIMING | Adjust for: RISK_LEVEL]"
+# Example: "[7 days | Adjust for: high-risk patient (3 days), stable patient (14 days)]"
+
+routine_interval: "[INTERVAL | Range: MIN-MAX | Based on: STABILITY]"
+# Example: "[Monthly | Range: 2 weeks - 3 months | Based on: parameter stability, adherence pattern]"
+```
+
+### **Static Fields (NO Brackets):**
+- Mechanism of action, Evidence citations, Contraindications, Drug interactions, Critical alert thresholds, Technique instructions
+
+*See [CARD_LIFECYCLE_AND_AI_PARAMETERS.md](CARD_LIFECYCLE_AND_AI_PARAMETERS.md) for complete AI parameter specification.*
+
+---
+
+## 🚀 INITIATION GUIDE
+
+> **Phase 1: Getting Started** (Days 1-14)
+
+### **Prerequisites:**
+- [ ] [Required tests or clearances completed]
+- [ ] [Equipment or supplies obtained]
+- [ ] [Related Micro-Learning card completed for foundational knowledge]
+
+### **Getting Started:**
+
+**Day 1:**
+- Read card completely (takes ~3 minutes)
+- Gather any needed equipment/supplies
+- Complete first session today
+- Log completion in app
+
+**Days 2-7:**
+- Focus on consistency over perfection
+- Anchor to existing habit (after morning coffee, before dinner)
+- Don't worry about optimization yet
+
+**Days 8-14:**
+- Notice how you feel
+- Build routine timing
+- Celebrate consistency - you're building a habit!
+
+### **Starting Parameters (Conservative):**
+- Frequency: [Start with lower frequency, build up]
+- Duration: [Start with minimum effective dose]
+- Intensity: [Start at Tier 1 - Beginner]
+
+### **Common Early Challenges:**
+
+| Challenge | Solution |
+|-----------|----------|
+| [Forgetting] | [Set phone reminder, link to existing habit] |
+| [Too hard] | [Start with even smaller version] |
+| [No time] | [5 minutes is better than 0; schedule like appointment] |
+| [Not seeing results] | [Takes 2-4 weeks minimum; trust the process] |
+
+### **Contact Your Care Team If:**
+- [Specific concerning symptom occurs]
+- [You're unsure how to proceed]
+- [Barrier feels insurmountable]
+
+---
+
+## ⚙️ MAINTENANCE GUIDE
+
+> **Phase 2: Staying on Track** (Day 15 - Goal Achievement)
+
+### **Daily Actions:**
+1. Complete session per prescribed parameters
+2. Log completion in app
+3. Note any concerns or observations
+
+### **AI Monitoring (Automatic):**
+- Adherence tracking (target: 80%+ over rolling 14 days)
+- Dashboard parameter trends
+- Barrier pattern detection
+
+### **Adjustment Triggers:**
+
+**Ready to Increase If:**
+- Adherence >80% for 2+ weeks
+- No significant side effects or barriers
+- Feeling ready for more challenge
+- Parameters improving but not yet at goal
+
+**Consider Decreasing If:**
+- Side effects limiting tolerability
+- Life circumstances changed (stress, illness, travel)
+- Adherence dropping significantly
+
+**Hold Steady If:**
+- Currently optimized and stable
+- Recent adjustment still being evaluated
+- Life temporarily demanding more flexibility
+
+### **Progression Pathway (Tierable Cards):**
+
+```
+Tier 1 (Beginner) → 2 weeks sustained adherence → Tier 2 (Intermediate)
+Tier 2 (Intermediate) → 2 weeks sustained adherence → Tier 3 (Advanced)
+
+Regression: Step back if prolonged break, illness recovery, or significant barrier
+```
+
+### **Scheduled Reviews:**
+- **Weekly:** AI adherence check + encouragement
+- **Monthly:** Parameter effectiveness review
+- **Quarterly:** Comprehensive goal assessment
+
+### **Troubleshooting:**
+
+**If Struggling with Adherence:**
+- AI asks: "What's getting in the way?"
+- AI offers: Simpler version, different timing, alternative approach
+- Patient can request: Pause, switch, or consultation
+
+**If No Improvement Despite Good Adherence:**
+- AI reviews: Has adequate trial period occurred?
+- AI considers: Is this the right intervention?
+- AI action: Escalate or offer alternative
+
+### **Synergy Tips (Habit Stacking):**
+- Consider pairing with: [Related active cards]
+- Time-saving combo: [How to bundle actions]
+
+---
+
+## 🎯 DE-LOADING / DE-PRESCRIBING GUIDE
+
+> **Phase 3: Completing Your Journey** (When Criteria Met)
+
+### **Three Exit Pathways:**
+
+#### **🎓 PATHWAY A: GRADUATION**
+*"You achieved your goal!"*
+
+**Criteria:**
+- [ ] Goal achieved (specific metric met)
+- [ ] Behavior sustained 90 days (behavioral cards)
+- [ ] Treatment course completed (medical cards)
+- [ ] Diagnosis resolved (applicable medical cards)
+
+**Outcome:** Card moves to "Completed Successfully" with celebration badge
+
+**What Happens:**
+1. AI or patient recognizes criteria met
+2. Celebration message acknowledges achievement
+3. Card archived in "Graduated" section
+4. Optional: Next-level card recommended
+
+---
+
+#### **🔄 PATHWAY B: TRANSITION**
+*"Time for something different"*
+
+**Advance to Higher Level If:**
+- Current level too easy
+- Ready for more challenge
+- Plateaued at current level
+
+**Step Down to Simpler Version If:**
+- Current level too difficult
+- Life circumstances changed
+- Need to rebuild after break
+
+**Switch to Alternative If:**
+- Different approach preferred
+- Current method not resonating
+- Better option discovered
+
+**Outcome:** Current card replaced with new card (begins in Initiation phase)
+
+---
+
+#### **⏹️ PATHWAY C: DISCONTINUATION**
+*"This isn't right for you"*
+
+**Criteria:**
+- Adverse event or intolerable side effect
+- Ineffective after adequate trial (typically 4-12 weeks)
+- Contraindication developed
+- Informed patient decision to stop
+
+**Outcome:** Card archived with outcome note
+
+**Safety Checks:**
+- **Medical Cards:** May require clinician approval, tapering protocol
+- **Behavioral Cards:** Generally patient self-directed
+
+---
+
+### **Autonomy by Card Type:**
+
+| Card Type | Who Can Initiate Exit? |
+|-----------|------------------------|
+| **Behavioral** (Nutrition, Movement, Recovery, Mind-Body, Environmental/Social) | Patient fully self-directed |
+| **Micro-Learning** | Auto-completes upon consumption |
+| **Diagnostic Testing** | Completes when test done |
+| **Low-Risk Medical** | Patient requests, AI approves |
+| **Chronic Disease Meds** | Clinician approval required |
+| **DME** (CPAP, CGM, etc.) | Clinician approval required |
+| **Procedures** | Clinician-directed throughout |
+
+---
+
+### **Patient Self-Directed Exit Process:**
+
+**Step 1: Request to Stop/Change**
+- Tap [⏸ Request to Stop/Change] on any card
+
+**Step 2: Select Reason**
+- ☐ I achieved my goal
+- ☐ I'm experiencing side effects
+- ☐ This is too difficult for me
+- ☐ I prefer a different approach
+- ☐ I have questions
+- ☐ Other
+
+**Step 3: AI Evaluates**
+- If behavioral card: AI can often approve immediately
+- If medical card: AI may escalate to clinician
+- If safety concern: AI escalates immediately
+
+**Step 4: Resolution**
+- Graduation, transition, or discontinuation processed
+- Appropriate messaging delivered
+- Card status updated
+
+---
+
+### **De-Loading Messaging Templates:**
+
+**Graduation Message:**
+```
+🎓 Congratulations! You've successfully completed your [CARD_NAME] card!
+
+Your Achievement:
+- [Specific outcome]
+- [Metric improvement]
+
+What's Next?
+- This behavior is now a habit - keep it up!
+- [Optional next card recommendation]
+```
+
+**Transition Message:**
+```
+🔄 Time for a change!
+
+Your [CURRENT_CARD] has served its purpose. Based on your progress,
+I recommend transitioning to [NEW_CARD].
+
+Why? [Rationale]
+
+[Accept New Card] [See Other Options] [Stay with Current]
+```
+
+**Discontinuation Message:**
+```
+⏹️ Stopping [CARD_NAME]
+
+Reason: [Reason]
+
+What We Learned: [Insight about what didn't work]
+
+Alternative: [Suggestion for different approach]
+
+[Try Alternative] [Take a Break] [Talk to Care Team]
+```
+
+*See [CARD_LIFECYCLE_AND_AI_PARAMETERS.md](CARD_LIFECYCLE_AND_AI_PARAMETERS.md) for complete lifecycle specification.*
