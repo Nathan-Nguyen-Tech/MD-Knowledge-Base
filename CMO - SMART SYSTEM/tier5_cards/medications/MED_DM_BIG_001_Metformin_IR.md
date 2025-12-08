@@ -1,701 +1,547 @@
-# SMART CARD: Metformin IR (Immediate Release)
+# SMART CARD: Metformin IR
 
 **Card ID:** MED_DM_BIG_001
-**Version:** 2.0
-**Template Version:** Universal Card Template v2.0
-**Last Updated:** 2025-12-07
+**Version:** 3.0
+**Last Updated:** 2025-12-08
 
 ---
 
-## 📱 PATIENT-FACING VIEW (Front)
-*6th-8th Grade Reading Level*
+# 📱 CONDENSED VIEW
 
-### WHAT YOU'RE DOING
-Taking a pill twice a day to help control your blood sugar.
+> Essentials for everyday use.
 
-### WHY THIS MATTERS TO YOU
-"I want to be around to meet my grandkids someday. I don't want to end up like my dad."
+## WHAT YOU'RE DOING
+Taking Metformin twice daily to lower your blood sugar and protect your heart.
 
-### HOW TO DO IT
-- Take one pill with breakfast
-- Take one pill with dinner
-- **Always eat food when you take it** - this prevents upset stomach
-- Swallow whole with water
-- Keep taking it even when you feel fine
+## WHY THIS MATTERS
+**Your goal:** "I want to be around to meet my grandkids. I don't want to end up like my dad."
 
-### WHEN TO DO IT
-**Twice daily with meals** | You should see blood sugar improve in 2-4 weeks
+**Why prescribed:** First-choice diabetes medication. Lowers blood sugar, protects heart, no weight gain.
 
-### WHAT TO WATCH FOR
-🔴 **Call 911 if:** Trouble breathing, severe muscle pain, feeling very cold, slow heartbeat
-🟠 **Call your doctor if:** Stomach problems don't get better after 4 weeks, extreme tiredness
-🟡 **Normal at first:** Upset stomach, loose stools - usually gets better in 2-4 weeks
+**Evidence:** Grade A - Proven effective over 60 years, reduces diabetes complications by 32%.
 
----
+## HOW TO DO IT
+1. Take one pill **with breakfast**
+2. Take one pill **with dinner**
+3. **Always eat food** when you take it
+4. Swallow whole with water
 
-## 📋 FULL CLINICAL VIEW (Back/Expandable)
+💡 **Tip:** Keep pills next to your coffee maker or dinner plate.
 
-### WHAT
+## WHEN TO DO IT
+Twice daily with meals. Every day, ongoing.
 
-**Card Name:** Metformin IR (Immediate Release)
-**Card ID:** MED_DM_BIG_001
-**Card Type:** Medication (Tier 2) > Prescription Medications (Tier 3) > Diabetes > Biguanides (Tier 4)
+## WHAT TO WATCH FOR
 
-**Medication Details:**
-- **Generic Name:** Metformin Hydrochloride
-- **Brand Names:** Glucophage, Riomet
-- **Dose Range:** 500-2550mg daily
-- **Starting Dose:** [500mg BID | Options: 500mg daily → 500mg BID | Start lower if: GI sensitivity, elderly, eGFR 45-60]
-- **Target Dose:** [1000mg BID | Range: 1500-2000mg/day | Max: 2550mg/day if tolerated]
-- **Formulation:** Oral tablet (500mg, 850mg, 1000mg)
-- **Route:** PO (oral)
-- **Frequency:** [BID with meals | Options: Daily → BID → TID | Adjust based on: GI tolerance, glycemic control]
+🔴 **Call 911:** Trouble breathing, severe muscle pain, feeling very cold, slow heartbeat
 
----
+🟠 **Call doctor:** Stomach problems not improving after 4 weeks, extreme tiredness
 
-### WHO
+🟡 **Normal at first:** Upset stomach, loose stools (improves in 2-4 weeks)
 
-**Primary Actor:** Patient (self-administers)
+## DIFFICULTY
+⭐⭐☆☆☆ **Easy** - Twice daily pill with meals
 
-**Support Actors:**
-- MD/NP/PA (prescribes, adjusts dose, monitors)
-- Pharmacist (dispenses, counsels on interactions)
-- Family/Caregiver (meal planning support, reminders)
+## 💬 WE'LL CHECK IN WITH YOU
 
-**Target Population:** Adults with Type 2 Diabetes Mellitus
+| When | What We'll Ask |
+|------|----------------|
+| Day 3 | How's your stomach? Taking with food? |
+| Day 7 | Tolerating? Any barriers? |
+| Day 14 | Ready to increase dose? |
+| Month 1 | Adherence? Side effects? |
+| Month 3 | A1c recheck - let's see progress! |
 
-**Special Considerations:**
-
-| Population | Guidance |
-|------------|----------|
-| **Renal Impairment** | eGFR ≥45: Full dose okay. eGFR 30-45: Max 1000mg/day, monitor closely. eGFR <30: **Contraindicated** |
-| **Hepatic Impairment** | Avoid if significant liver disease (increases lactic acidosis risk) |
-| **Geriatric (>65)** | Start low (500mg daily), titrate slowly, monitor renal function q3-6 months |
-| **Pregnancy** | Category B - May continue if benefits outweigh risks; consult OB |
-| **Breastfeeding** | Compatible - minimal transfer to breast milk |
-| **Contrast Media** | **HOLD 48 hours** before and after IV iodinated contrast |
+## COMMUNITY
+⭐ 4.2/5 | 72% still taking at 6 months | 65% reached their goal
 
 ---
 
-### WHEN
+# 📋 EXPANDED VIEW
 
-- **Frequency:** [BID with meals | Options: Once daily → BID → TID | Increase if: inadequate glycemic control | Decrease if: GI intolerance, renal decline]
-- **Duration:** Ongoing (chronic therapy)
-- **Best Time:** With breakfast and dinner (food reduces GI side effects by ~50%)
-- **Missed Dose:** Take with next meal; do NOT double up
-- **Start Date:** [Immediately upon prescription]
-
-**Titration Tiers (within same card):**
-
-```
-Tier 0 (Sick Day): HOLD if dehydrated, vomiting, diarrhea, or acute illness
-  Resume when: Eating/drinking normally, no longer acutely ill
-
-Tier 1 (Conservative Start): 500mg once daily with dinner
-  Duration: 1 week
-  Advance if: Tolerating without significant GI upset
-
-Tier 2 (Standard Start): 500mg BID with meals ← TYPICAL STARTING POINT
-  Duration: 1-2 weeks
-  Advance if: Tolerating well, A1c/FBG not at goal
-
-Tier 3 (Intermediate): 1000mg AM / 500mg PM with meals
-  Duration: 1-2 weeks
-  Advance if: Tolerating well, A1c/FBG not at goal
-
-Tier 4 (Target): 1000mg BID with meals
-  Duration: Ongoing maintenance
-  Note: This is typical maximum effective dose
-
-Tier 5 (Maximum): 850mg TID or 1000mg AM/1000mg lunch/500mg PM (2550mg/day)
-  Only if: Additional glycemic control needed AND tolerating well
-```
+> Full details for clinicians, advanced users, and curious patients.
 
 ---
 
-### WHERE
+## WHO
 
-- **Setting:** Home (self-administered)
-- **Storage:** Room temperature (68-77°F), protect from moisture
-- **Access:** Any pharmacy - widely available generic
+**Patient:** Take as prescribed, report side effects, communicate barriers
 
----
+**Care Team:**
+- Prescriber: Prescribes, adjusts dose, monitors labs
+- Pharmacist: Dispenses, counsels on use
+- Nurse: Check-ins, education, troubleshooting
 
-### WHY
-
-**Clinical Goal (Performance Medicine Framework):**
-- **Primary:** Metabolic System: Improve Function (glucose regulation)
-- **Secondary:** Cardiovascular System: Reduce Risk (proven CV mortality benefit)
-
-**Patient's Personal Goal:**
-[Patient's own words - customize per individual]
-Example: "I want to be around to meet my grandkids. I don't want to end up like my dad who died of a heart attack at 68."
-
-**Connection:**
-Your A1c shows you have type 2 diabetes. Metformin is the #1 medicine we start with because it works well, is affordable, and actually helps protect your heart - not just your blood sugar. Taking this consistently is one of the best things you can do for your long-term health.
-
-**Mechanism of Action:**
-Metformin works in three ways:
-1. **Reduces hepatic glucose production** - Your liver makes less sugar
-2. **Improves insulin sensitivity** - Your muscles use insulin better
-3. **Slows intestinal glucose absorption** - Sugar from food absorbs more slowly
-
-Unlike sulfonylureas, metformin does NOT cause hypoglycemia when used alone and is weight-neutral or promotes modest weight loss.
-
-**Evidence:**
-- **Source:** ADA Standards of Care 2024; UKPDS Trial (1998); Cochrane Review (2020)
-- **Grade:** **A** (Extensive RCT evidence, 60+ years clinical experience)
-- **Summary:** First-line therapy for T2DM. Reduces A1c by 1.0-1.5%. UKPDS showed 32% reduction in diabetes-related endpoints and 36% reduction in all-cause mortality in overweight patients. Excellent long-term safety profile.
-
-**Expected Timeline (Time-to-Benefit):**
-- Blood sugar improvement: 2-4 weeks
-- Maximum A1c reduction: 3 months (full effect)
-- CV risk reduction: Develops over years of use
-
-**DISCLAIMER:**
-These timelines are based on average patient outcomes. Your individual results may vary based on adherence, your body's response, other health conditions, medications, and lifestyle factors. If you're not seeing improvement in the expected timeframe, contact your care team.
+**Support People:**
+- Family/caregiver: Reminders, watching for warning signs
 
 ---
 
-### HOW
+## WHAT
 
-**Detailed Step-by-Step Instructions:**
-
-1. Take tablet(s) with breakfast - swallow whole with water
-2. Take tablet(s) with dinner - swallow whole with water
-3. **ALWAYS take with food** - this is critical for tolerability
-4. Store at room temperature away from moisture
-5. Refill prescription before running out (don't skip doses)
-
-**If GI Side Effects Occur:**
-- Ensure you're taking WITH food (not just "after")
-- Consider temporarily stepping back one tier
-- Discuss switching to extended-release (Metformin ER) with provider
-
-**Synergy Tips (Habit Stacking):**
-- **Pair with:** Home Glucose Monitoring card - see the impact of your medication
-- **Pair with:** "Reduce Sugary Drinks" card - cutting sodas amplifies metformin's effect
-- **Pair with:** Walking card - exercise + metformin is more effective than either alone
-- **Pair with:** Lisinopril card (if prescribed) - both protect kidneys, powerful combo for diabetics
-
-**Occupation-Specific Tips:**
-- Pack enough medication for work trips
-- Keep crackers/snacks available if you take it and then can't eat
-- Set phone alarms for consistent timing
+**Medication:** Metformin Hydrochloride (Glucophage)
+**Class:** Biguanide
+**Dose:** 500mg → titrating to 1000mg twice daily
+**Form:** Oral tablet
 
 ---
 
-### MEASURE
+## WHEN
 
-**Tracking Method:**
-- **Primary:** Hemoglobin A1c (reflects 3-month average glucose)
-- **Secondary:** Fasting blood glucose (FBG) via fingerstick
+**Schedule:** Twice daily with breakfast and dinner
+**Duration:** Ongoing
+**Missed dose:** Take with next meal. Don't double up.
 
-**Frequency:**
-- A1c: [Every 3 months until stable | Then every 6 months]
-- Fasting glucose: [Daily first 2 weeks | Then 2-3x/week | Then as directed]
+### Dose Progression
 
-**Tools Needed:**
-- Blood glucose meter + test strips + lancets (for home monitoring)
-- Lab order for A1c (covered by insurance for diabetics)
+| Week | Morning | Evening |
+|------|---------|---------|
+| 1-2 | 500mg | 500mg |
+| 3-4 | 500mg | 1000mg |
+| 5+ | 1000mg | 1000mg |
 
-**Additional Monitoring:**
-- Renal function (eGFR): [Every 3-6 months initially | Annually when stable]
-- Vitamin B12: [Annually | More often if symptoms of deficiency]
+*Advance only when tolerating well.*
 
 ---
 
-### TARGET
+## WHERE
 
-**Primary Goal:**
-- A1c: [<7.0% | Adjust for: Elderly/frail (target <8.0%), hypoglycemia risk, limited life expectancy (individualize)]
-- Fasting glucose: [80-130 mg/dL | Adjust for: Age, hypoglycemia history]
-
-**Timeline:** [3-6 months to goal | Range: 3-12 months | Depends on: Baseline A1c, adherence, lifestyle changes]
-
-**Success Criteria:**
-- ✅ A1c at individualized target
-- ✅ Fasting glucose consistently in target range
-- ✅ No hypoglycemia (metformin alone rarely causes this)
-- ✅ GI side effects manageable or resolved
-- ✅ No signs of B12 deficiency
-- ✅ Stable renal function
+**Setting:** Home, with meals
+**Storage:** Room temperature, away from moisture
 
 ---
 
-### SAFETY
+## WHY
 
-**🟡 YELLOW - Common Side Effects (Monitor, usually improve):**
-- GI upset, nausea (30-50%) - **improves over 2-4 weeks**
-- Diarrhea (10-30%) - **take with food to minimize**
-- Metallic taste (3-5%)
-- Gas, bloating
+**Mechanism:**
+1. Reduces liver glucose production
+2. Improves muscle insulin sensitivity
+3. Slows intestinal glucose absorption
 
-**Tip:** GI side effects are VERY common initially but almost always improve. Take with food, start low, go slow.
+**Benefits:** No hypoglycemia risk (monotherapy). Weight neutral or slight loss. Cardiovascular protection.
 
-**🟠 ORANGE - Contact Care Team If:**
-- GI symptoms don't improve after 4 weeks despite taking with food
-- Severe stomach pain
-- Extreme tiredness out of proportion to activity
-- Getting imaging with IV contrast (HOLD metformin - call for instructions)
-- Signs of B12 deficiency (numbness/tingling in hands/feet, fatigue, weakness)
-- eGFR declining on labs
+---
 
-**🔴 RED - Emergency - Call 911 (Lactic Acidosis - Very Rare):**
+## HOW
+
+### Instructions
+1. Take with first bite of food (not before eating)
+2. Swallow whole with water
+3. Same times daily for consistency
+
+### If Stomach Upset
+- Eat more food with it
+- Avoid greasy foods initially
+- Usually resolves by week 3-4
+- Extended-release option if persistent
+
+---
+
+## MEASURE
+
+| Test | Frequency | Purpose |
+|------|-----------|---------|
+| A1c | q3mo → q6mo when stable | 3-month glucose average |
+| eGFR | q3-6mo initially | Kidney safety |
+| B12 | Annually | Metformin lowers B12 |
+
+**What you may notice:** More energy, fewer cravings, possible weight loss
+
+---
+
+## TARGET
+
+**A1c goal:** Below 7.0%
+**Timeline:** 3-6 months
+
+**Expected results:**
+- Glucose improving: 2-4 weeks
+- Full A1c effect: 3 months
+- Typical A1c reduction: 1.0-1.5%
+
+---
+
+## SAFETY
+
+### Common Side Effects (Temporary)
+- Stomach upset, nausea (30-50%)
+- Diarrhea
+- Metallic taste
+
+### Contact Care Team If:
+- GI symptoms persist >4 weeks
+- Unusual tiredness
+- Numbness/tingling extremities
+- Scheduled for contrast imaging
+
+### Emergency (Call 911):
 - Trouble breathing
-- Severe muscle pain or cramping
-- Unusual sleepiness or extreme weakness
-- Feeling very cold
-- Dizziness, lightheadedness
-- Slow or irregular heartbeat
-- Severe stomach pain with nausea/vomiting
+- Severe muscle pain
+- Feeling very cold + slow heartbeat
+- Severe stomach pain + vomiting
 
-**Note:** Lactic acidosis is extremely rare (~1 in 30,000 patient-years) but serious. Risk increases with kidney failure, liver disease, severe dehydration, excessive alcohol, or acute illness.
+### Hold If:
+- Severely dehydrated or acutely ill
+- IV contrast (48h before/after)
 
-**Contraindications:**
-- **Absolute:** eGFR <30, acute/unstable heart failure, hepatic failure, metabolic acidosis, active alcohol abuse
-- **Relative:** eGFR 30-45 (reduce dose), upcoming surgery (hold), heavy alcohol use
-
-**Drug Interactions:**
-| Interacting Drug | Effect | Action |
-|------------------|--------|--------|
-| IV Contrast | Increased lactic acidosis risk | Hold 48h before/after |
-| Alcohol (excessive) | Increased lactic acidosis risk | Limit to 1-2 drinks/day |
-| NSAIDs (chronic) | May reduce renal function | Monitor eGFR, avoid if possible |
-| Carbonic anhydrase inhibitors | Increased acidosis risk | Monitor |
-| Cationic drugs (cimetidine, etc.) | Compete for tubular secretion | Monitor |
+### Interactions:
+| Substance | Action |
+|-----------|--------|
+| Alcohol | Limit 1-2 drinks |
+| NSAIDs | Use sparingly |
+| IV contrast | Hold 48h |
 
 ---
 
-### FOLLOW-UP
+## FOLLOW-UP
 
-**Review Timeline:**
-- **When:** [Week 1 phone check → Week 2-4 titration → Month 3 A1c recheck]
-- **What:** GI tolerance, adherence, glucose logs, A1c
-- **Who:** MD/NP/PA for titration; RN/PharmD for tolerance checks
-- **Where:** Phone/telehealth for early checks; lab for A1c
+### Phase 1: Initiation (Days 1-14)
+| Day | Method | Focus |
+|-----|--------|-------|
+| 3 | App/text | GI tolerance |
+| 7 | App/phone | Barriers |
+| 14 | App/phone | Dose advancement |
 
-**Monitoring Schedule:**
-- **Week 1:** Phone check-in on GI tolerance
-- **Week 2:** If tolerating, advance to next tier
-- **Week 4:** Office/telehealth visit, review glucose logs
-- **Month 3:** A1c recheck, comprehensive assessment
-- **Ongoing:** A1c every 3-6 months, annual B12, renal function q3-12 months
+### Phase 2: Titration (Weeks 3-12)
+| When | Method | Focus |
+|------|--------|-------|
+| Week 4 | Phone/visit | Dose increase |
+| Week 8 | App | Adherence |
+| Month 3 | Lab + visit | A1c recheck |
 
-**Action Based on Results:**
+### Phase 3: Maintenance (Month 4+)
+| When | Method | Focus |
+|------|--------|-------|
+| Monthly | App | Quick check |
+| q3-6mo | Lab + visit | A1c, eGFR |
+| Yearly | Comprehensive | B12, full review |
 
-| Result | Action |
-|--------|--------|
-| A1c at goal, tolerating well | Continue current therapy, maintain lifestyle |
-| A1c still elevated despite max dose | Add second agent (consider GLP-1 or SGLT2) |
-| A1c at goal but GI intolerable | Switch to Metformin ER (extended-release) |
-| eGFR declining | Reassess dose; if <30, discontinue |
-| B12 low | Supplement with B12 1000mcg daily |
-
----
-
-### NOTES
-
-**Evidence:**
-- Source: ADA Standards of Medical Care in Diabetes 2024; UKPDS 34 (Lancet 1998)
-- Grade: **A**
-- Summary: Gold standard first-line therapy. Proven efficacy, safety, CV benefit, and affordability over 60+ years.
-
-**Feasibility/Actionability Score:** [75% | Range: 60-90% | Depends on: GI tolerance, twice-daily adherence]
-
-Base Score: 100%
-
-**Deductions:**
-- GI side effects common initially: -15%
-- Twice daily dosing (vs once daily): -5%
-- Requires glucose monitoring: -5%
-
-**Additions:**
-- Very affordable ($4-10/month): +10%
-- Weight neutral/slight loss: +5%
-- No hypoglycemia risk alone: +5%
-- 60+ year safety track record: +5%
-
-**Patient Confidence Score:** [Assess at visit: 0-10 scale]
-
-**Barriers Checklist:**
-- [ ] GI side effects - Counsel on temporary nature, take with food, consider ER formulation
-- [ ] Twice daily dosing - Anchor to meals, use pill organizer, set alarms
-- [ ] Cost concerns - $4 generic programs at major pharmacies
-- [ ] Needle fear (for glucose monitoring) - Demonstrate proper technique, consider CGM
-
-**Access Information:**
-- **Cost:** $ ($4-10/month generic at most pharmacies)
-- **Insurance:** Covered - typically Tier 1 (lowest copay)
-- **Where to Get:** Any pharmacy; $4 generic programs at Walmart, Costco, etc.
-- **Alternative:** Metformin ER (extended-release) if GI intolerant - slightly more expensive
+### Decision Tree:
+| Situation | Action |
+|-----------|--------|
+| A1c at goal | Continue, extend intervals |
+| A1c elevated after 3mo max dose | Add second agent |
+| Persistent GI | Switch to ER formulation |
+| eGFR declining | Adjust dose or discontinue |
 
 ---
 
-## 🏷️ METADATA
+## IF YOU'RE STRUGGLING
 
-**Tags:** #Diabetes #Metabolic #FirstLine #Biguanide #T2DM #ChronicManagement #ADA_GradeA #Affordable #WeightNeutral #CardioProtective
+**Missed days?** Restart with next meal. No doubling.
 
-**Evidence Grade:** A
+**Missed week+?** Restart at current dose. Notify at next check-in.
 
-**Feasibility Score:** 75%
+### Barriers & Solutions
 
-**Version:** 2.0
-
-**Last Updated:** 2025-12-07
-
-**Next Review:** 2026-06-07
-
-**Related Cards:**
-- MED_DM_BIG_002 (Metformin ER) - if GI intolerant
-- MED_DM_SGLT2_001 (Empagliflozin) - common add-on
-- MED_DM_GLP1_001 (Semaglutide) - common add-on
-- DIAG_LAB_001 (A1c Monitoring)
-- BEHAV_NUT_xxx (Reduce Sugary Drinks)
-- BEHAV_MOV_xxx (Walking Program)
+| Barrier | Solution |
+|---------|----------|
+| Forgetting | Pill organizer, alarm, anchor to meals |
+| GI issues | More food, wait 3-4 weeks, try ER |
+| No perceived effect | Works silently - A1c shows it |
+| Travel | Take with any meal; timing flexible |
 
 ---
 
-## 🔧 AI-MODIFIABLE PARAMETERS
+## YOUR PROGRESS
 
-> **Bracket `[ ]` Notation:** These fields can be customized by AI or clinicians per patient.
+**Baseline:** A1c: _____ | Date started: _____
 
-### WHEN Parameters:
+**Milestones:**
+- [ ] First week completed
+- [ ] Target dose reached
+- [ ] First A1c recheck
+- [ ] A1c at goal
+
+---
+
+## EVIDENCE
+
+### Summary
+Metformin is the most extensively studied diabetes medication with over 60 years of clinical use. Multiple large trials and every major diabetes guideline recommend it as first-line therapy. It reliably lowers blood sugar and uniquely among diabetes drugs, has proven cardiovascular benefits.
+
+### Grade: A
+
+### Grading Criteria Met
+- [x] Supported by multiple systematic reviews/meta-analyses
+- [x] Multiple large, well-designed RCTs with consistent results
+- [x] Endorsed by all major guideline bodies (ADA, EASD, AACE)
+- [x] Extensive real-world effectiveness data
+- [x] Benefits clearly outweigh risks
+
+### Primary Sources
+
+#### Guideline: ADA Standards of Care in Diabetes
+- **Organization:** American Diabetes Association
+- **Year:** 2024
+- **Recommendation:** "Metformin is the preferred initial pharmacologic agent for type 2 diabetes"
+- **Strength:** Strong (Level A)
+- **Link:** diabetesjournals.org/care
+
+#### Guideline: ADA/EASD Consensus Report
+- **Organization:** American Diabetes Association / European Association for the Study of Diabetes
+- **Year:** 2022
+- **Recommendation:** "Metformin remains first-line therapy for most patients with T2DM"
+- **Strength:** Strong consensus
+
+#### Trial: UKPDS 34 (UK Prospective Diabetes Study)
+- **Citation:** UK Prospective Diabetes Study Group. Lancet. 1998;352(9131):854-865
+- **Design:** Randomized controlled trial
+- **Population:** Newly diagnosed T2DM, overweight patients
+- **N:** 1,704
+- **Follow-up:** Median 10.7 years
+- **Key Findings:**
+  - 32% reduction in diabetes-related endpoints (p=0.002)
+  - 42% reduction in diabetes-related death (p=0.017)
+  - 36% reduction in all-cause mortality (p=0.011)
+- **NNT:** 14 (to prevent one diabetes-related endpoint over 10 years)
+- **Limitations:** Overweight subgroup only; open-label design
+
+#### Meta-Analysis: Cochrane Review
+- **Citation:** Hirst JA, et al. Cochrane Database Syst Rev. 2012
+- **Design:** Systematic review of 35 RCTs
+- **Key Finding:** Metformin reduces HbA1c by ~1.0-1.5% vs placebo
+
+### Supporting Evidence
+
+**A1c Reduction:** Consistent 1.0-1.5% reduction across trials, effect maintained long-term
+
+**Cardiovascular Outcomes:** UKPDS showed CV mortality benefit maintained at 10-year follow-up; HOME trial showed reduced macrovascular events
+
+**Weight Effects:** Weight neutral to modest loss (-1-2 kg); does not cause hypoglycemia as monotherapy
+
+**Safety Profile:** 60+ years post-marketing experience; lactic acidosis extremely rare (4.3 per 100,000 patient-years)
+
+### Evidence Gaps
+- Limited RCT data in patients with eGFR 30-45
+- No large RCTs comparing to newer agents as first-line
+- Optimal dosing for CV benefit not established
+
+### Last Evidence Review
+December 2024
+
+---
+
+## NOTES
+
+### Feasibility Score (Clinician Reference): 75/100
+- Base: 100
+- Deductions: GI effects (-15), BID dosing (-5), monitoring (-5)
+- Boosters: Affordable (+10), no hypoglycemia (+5), weight neutral (+5)
+
+### Patient Confidence Assessment
+Ask: "On a scale of 0-10, how confident are you that you can take this medication twice daily with meals?"
+- 8-10: Ready to start
+- 5-7: Explore barriers
+- 0-4: Address concerns first
+
+### Version History
+- v3.0 (2025-12-08): Restructured for patient/clinician clarity; robust EVIDENCE section
+- v2.5 (2025-12-07): Added AI agent specifications
+- v1.0 (2024-11-23): Initial card
+
+---
+
+# 🔧 AI METADATA
+
+<!--
+Hidden from user interface.
+Parsed by AI agents for decision-making.
+Clinician override via interface dropdown.
+-->
 
 ```yaml
-starting_dose: "[500mg BID | Options: 500mg daily → 500mg BID | Start lower if: GI sensitivity, elderly (>65), eGFR 45-60]"
+# === IDENTIFIERS ===
+card_id: MED_DM_BIG_001
+generic: Metformin Hydrochloride
+brand: Glucophage
+class: Biguanide
+path: Medical > Medications > Diabetes > Biguanides
 
-frequency: "[BID with meals | Options: Daily → BID → TID | Increase if: inadequate glycemic control after 2-4 weeks | Decrease if: GI intolerance]"
+# === AUTONOMY ===
+autonomy:
+  tier: 4  # Clinician-directed
+  responsible_agent: AI_Pharmacist
+  specialist_consult: AI_Endocrinologist
+  approval_type: individual
+  patient_can_initiate: false
+  patient_can_adjust: false
+  patient_can_pause: true  # AI alerts clinician
+  patient_can_discontinue: false  # Requires approval
 
-titration_speed: "[Advance every 1-2 weeks | Options: Weekly → Biweekly → Monthly | Slower if: GI sensitive, elderly, cautious patient]"
+# === TAGS ===
+tags:
+  clinical: [diabetes, T2DM, metabolic, first_line]
+  evidence: [grade_A, guideline_recommended, RCT_supported]
+  properties: [oral, BID, titratable, chronic]
+  systems: [metabolic, cardiovascular]
+
+# === RELATED CARDS ===
+related:
+  alternative: MED_DM_BIG_002  # Metformin ER - if GI intolerant
+  add_on:
+    - MED_DM_SGLT2_001  # Empagliflozin - if CV/renal benefit needed
+    - MED_DM_GLP1_001   # Semaglutide - if weight loss priority
+  synergy:
+    - DIAG_LAB_A1C      # A1c monitoring
+    - BEHAV_NUT_xxx     # Nutrition cards
+    - BEHAV_MOV_xxx     # Movement cards
+  prerequisite: none
+  leads_to: [SGLT2i, GLP1]  # If inadequate response
+
+# === DOSING ===
+dosing:
+  forms: [500mg, 850mg, 1000mg]
+  route: PO
+  frequency: BID
+  with_food: required
+  start: 500mg BID
+  target: 1000mg BID
+  max: 2550mg/day
+  titration:
+    interval: 1-2 weeks
+    increment: 500mg
+
+# === CONTRAINDICATIONS ===
+contraindications:
+  - eGFR < 30
+  - lactic_acidosis_history
+  - acute_decompensated_HF
+  - severe_hepatic_impairment
+
+# === ADJUSTMENTS ===
+adjustments:
+  renal:
+    - condition: eGFR 30-45
+      action: max 1000mg/day, monitor q3mo
+    - condition: eGFR 45-60
+      action: full dose, monitor q3mo
+  age:
+    - condition: age > 75
+      action: start 500mg daily, slow titration
+  GI_history:
+    - condition: prior_intolerance
+      action: start 500mg daily, consider ER
+
+# === HOLD CONDITIONS ===
+hold:
+  - condition: IV_contrast
+    action: hold 48h before and after
+    auto_resume: yes, if eGFR stable
+  - condition: acute_illness_dehydration
+    action: hold until resolved
+  - condition: surgery_NPO
+    action: hold day of procedure
+
+# === INTERACTIONS ===
+interactions:
+  - drug: alcohol
+    severity: moderate
+    action: counsel limit 1-2 drinks
+  - drug: NSAIDs_chronic
+    severity: moderate
+    action: monitor eGFR
+  - drug: contrast_IV
+    severity: high
+    action: hold protocol
+
+# === MONITORING ===
+monitoring:
+  A1c: {initial: q3mo, stable: q6mo}
+  eGFR: {initial: q3mo, stable: annually}
+  B12: annually
+
+# === ALERTS ===
+alerts:
+  efficacy:
+    - condition: A1c drop < 0.5% after 3mo max dose
+      action: recommend add second agent
+      urgency: routine
+  safety:
+    - condition: eGFR decline > 25%
+      action: flag for clinician review
+      urgency: urgent
+    - condition: eGFR < 30
+      action: discontinue, alert clinician
+      urgency: urgent
+  tolerability:
+    - condition: GI symptoms > 4 weeks
+      action: recommend switch to ER
+      urgency: routine
+  adherence:
+    - condition: missed 3+ consecutive
+      action: barrier assessment
+      urgency: routine
+    - condition: adherence < 50% over 14 days
+      action: escalate to care team
+      urgency: soon
+
+# === PROACTIVE CHECK-INS ===
+checkins:
+  initiation:
+    - day: 3
+      questions: [gi_tolerance, taking_with_food]
+      escalate_if: severe_gi
+    - day: 7
+      questions: [tolerating, barriers]
+      escalate_if: persistent_gi, non_adherence
+    - day: 14
+      questions: [ready_to_advance]
+      action_if_ready: advance_dose
+  titration:
+    - week: 4
+      focus: dose_advancement
+    - week: 8
+      focus: adherence_check
+  maintenance:
+    - interval: monthly
+      focus: adherence_symptoms
+    - interval: quarterly
+      focus: a1c_egfr_comprehensive
+
+# === LIFECYCLE ===
+lifecycle:
+  initiation:
+    duration: days 1-14
+    focus: tolerability
+    success: tolerating BID, no severe GI
+  maintenance:
+    adherence_target: 80%
+    review: monthly app, quarterly visit
+  de_loading:
+    graduation:
+      criteria: A1c < 5.7% sustained 6mo + lifestyle
+      action: supervised taper
+      rare: true
+    transition_gi:
+      criteria: GI intolerable > 4 weeks
+      action: switch to MED_DM_BIG_002
+    transition_efficacy:
+      criteria: A1c not at goal after 3mo max dose
+      action: add SGLT2i or GLP-1
+    discontinue:
+      criteria: [eGFR < 30, lactic_acidosis, patient_refusal]
+      action: stop, document, alternative
+
+# === EVIDENCE (AI Reference) ===
+evidence:
+  grade: A
+  last_reviewed: 2024-12
+  primary_guideline: ADA_Standards_2024
+  key_trials: [UKPDS_34, HOME]
+  meta_analyses: [Cochrane_2012]
+  evidence_gaps: [eGFR_30-45_RCT, first_line_vs_newer_agents]
+
+# === FEASIBILITY ===
+feasibility:
+  score: 75
+  difficulty: easy  # Patient-facing
+  deductions: {GI_effects: -15, BID_dosing: -5, monitoring: -5}
+  boosters: {affordable: +10, no_hypoglycemia: +5, weight_neutral: +5}
 ```
-
-### TARGET Parameters:
-
-```yaml
-a1c_goal: "[<7.0% | Adjust for: Age >75 or frail (<8.0%), limited life expectancy (individualize), history of severe hypoglycemia (<8.0%)]"
-
-fasting_glucose_goal: "[80-130 mg/dL | Adjust for: Elderly (90-150), hypoglycemia-prone (100-140)]"
-
-timeline_to_goal: "[3-6 months | Range: 3-12 months | Depends on: Baseline A1c, adherence, concurrent lifestyle changes]"
-```
-
-### FOLLOW-UP Parameters:
-
-```yaml
-initial_check: "[1 week | Adjust for: GI-sensitive or anxious patient (3-5 days), stable/experienced patient (2 weeks)]"
-
-a1c_frequency: "[Every 3 months until stable | Then every 6 months | More frequent if: A1c >9%, recent medication change]"
-
-renal_monitoring: "[Every 3-6 months initially | Annually when stable | More frequent if: eGFR 30-60, on nephrotoxic drugs]"
-```
-
-### STATIC FIELDS (No AI Modification):
-
-- Mechanism of action
-- Contraindications (eGFR <30, etc.)
-- Drug interactions
-- Lactic acidosis warning signs
-- Evidence citations
-
----
-
-## 🚀 INITIATION GUIDE
-
-> **Phase 1: Getting Started** (Days 1-14)
-
-### Prerequisites:
-- [ ] Diagnosis of Type 2 Diabetes confirmed
-- [ ] Baseline labs: A1c, eGFR/Cr, LFTs
-- [ ] eGFR ≥30 (≥45 preferred for full dosing)
-- [ ] No active contraindications
-- [ ] Glucose meter and supplies obtained (if home monitoring planned)
-
-### Getting Started:
-
-**Day 1:**
-- Fill prescription at pharmacy
-- Read this card completely (~5 minutes)
-- Take first dose WITH dinner (food is critical!)
-- Log in app that you started
-
-**Days 2-7:**
-- Take medication with breakfast AND dinner
-- Always eat when you take it
-- Expect some stomach upset - this is normal and usually temporary
-- Keep crackers nearby in case of nausea
-- Log any side effects in app
-
-**Days 8-14:**
-- Side effects should be improving
-- If tolerating well, provider may increase dose
-- Start checking fasting glucose if instructed
-- Building the habit - consistency matters more than perfection
-
-### Starting Parameters (Conservative):
-- **Dose:** 500mg with dinner only (if GI-sensitive) OR 500mg BID (standard)
-- **Timing:** With meals - non-negotiable for tolerability
-- **Monitoring:** Daily fasting glucose if home monitoring planned
-
-### Common Early Challenges:
-
-| Challenge | Solution |
-|-----------|----------|
-| Upset stomach/nausea | Take WITH food (not after), eat slowly, smaller meals |
-| Diarrhea | Usually improves by week 2-4; ensure taking with food |
-| Metallic taste | Temporary; try sugar-free mints |
-| Forgetting doses | Set phone alarms, use pill organizer, anchor to meals |
-| "It's not working" | Takes 2-4 weeks for glucose effect, 3 months for full A1c impact |
-
-### Contact Your Care Team If:
-- Severe stomach pain or vomiting
-- Diarrhea that doesn't improve after 2 weeks
-- Signs of lactic acidosis (see RED warnings above)
-- You're unsure about anything
-
----
-
-## ⚙️ MAINTENANCE GUIDE
-
-> **Phase 2: Staying on Track** (Day 15 - Goal Achievement)
-
-### Daily Actions:
-1. Take metformin with breakfast and dinner
-2. Log adherence in app (takes 10 seconds)
-3. Check fasting glucose per schedule (if monitoring)
-4. Note any concerns or side effects
-
-### AI Monitoring (Automatic):
-- **Adherence tracking:** Target 80%+ over rolling 14 days
-- **Glucose trend analysis:** Flagging if values consistently out of range
-- **Refill reminders:** Alert when prescription running low
-- **Lab due reminders:** A1c, renal function per schedule
-
-### Adjustment Triggers:
-
-**Ready to Increase Dose If:**
-- Adherence >80% for 2+ weeks
-- GI side effects resolved or minimal
-- A1c or fasting glucose still above goal
-- Current dose is below target (1000mg BID)
-
-**Consider Decreasing If:**
-- GI side effects limiting tolerability despite strategies
-- eGFR declining (30-45 range: max 1000mg/day)
-- Hypoglycemia occurring (rare with metformin alone; check for other causes)
-
-**Hold Metformin If:**
-- Acute illness with dehydration, vomiting, or diarrhea
-- Scheduled for IV contrast imaging
-- Upcoming surgery
-- Resume when: Eating normally, well-hydrated, 48h post-contrast
-
-**Add Second Agent If:**
-- A1c still >goal after 3 months on max tolerated metformin dose
-- Common additions: SGLT2 inhibitor (Jardiance, Farxiga) or GLP-1 (Ozempic, Trulicity)
-
-### Scheduled Reviews:
-- **Weekly (first month):** App check-in on adherence/tolerance
-- **Monthly:** Brief provider touchpoint
-- **Quarterly:** A1c recheck, comprehensive review
-- **Annually:** Full diabetes assessment, B12 level, eye exam, foot exam
-
-### Troubleshooting:
-
-**If Struggling with Adherence:**
-- AI asks: "What's getting in the way?"
-- Options: Simplify to once daily ER formulation, adjust timing, address barriers
-- Patient can request: Consultation, medication change
-
-**If GI Side Effects Persist >4 Weeks:**
-- Switch to Metformin ER (extended-release) - much better GI tolerance
-- Or reduce dose and re-titrate more slowly
-
-**If A1c Not Improving Despite Good Adherence:**
-- Verify timing (with meals?)
-- Consider adding second agent
-- Review diet/lifestyle factors
-
----
-
-## 🎯 DE-LOADING / DE-PRESCRIBING GUIDE
-
-> **Phase 3: Completing Your Journey** (When Criteria Met)
-
-### Three Exit Pathways:
-
-#### 🎓 PATHWAY A: GRADUATION (Rare for Metformin)
-*"Your diabetes has resolved"*
-
-**Criteria (all must be met):**
-- [ ] A1c <5.7% (non-diabetic range) for 6+ months
-- [ ] Significant lifestyle changes sustained (weight loss, diet, exercise)
-- [ ] No other diabetes medications
-- [ ] Provider assessment confirms remission
-
-**Process:**
-1. Gradual taper over 1-3 months (not abrupt stop)
-2. Increased glucose monitoring during taper
-3. A1c recheck 3 months after stopping
-4. If A1c rises >6.5%, restart metformin
-
-**Outcome:** Card moves to "Completed - Diabetes Remission" 🎉
-
-**Note:** True diabetes remission is uncommon but possible, especially with significant weight loss (bariatric surgery, intensive lifestyle intervention).
-
----
-
-#### 🔄 PATHWAY B: TRANSITION
-*"Switching to a different approach"*
-
-**Switch to Metformin ER If:**
-- GI side effects intolerable on IR formulation
-- Patient prefers once-daily dosing
-- Action: Discontinue IR, start ER at equivalent total daily dose
-
-**Add Second Agent If:**
-- A1c not at goal on max metformin
-- CV or renal benefit desired (SGLT2i, GLP-1)
-- Action: Keep metformin, add new card
-
-**Replace Metformin If:**
-- Contraindication develops (eGFR <30, etc.)
-- Intolerable despite ER formulation
-- Action: Discontinue metformin, start alternative (e.g., SGLT2i monotherapy)
-
-**Outcome:** Current card replaced/supplemented; new card begins Initiation phase
-
----
-
-#### ⏹️ PATHWAY C: DISCONTINUATION
-*"This medication must stop"*
-
-**Criteria:**
-- eGFR drops below 30 (absolute contraindication)
-- Lactic acidosis event
-- Severe, intolerable adverse effects despite interventions
-- Patient informed refusal (document discussion)
-
-**Process:**
-1. Can stop immediately (no taper required for metformin)
-2. Discuss alternative diabetes management
-3. Increase monitoring during transition
-4. Document reason for discontinuation
-
-**Outcome:** Card archived with outcome note; alternative therapy initiated
-
----
-
-### Autonomy Level:
-
-| Action | Who Decides? |
-|--------|--------------|
-| Temporary hold (sick day, contrast) | Patient self-directed with education |
-| Dose adjustment within prescribed range | Patient + AI guidance, provider notified |
-| Switching IR → ER | Provider approval (same medication, different form) |
-| Adding second agent | Provider required |
-| Discontinuing for intolerance | Provider approval recommended |
-| Discontinuing for contraindication | Provider required |
-| Stopping for "remission" | Provider required + close monitoring |
-
----
-
-### De-Prescribing Messaging Templates:
-
-**Remission Message (Rare):**
-```
-🎓 Amazing news! Your diabetes appears to be in remission!
-
-Your A1c has been in the non-diabetic range for 6 months.
-Your lifestyle changes are working.
-
-Next Steps:
-- We'll slowly taper your metformin over the next 1-3 months
-- Continue your healthy habits - they're the reason this is possible
-- Monitor glucose more closely during the taper
-- Recheck A1c in 3 months after stopping
-
-[Accept Taper Plan] [I Have Questions] [Keep Taking Metformin]
-```
-
-**Transition to ER Message:**
-```
-🔄 Let's try a gentler version!
-
-Your stomach hasn't adjusted to regular metformin, and that's okay.
-Metformin ER (extended-release) works the same way but is much easier on digestion.
-
-Changes:
-- Stopping: Metformin IR 500mg twice daily
-- Starting: Metformin ER 1000mg once daily with dinner
-
-[Accept Switch] [I Have Questions]
-```
-
-**Discontinuation Message:**
-```
-⏹️ We need to stop your metformin
-
-Reason: [eGFR has dropped below safe level / Other reason]
-
-What This Means:
-- Metformin is no longer safe for your kidneys
-- We have other good options to manage your diabetes
-
-Next Steps:
-- Stop taking metformin today
-- Start [NEW MEDICATION] - details in your new card
-- Your care team will monitor you closely
-
-[View New Medication Card] [Talk to Care Team]
-```
-
----
-
-## 📊 BARRIERS CHECKLIST (Interactive)
-
-**Physical Barriers:**
-- [ ] Difficulty swallowing pills → Consider liquid formulation (Riomet)
-- [ ] GI conditions (IBS, gastroparesis) → Start very low, titrate slowly, consider ER
-
-**Cognitive/Psychological Barriers:**
-- [ ] Forgetfulness → Pill organizer, phone alarms, anchor to meals
-- [ ] Fear of side effects → Educate on temporary nature, start conservatively
-- [ ] "I don't feel sick" → Explain silent damage of high glucose
-
-**Financial Barriers:**
-- [ ] Cost concerns → $4 generics at Walmart, Costco, many pharmacies
-- [ ] No insurance → Still affordable OOP; patient assistance programs available
-
-**Logistical Barriers:**
-- [ ] Irregular meal schedule → Take with ANY food, even a snack; consider ER for once-daily
-- [ ] Travel frequently → Pack extra supply, maintain routine across time zones
-
----
-
-## 💬 COMMUNITY FEEDBACK
-
-⭐ **Average Rating:** 4.2/5 (based on community data)
-
-**Adherence Rate:** 72% (patients taking >80% of doses at 6 months)
-
-**Target Achievement:** 65% (patients reaching A1c goal within 6 months)
-
-**Common Patient Comments:**
-- "The stomach issues were rough at first but got better after 3 weeks" - Maria, 54
-- "Taking it with food makes a huge difference" - James, 61
-- "Can't beat the price - $4 at Walmart" - Linda, 58
-- "Switched to the extended-release and no more bathroom issues" - Robert, 49
-
-**Patient-Generated Tags:**
-#Affordable (892) #StomachIssuesAtFirst (567) #TakeWithFood (445) #WorkedForMe (334) #SwitchedToER (201)
 
 ---
 
 **END OF CARD**
 
----
-
-*This card follows Universal Card Template v2.0*
-*See: 02_UNIVERSAL_CARD_TEMPLATE.md for template specification*
-*See: CARD_LIFECYCLE_AND_AI_PARAMETERS.md for AI parameter details*
+*Template: Universal Card Template v3.0*
