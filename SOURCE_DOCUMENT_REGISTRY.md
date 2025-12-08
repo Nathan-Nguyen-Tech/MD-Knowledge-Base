@@ -1,7 +1,7 @@
 # SOURCE DOCUMENT REGISTRY & VERIFICATION PROTOCOL
-**Version:** 1.4
-**Date:** 2025-12-07
-**Updated:** All links verified after folder restructuring (CMO - HEALTH OVERVIEW → CMO - DATA INPUT)
+**Version:** 1.5
+**Date:** 2025-12-08
+**Updated:** Added AUTONOMY_AND_AI_AGENT_SPECIFICATION.md and EVIDENCE_SECTION_SPECIFICATION.md
 **Purpose:** Prevent information loss by maintaining canonical source documents for every critical specification
 
 ---
@@ -85,7 +85,8 @@
 | **Card Generation Specification** | [CARD_GENERATION_SPECIFICATION.md](CMO - SMART SYSTEM/docs/core/CARD_GENERATION_SPECIFICATION.md) | 1.0 | **DETERMINISTIC GENERATION** - Seed inputs, canonical sources, phrase libraries, validation rules |
 | **DME + Monitoring Workflow** | [DME_MONITORING_WORKFLOW_PATTERN.md](CMO - SMART SYSTEM/docs/core/DME_MONITORING_WORKFLOW_PATTERN.md) | 1.0 | **TWO-STEP PATTERN** - DME acquisition + ongoing monitoring as separate cards |
 | **Library Hierarchy** | [LIBRARY_TIER_STRUCTURE.md](CMO - SMART SYSTEM/LIBRARY_TIER_STRUCTURE.md) | Latest | Tier 1-5 organization |
-| **Evidence Grading** | [CARD_TYPE_SPECIFICATIONS.md](CMO - SMART SYSTEM/docs/core/03_CARD_TYPE_SPECIFICATIONS.md) | 2.0 | A/B/C evidence grades |
+| **Evidence Grading** | [EVIDENCE_SECTION_SPECIFICATION.md](CMO - SMART SYSTEM/docs/core/EVIDENCE_SECTION_SPECIFICATION.md) | 1.0 | A/B/C evidence grades, required sources, trust elements |
+| **Autonomy Tiers & AI Agents** | [AUTONOMY_AND_AI_AGENT_SPECIFICATION.md](CMO - SMART SYSTEM/docs/core/AUTONOMY_AND_AI_AGENT_SPECIFICATION.md) | 1.0 | 4-tier autonomy, AI agent ecosystem, legal sign-off workflows |
 
 ---
 
@@ -252,6 +253,9 @@ Card Lifecycle Phases            → CARD_LIFECYCLE_AND_AI_PARAMETERS.md (NEW!)
   • De-loading/De-prescribing
 AI-Modifiable Parameters [ ]     → CARD_LIFECYCLE_AND_AI_PARAMETERS.md (NEW!)
 De-prescribing Criteria          → CARD_DEPRESCRIBING_AND_AI_OVERSIGHT_SPEC.md
+Autonomy Tiers (4 tiers)         → AUTONOMY_AND_AI_AGENT_SPECIFICATION.md (NEW!)
+AI Agent Ecosystem               → AUTONOMY_AND_AI_AGENT_SPECIFICATION.md (NEW!)
+Evidence Grading & Sources       → EVIDENCE_SECTION_SPECIFICATION.md (NEW!)
 Card Generation/Mass Production  → CARD_GENERATION_SPECIFICATION.md
 DME + Home Monitoring Workflow   → DME_MONITORING_WORKFLOW_PATTERN.md
 Behavioral Card Libraries        → TIER5_*_v2.md files (v2.0!)
