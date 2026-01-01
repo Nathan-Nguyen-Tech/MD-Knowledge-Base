@@ -1,8 +1,44 @@
 # CARD TYPE-SPECIFIC SPECIFICATIONS
 
+**Version:** 0.2
+**Updated:** 2025-12-12
+**Status:** Pre-release (v1.0 = first production deployment)
+
 All card types use the universal WHO-WHAT-WHEN-WHERE-WHY-HOW-MEASURE-TARGET-SAFETY-FOLLOW-UP-NOTES template, but each has specific sub-data elements.
 
-**UPDATED v2.0**: Aligned with 12 Tier 2 Card Types per LIBRARY_TIER_STRUCTURE.md
+**Related Documents:**
+- [CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md](../../../CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md) - 3 Care Plan Types, 90/10 Model
+- [UNIVERSAL_CARD_TEMPLATE.md](02_UNIVERSAL_CARD_TEMPLATE.md) - Template structure
+- [LIBRARY_TIER_STRUCTURE.md](../../LIBRARY_TIER_STRUCTURE.md) - Card hierarchy
+
+---
+
+## CARE PLAN CONTEXT
+
+**IMPORTANT:** Cards don't exist in isolation - they are organized into Care Plans.
+
+### Care Plan = Organized Collection of SMART Cards
+
+| Care Plan Type | Timeframe | Typical Cards |
+|---------------|-----------|---------------|
+| **Chronic** | 12 months, quarterly | All card types organized by quarter |
+| **Subacute** | Days to weeks | Investigation cards, temporary adjustments |
+| **Acute** | Minutes to hours | Emergency protocols, pause non-essential cards |
+
+### Card Organization Within Care Plans
+
+Cards are organized by:
+- **Time interval**: Daily, Weekly, Monthly, Quarterly, Annually
+- **Clinical intent**: Stabilize → Restore → Protect → Optimize
+- **Specialist domain**: Which AI agent owns the card
+
+### 90/10 Self-Directed Model
+
+| Card Tier | Patient Autonomy | % of Actions |
+|-----------|------------------|--------------|
+| Behavioral cards | Patient + AI autonomous | 65% (Tier 1) |
+| OTC/Supplements | Patient + AI + Allied Health | 25% (Tier 2) |
+| Rx Medications | Physician required | 10% (Tier 3) |
 
 ---
 
@@ -710,9 +746,9 @@ Brief (5-minute) educational cards that provide foundational knowledge within de
 
 ## VERSION HISTORY
 
-- **v2.0** (November 2025): Major update to align with 12 Tier 2 types per LIBRARY_TIER_STRUCTURE.md
-  - Consolidated: Supplements → Medications (Tier 3), Vital Monitoring → Diagnostic Testing (Tier 3)
-  - Split: Imaging/Procedures into separate Tier 2 types
-  - Added: DME, Mind-Body Practices, Environmental & Social Health
-  - Renamed: Education → Micro-Learning
-- **v1.0** (Original): 10 card types
+| Version | Date | Changes |
+|---------|------|---------|
+| 0.2 | 2025-12-12 | Added Care Plan Context, 90/10 Model tier mapping |
+| 0.1 | 2025-11-26 | Initial 12 card types specification |
+
+**Note:** v1.0 will be assigned at first production deployment with real patients.

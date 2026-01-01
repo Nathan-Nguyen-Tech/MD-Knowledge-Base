@@ -1,15 +1,21 @@
 # MULTI-AGENT AI PLATFORM ARCHITECTURE
-**Version:** 2.0
-**Date:** 2025-11-26
+**Version:** 0.3
+**Date:** 2025-12-12
 **Scope:** PLATFORM-WIDE (All 4 Sections)
-**Status:** Active - Master Level Specification
+**Status:** Pre-release (v1.0 = first production deployment)
 
 ---
 
-**Purpose:** Define a multi-agent AI system (similar to BMAD framework) that oversees the ENTIRE CMO PLATFORM across all four sections.
+**Purpose:** Define a multi-agent AI system that oversees the ENTIRE CMO PLATFORM across all four sections.
+
+**Key Features:**
+- **Multi-Specialty AI Selection Architecture** - 14+ domain-specific specialist agents
+- **Integration with Three Care Plan Types** - Chronic, Subacute, Acute
+- **PCP AI as Orchestrator** - Coordinates specialist recommendations
+- **Clinical Intent Hierarchy** - Stabilize → Restore → Protect → Optimize
 
 **Why Platform-Wide (Not Just SMART SYSTEM):**
-The 5 AI agents work across ALL sections, not just Section 3:
+The AI agents work across ALL sections, not just Section 3:
 - **Dr. ADAPT** analyzes Section 1 (clinical data) + Section 2 (dashboard scores) to prescribe Section 3 (cards)
 - **DataWatch** continuously monitors Section 2 (dashboard) to trigger Section 3 actions
 - **PharmaSafe** validates Section 1 (medication input) AND Section 3 (medication cards)
@@ -166,6 +172,9 @@ This increases autonomous decisions from 80% → 97% while maintaining safety.
 
 ### **How Agents Work Together:**
 
+**The Five Core Agents + Multi-Specialty Selection:**
+The 5 agents above handle operations, safety, and patient interface. For **card selection**, we use specialized domain agents (see MULTI-SPECIALTY AI SELECTION below).
+
 **Example Scenario: Patient Requests to Stop Lisinopril Card**
 
 1. **PatientPal** receives request, asks clarifying questions
@@ -185,6 +194,128 @@ This increases autonomous decisions from 80% → 97% while maintaining safety.
 11. **Dr. ADAPT** sends summary to human clinician for 24-hour retrospective review
 
 **Human Clinician Involvement:** None immediately, retrospective review only
+
+---
+
+## MULTI-SPECIALTY AI SELECTION ARCHITECTURE
+
+### Overview
+
+The SMART Card library (1,000+ cards) is queried by **domain-specific AI specialists**, not a single AI. Each specialist owns specific health systems and lifestyle pillars. This enables intelligent card selection at scale.
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    MULTI-SPECIALTY AI SELECTION                              │
+│                                                                              │
+│                         ┌─────────────────────┐                             │
+│                         │   PATIENT DATA      │                             │
+│                         │   (Health Matrix)   │                             │
+│                         └──────────┬──────────┘                             │
+│                                    │                                         │
+│                         ┌──────────▼──────────┐                             │
+│                         │   PCP AI            │                             │
+│                         │   (Orchestrator)    │                             │
+│                         └──────────┬──────────┘                             │
+│                                    │                                         │
+│         ┌──────────────────────────┼──────────────────────────┐             │
+│         │                          │                          │             │
+│         ▼                          ▼                          ▼             │
+│  ┌─────────────┐           ┌─────────────┐           ┌─────────────┐       │
+│  │ CARDIOLOGIST│           │ENDOCRINOLOG │           │  MSK / PT   │       │
+│  │     AI      │           │     AI      │           │     AI      │       │
+│  │             │           │             │           │             │       │
+│  │ CV System   │           │ Metabolic   │           │ MSK System  │       │
+│  │ BP, Lipids  │           │ Glucose     │           │ Strength    │       │
+│  │ Zone 2 cardio│          │ Nutrition   │           │ Balance     │       │
+│  └─────────────┘           └─────────────┘           └─────────────┘       │
+│         │                          │                          │             │
+│         └──────────────────────────┼──────────────────────────┘             │
+│                                    │                                         │
+│                         ┌──────────▼──────────┐                             │
+│                         │   PCP AI            │                             │
+│                         │   (Synthesizer)     │                             │
+│                         │   - Resolve conflicts│                            │
+│                         │   - Prioritize       │                            │
+│                         │   - Apply 3-card limit│                           │
+│                         └──────────┬──────────┘                             │
+│                                    │                                         │
+│                         ┌──────────▼──────────┐                             │
+│                         │   UNIFIED CARE PLAN │                             │
+│                         └─────────────────────┘                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Specialist Agent Domains
+
+| Agent | Health Systems | Lifestyle Pillars | Card Types Owned |
+|-------|---------------|-------------------|------------------|
+| **Cardiologist AI** | CV Structure/Function/Risk | Movement (Zone 2) | CV meds, cardiac testing, cardiac rehab |
+| **Endocrinologist AI** | Metabolic S/F/R | Nutrition | DM meds, thyroid, metabolic testing |
+| **Neurologist AI** | Neuro S/F/R | Mind-Body, Sleep | Neuro meds, cognitive cards |
+| **Pulmonologist AI** | Respiratory S/F/R | — | Resp meds, pulm testing, resp DME |
+| **Nephrologist AI** | Filtration S/F/R | Nutrition (renal) | Renal meds, kidney testing |
+| **MSK/PT AI** | MSK S/F/R | Movement, Recovery | PT cards, MSK meds, mobility DME |
+| **Immunologist AI** | Immune S/F/R | — | Immune meds, vaccinations |
+| **OB-GYN/Uro AI** | Reproductive S/F/R | — | Hormone meds, screening |
+| **Nutritionist AI** | — | Nutrition Pillar | All 102 nutrition cards |
+| **Exercise Physiology AI** | — | Movement Pillar | All 150 movement cards |
+| **Sleep Medicine AI** | — | Sleep, Recovery | Sleep + recovery cards |
+| **Mental Health AI** | Neuro (mood) | Mind-Body | Psych meds, mind-body cards |
+| **Pharmacist AI** | All (safety) | — | Drug interactions, optimization |
+| **Preventive Care AI** | All (screening) | All | Screenings, vaccines, prevention cards |
+
+### Clinical Intent Hierarchy
+
+Card selection follows strict priority ordering:
+
+```yaml
+clinical_intent_hierarchy:
+  1_stabilize:  # Highest priority - reduce volatility
+    description: "Address acute/unstable issues first"
+    examples: ["BP spikes", "glucose out of control", "severe pain", "falls risk"]
+    rule: "Must address before ANY other intent"
+
+  2_restore:    # Second priority - rebuild capacity
+    description: "Rebuild lost function"
+    examples: ["deconditioning", "post-illness", "strength loss"]
+    rule: "Only after stabilized"
+
+  3_protect:    # Third priority - reduce future risk
+    description: "Prevent future problems"
+    examples: ["CV risk reduction", "cancer screening", "osteoporosis prevention"]
+    rule: "Ongoing alongside restore"
+
+  4_optimize:   # Lowest priority - only when stable
+    description: "Enhance beyond baseline"
+    examples: ["performance", "longevity", "biohacking"]
+    rule: "NEVER before stabilized/restored"
+```
+
+### Card Selection Rules
+
+**3-Card Maximum Rule:**
+- Never more than 3 active behavioral cards at any time
+- Medications don't count against behavioral limit
+- Cards must graduate/transition before new cards unlock
+
+**Specialist Recommendation Flow:**
+1. PCP AI identifies relevant specialists based on Health Matrix
+2. Each specialist queries their domain's cards independently
+3. PCP AI collects all recommendations
+4. PCP AI resolves conflicts (if two specialists recommend conflicting cards)
+5. PCP AI applies clinical intent hierarchy (stabilize before optimize)
+6. PCP AI enforces 3-card limit
+7. Final care plan delivered to patient
+
+### Integration with Three Care Plan Types
+
+| Care Plan Type | Specialist Involvement | Selection Logic |
+|---------------|----------------------|-----------------|
+| **Chronic** | All specialists for quarterly planning | Full selection algorithm, quarterly review |
+| **Subacute** | 1-2 specialists for emerging issue | Focused query, temporary cards only |
+| **Acute** | Emergency protocols override | Pre-defined cards, immediate activation |
+
+For detailed specifications, see: [CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md](CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md)
 
 ---
 
@@ -745,7 +876,28 @@ PATIENTS OVERDUE FOR FOLLOW-UP: 2
 ✅ **Buildable architecture** (specific tech stack + phased roadmap)
 
 **Key Innovation:**
-> By distributing expertise across 5 specialized agents and implementing 4-tier progressive automation, we achieve near-full autonomy while maintaining safety and enabling patient self-direction.
+> By distributing expertise across 5 core agents + 14 specialist agents and implementing 4-tier progressive automation, we achieve near-full autonomy while maintaining safety and enabling patient self-direction.
+
+---
+
+## RELATED DOCUMENTS
+
+- [CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md](CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md) - 3 Care Plan Types, 90/10 Model
+- [INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md) - 4-Section workflow
+- [AUTONOMY_AND_AI_AGENT_SPECIFICATION.md](CMO - SMART SYSTEM/docs/core/AUTONOMY_AND_AI_AGENT_SPECIFICATION.md) - 4-tier autonomy details
+- [CARD_DEPRESCRIBING_AND_AI_OVERSIGHT_SPEC.md](CMO - SMART SYSTEM/CARD_DEPRESCRIBING_AND_AI_OVERSIGHT_SPEC.md) - De-prescribing pathways
+
+---
+
+## VERSION HISTORY
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 0.3 | 2025-12-12 | Added MULTI-SPECIALTY AI SELECTION (14 specialists), Clinical Intent Hierarchy |
+| 0.2 | 2025-11-26 | Moved to master level (platform-wide scope), corrected 12 card types |
+| 0.1 | 2025-11-26 | Initial multi-agent architecture |
+
+**Note:** v1.0 will be assigned at first production deployment with real patients.
 
 ---
 

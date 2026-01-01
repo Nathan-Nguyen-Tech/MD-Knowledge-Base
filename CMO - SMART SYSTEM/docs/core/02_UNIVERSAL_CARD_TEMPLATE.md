@@ -1,9 +1,11 @@
 # UNIVERSAL SMART CARD TEMPLATE
 
-**Version:** 4.0
-**Updated:** 2025-12-08
+**Version:** 0.5
+**Updated:** 2025-12-13
+**Status:** Pre-release (v1.0 = first production deployment)
 
 **Related Documents:**
+- [CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md](../../../CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md) - 3 Care Plan Types, 90/10 Model
 - [CARD_LIFECYCLE_AND_AI_PARAMETERS.md](CARD_LIFECYCLE_AND_AI_PARAMETERS.md) - AI bracket notation & lifecycle phases
 - [CARD_TYPE_SPECIFICATIONS.md](03_CARD_TYPE_SPECIFICATIONS.md) - 12 card type details
 - [AUTONOMY_AND_AI_AGENT_SPECIFICATION.md](AUTONOMY_AND_AI_AGENT_SPECIFICATION.md) - 4-tier autonomy system
@@ -14,24 +16,59 @@
 
 ---
 
-## Template Structure (v4.0)
+## Template Philosophy
 
-Every SMART Card follows this architecture:
+### Audience-Specific Sections
+
+| Section | Primary Audience | Purpose |
+|---------|------------------|---------|
+| **AT-A-GLANCE** | Patient | 20-second quick reference for everyday use |
+| **CONDENSED VIEW** | Patient | Everyday essentials; what patients need to know |
+| **EXPANDED VIEW** | Patient | Deep-dive information; clinicians guide patients using THIS language |
+| **EVIDENCE** | Patient | Brief trust-builder; authoritative sources (not detailed) |
+| **CLINICIAN & AI REFERENCE** | Clinician + AI | Like UpToDate/OpenEvidence; medical encyclopedia for clinical decisions |
+| **AI METADATA** | AI Systems | Machine-readable YAML for automated processing |
+
+### Key Principles
+
+1. **Patient-Centered Language**: The Condensed and Expanded Views use patient-friendly language. Clinicians read these sections to understand HOW to guide patients in language patients understand.
+
+2. **Clinicians as Guidance Counselors**: In patient views, clinicians are not making clinical decisions—they're helping patients understand and follow through. Clinical decision-making happens in the Clinician & AI Reference section.
+
+3. **Evidence for Trust**: The Evidence section is brief and authoritative. It answers "Why should I trust this?" not "What are all the studies?" Detailed evidence goes in the Clinician Reference.
+
+4. **AI Reference = Medical Encyclopedia**: The Clinician & AI Reference section is like a condensed UpToDate page—comprehensive clinical information for clinician decision-making, with AI-readable YAML underneath.
+
+---
+
+## Template Structure
 
 ```
-1. AT-A-GLANCE (20 seconds)   ← NEW in v4.0
-2. CONDENSED VIEW             ← Patient everyday use
-3. EXPANDED VIEW              ← Full details for all users
-4. EVIDENCE                   ← Trust-building citations
-5. NOTES                      ← Clinician reference
-6. AI METADATA (hidden)       ← Machine-readable YAML
+1. AT-A-GLANCE (20 seconds)      ← Patient: Quick mobile reference
+2. CONDENSED VIEW                ← Patient: Everyday use
+3. EXPANDED VIEW                 ← Patient: Deep dive (clinicians guide in this language)
+4. EVIDENCE                      ← Patient: Trust-building (brief, authoritative)
+5. CLINICIAN & AI REFERENCE      ← Clinician: Medical encyclopedia + AI YAML
 ```
+
+### Care Plan Integration
+
+**Cards exist within Care Plans**, not in isolation:
+- **Chronic Care Plan**: Long-term cards organized by quarter
+- **Subacute Overlay**: Temporary cards for emerging issues
+- **Acute Overlay**: Emergency cards (may pause non-essential cards)
+
+**Card Selection by Multi-Specialty AI**:
+- 14 specialist agents query card library
+- PCP AI orchestrates and resolves conflicts
+- Clinical Intent Hierarchy: Stabilize → Restore → Protect → Optimize
+- Maximum 3 active behavioral cards at any time
 
 ---
 
 # 📱 AT-A-GLANCE (20 seconds)
 
-> Ultra-condensed quick reference. Fits on one mobile screen.
+> Ultra-condensed quick reference. Fits on one mobile screen. Patients use this daily.
 
 ```
 [CARD NAME] | [DOSE/ACTION] | [FREQUENCY] | [KEY REQUIREMENT]
@@ -62,17 +99,15 @@ Goal: [Target outcome + timeline]
 
 # 📱 CONDENSED VIEW
 
-> Essentials for everyday use. 6th-8th grade reading level.
+> Your everyday quick guide. 6th-8th grade reading level.
 
 ## WHAT YOU'RE DOING
 [Simple action statement - 1 sentence]
 
 ## WHY THIS MATTERS
-**Your goal:** [Patient's own words - captured at intake]
+**Your goal:** [Your own words - what you want to achieve]
 
-**Why prescribed:** [1-2 sentence clinical rationale in plain language]
-
-**Evidence:** Grade [A/B/C] - [One sentence plain-language summary]
+**Why this [medication/action]:** [1-2 sentence rationale in plain language]
 
 ## HOW TO DO IT
 1. [Step 1 - action verb, simple language]
@@ -89,213 +124,160 @@ Goal: [Target outcome + timeline]
 🟡 [Phase 2] → [Intermediate level]    (building)
 🟣 [Phase 3] → [Target level]          (target)
 ```
-*Advance only when tolerating well.*
+*Only increase when you're tolerating well.*
 
 ## WHAT TO WATCH FOR
 
-| Level | Signs | Action |
-|-------|-------|--------|
-| 🟡 Normal | [Expected early effects] | [Wait X time, improves] |
-| 🟠 Call doctor | [Warning signs] | [Schedule visit] |
+| Level | Signs | What to Do |
+|-------|-------|------------|
+| 🟡 Normal | [Expected early effects] | [Wait X time - this improves] |
+| 🟠 Call us | [Warning signs] | [Schedule a visit] |
 | 🔴 Emergency | [Critical symptoms] | Call 911 |
-
-## DIFFICULTY
-[⭐⭐☆☆☆] **[Easy/Moderate/Hard]** - [Brief descriptor]
 
 ## CHECK-INS
 
 | When | What We'll Ask |
 |------|----------------|
-| [Day X] | [Question] |
+| [Day X] | [Question in patient-friendly language] |
 | [Day Y] | [Question] |
 | [Month X] | [Assessment] |
 
-## COMMUNITY
-⭐ [X.X]/5 | [X]% still doing at [timeframe] | [X]% reached their goal
+## HOW OTHERS ARE DOING
+⭐ [X.X]/5 rating | [X]% still doing at [timeframe] | [X]% reached their goal
 
 ---
 
 # 📋 EXPANDED VIEW
 
-> Full details for clinicians, advanced users, and curious patients.
+> Everything you might want to know. Your care team uses this same information to guide you.
 
 ---
 
-## WHO
+## UNDERSTANDING YOUR [MEDICATION/INTERVENTION]
 
-| Role | Responsibility |
-|------|----------------|
-| Patient | [Primary responsibilities] |
-| [Role 2] | [Responsibilities] |
-| [Role 3] | [Responsibilities] |
-| Family | [Support role] |
+**What is [Name]?**
+[2-3 sentence explanation in plain language]
 
----
+**How does it work?**
+[Mechanism explained simply - what happens in your body]
+1. [Action 1]
+2. [Action 2]
+3. [Action 3]
 
-## WHAT
-
-| Field | Value |
-|-------|-------|
-| [Name field] | [Value] |
-| [Class/Type] | [Value] |
-| [Starting] | [Value] |
-| [Target] | [Value] |
-| [Maximum] | [Value] |
-| [Form] | [Value] |
+**What makes it special?**
+- [Benefit 1]
+- [Benefit 2]
+- [Benefit 3]
 
 ---
 
-## WHEN
+## YOUR [DOSING/ACTION] SCHEDULE
 
-**Schedule:** [Frequency and timing]
-**Duration:** [Ongoing/limited course]
-**Missed dose/session:** [Recovery instructions]
+| Form | Options |
+|------|---------|
+| [Type 1] | [Options] |
+| [Type 2] | [Options] |
 
----
+**Your schedule:** [Frequency and timing]
+**Why [timing requirement]?** [Simple explanation]
 
-## WHERE
-
-**Setting:** [Location]
-**Storage:** [If applicable]
-
----
-
-## WHY (Mechanism)
-
-1. **[Action 1]** [description]
-2. **[Action 2]** [description]
-3. **[Action 3]** [description]
-
-**Benefits:** [Key benefits in plain language]
+**If you miss a [dose/session]:** [Recovery instruction]
 
 ---
 
-## HOW
+## WHAT TO EXPECT
 
-**Instructions:**
-1. [Detailed step 1]
-2. [Detailed step 2]
-3. [Detailed step 3]
+### First [Time Period] (Getting Started)
+[What commonly happens early on - normalize the experience]
+- [Common experience 1]
+- [Common experience 2]
+- [Common experience 3]
 
-**If [common issue]:**
-- [Solution 1]
-- [Solution 2]
-- [Escalation if needed]
+**These typically improve by [timeframe].** If they don't, we have solutions.
 
----
+### After [Time Period]
+- [Expected improvement 1]
+- [Expected improvement 2]
+- [Expected improvement 3]
 
-## MEASURE
-
-| Test/Metric | Frequency | Purpose |
-|-------------|-----------|---------|
-| [Metric 1] | [Frequency] | [Purpose] |
-| [Metric 2] | [Frequency] | [Purpose] |
-| [Metric 3] | [Frequency] | [Purpose] |
-
-**What you may notice:** [Subjective improvements]
+### Long-Term Benefits
+- [Benefit 1]
+- [Benefit 2]
+- [Benefit 3]
 
 ---
 
-## TARGET
+## MONITORING & [LABS/TRACKING]
 
-| Metric | Goal | Timeline |
-|--------|------|----------|
-| [Primary] | [Value] | [Timeframe] |
-| [Secondary] | [Value] | [Timeframe] |
+| Test/Metric | How Often | Why |
+|-------------|-----------|-----|
+| [Metric 1] | [Frequency] | [Simple explanation] |
+| [Metric 2] | [Frequency] | [Simple explanation] |
+| [Metric 3] | [Frequency] | [Simple explanation] |
+
+**Your target:** [Goal in patient-friendly terms]
 
 ---
 
-## SAFETY
+## WHEN TO PAUSE [OR HOLD]
 
-### Common Side Effects (Temporary)
-- [Effect 1] ([percentage])
-- [Effect 2]
-- [Effect 3]
+There are specific times when you should temporarily stop:
 
-### Hold/Stop If:
-| Situation | Action |
-|-----------|--------|
+| Situation | What to Do |
+|-----------|------------|
 | [Situation 1] | [Action] |
 | [Situation 2] | [Action] |
+| [Situation 3] | [Action] |
 
-### Interactions:
-| Substance | Guidance |
-|-----------|----------|
-| [Item 1] | [Guidance] |
-| [Item 2] | [Guidance] |
+**When in doubt, call us.** You can always restart when the situation resolves.
 
 ---
 
-## DECISION PATHWAY
+## LIFESTYLE & INTERACTIONS
 
-```
-START: [Initial state]
-         │
-         ▼
-    ┌─────────────────────────────────────────┐
-    │     [CHECKPOINT]: [Assessment]          │
-    └─────────────────────────────────────────┘
-         │
-    ┌────┴────┐
-    ▼         ▼
- [OUTCOME A]  [OUTCOME B]
-    │            │
-    ▼            ▼
-[Action A]   [Action B]
-    │
-    ▼
-    ┌─────────────────────────────────────────┐
-    │     ONGOING MONITORING                  │
-    └─────────────────────────────────────────┘
-    │
-    ├── [Trigger 1]? → [Response 1]
-    ├── [Trigger 2]? → [Response 2]
-    └── [Trigger 3]? → [Response 3]
-```
+**Food:** [Guidance]
+
+**Alcohol:** [Guidance]
+
+**Other things to know:**
+- [Interaction/consideration 1]
+- [Interaction/consideration 2]
 
 ---
 
-## FOLLOW-UP SCHEDULE
+## COMMON QUESTIONS
 
-### Phase 1: Initiation (Days 1-14)
-| Day | Method | Focus |
-|-----|--------|-------|
-| [X] | [Method] | [Focus] |
-| [Y] | [Method] | [Focus] |
+**"[Common question 1]?"**
+[Answer in patient-friendly language]
 
-### Phase 2: Titration/Building (Weeks 3-12)
-| When | Method | Focus |
-|------|--------|-------|
-| [X] | [Method] | [Focus] |
-| [Y] | [Method] | [Focus] |
+**"[Common question 2]?"**
+[Answer]
 
-### Phase 3: Maintenance (Month 4+)
-| When | Method | Focus |
-|------|--------|-------|
-| [X] | [Method] | [Focus] |
-| [Y] | [Method] | [Focus] |
+**"[Common question 3]?"**
+[Answer]
+
+**"[Common question 4]?"**
+[Answer]
 
 ---
 
-## IF YOU'RE STRUGGLING
+## WHEN TO REACH OUT
 
-**Missed [short time]?** [Recovery instruction]
-**Missed [longer time]?** [Recovery instruction]
+**Schedule a visit for:**
+- [Reason 1]
+- [Reason 2]
+- [Reason 3]
 
-### Common Barriers & Solutions
-
-| Barrier | Solution |
-|---------|----------|
-| [Barrier 1] | [Solution] |
-| [Barrier 2] | [Solution] |
-| [Barrier 3] | [Solution] |
-| [Barrier 4] | [Solution] |
+**Seek immediate care for:**
+- [Emergency sign 1]
+- [Emergency sign 2]
+- [Emergency sign 3]
 
 ---
 
-## YOUR PROGRESS
+## YOUR PROGRESS TRACKER
 
-**Baseline:** [Metric]: _____ | Date started: _____
+**Your starting [metric]:** _____ | **Date started:** _____
 
 **Milestones:**
 - [ ] [Milestone 1]
@@ -305,79 +287,126 @@ START: [Initial state]
 
 ---
 
-## EVIDENCE
+# 📚 EVIDENCE
 
-### Summary
-[2-3 sentence plain-language summary accessible to patients]
+> Why you can trust this recommendation.
 
-### Grade: [A/B/C] ([Strongest/Good/Limited])
+**Bottom line:** [One sentence summary of why this is trustworthy]
 
-### Grading Criteria Met
-- [x] [Criterion 1]
-- [x] [Criterion 2]
-- [x] [Criterion 3]
+| Source | What They Say |
+|--------|---------------|
+| **[Authoritative Body 1]** | "[Key recommendation quote]" |
+| **[Years of Use/Data]** | [Trust-building fact] |
+| **[Major Trials]** | [Key outcome in patient terms] |
 
-### Key Studies
-
-| Study | Finding |
-|-------|---------|
-| **[Study 1]** ([details]) | [Key finding] |
-| **[Study 2]** ([details]) | [Key finding] |
-| **[Guideline]** | [Recommendation] |
-
-**NNT/NNH:** [If applicable]
-
-### Evidence Gaps
-- [Gap 1]
-- [Gap 2]
-
-**Last Reviewed:** [Month Year]
-
-*See [EVIDENCE_SECTION_SPECIFICATION.md](EVIDENCE_SECTION_SPECIFICATION.md) for detailed grading criteria.*
+**Evidence Grade: [A/B/C]** ([Strongest/Good/Limited])
 
 ---
 
-## NOTES
+# 🏥 CLINICIAN & AI REFERENCE
 
-### Feasibility Score: [X]/100 (Clinician Reference)
-| Factor | Impact |
+> Clinical decision support for care teams. AI-readable specifications below.
+
+---
+
+## CLINICAL SUMMARY
+
+### Overview
+[1-2 paragraph clinical summary as would appear in UpToDate or OpenEvidence. Include mechanism, indications, key clinical pearls.]
+
+### Key Clinical Points
+- **[Point 1]:** [Value/detail]
+- **[Point 2]:** [Value/detail]
+- **[Point 3]:** [Value/detail]
+- **[Point 4]:** [Value/detail]
+- **[Point 5]:** [Value/detail]
+
+### Contraindications
+- [Contraindication 1]
+- [Contraindication 2]
+- [Contraindication 3]
+- [Contraindication 4]
+
+### [Dosing Adjustments / Special Populations]
+| [Factor] | Recommendation |
+|----------|----------------|
+| [Condition 1] | [Adjustment] |
+| [Condition 2] | [Adjustment] |
+| [Condition 3] | [Adjustment] |
+| [Condition 4] | [Adjustment] |
+
+### Common Drug Interactions / Considerations
+| Agent | Severity | Management |
+|-------|----------|------------|
+| [Item 1] | [High/Moderate/Low] | [Action] |
+| [Item 2] | [Severity] | [Action] |
+| [Item 3] | [Severity] | [Action] |
+
+### Monitoring Protocol
+| Parameter | Frequency |
+|-----------|-----------|
+| [Metric 1] | [Schedule] |
+| [Metric 2] | [Schedule] |
+| [Metric 3] | [Schedule] |
+
+### Treatment Failure Considerations
+If [goal not met] after [timeframe]:
+- **With [condition A]:** [Recommendation]
+- **With [condition B]:** [Recommendation]
+- **With [condition C]:** [Recommendation]
+
+### Evidence Base
+| Study | Design | Key Finding |
+|-------|--------|-------------|
+| [Study 1] | [Design] | [Finding] |
+| [Study 2] | [Design] | [Finding] |
+| [Study 3] | [Design] | [Finding] |
+
+**Evidence gaps:** [Known limitations in the evidence]
+
+### Feasibility Score: [X]/100
+
+| Factor | Points |
 |--------|--------|
-| Base | 100 |
+| Baseline | 100 |
 | [Deduction 1] | -X |
 | [Deduction 2] | -X |
 | [Booster 1] | +X |
 | [Booster 2] | +X |
 
 ### Patient Confidence Assessment
-*Ask at prescribing:* "On a scale of 0-10, how confident are you that you can [action] consistently?"
+Ask at prescribing: "On a scale of 0-10, how confident are you that you can [action]?"
 
 | Score | Interpretation | Action |
 |-------|----------------|--------|
-| 8-10 | Ready | Proceed |
-| 5-7 | Uncertain | Explore barriers |
-| 0-4 | Concerned | Address before starting |
-
-### Version History
-| Version | Date | Changes |
-|---------|------|---------|
-| [X.X] | [Date] | [Changes] |
+| 8-10 | High confidence | Proceed with standard initiation |
+| 5-7 | Moderate confidence | Explore barriers, consider additional support |
+| 0-4 | Low confidence | Address barriers before starting |
 
 ---
 
-# 🔧 AI METADATA
+## AI METADATA
 
 <!--
-Hidden from user interface.
-Parsed by AI agents for decision-making.
-Clinician override via interface dropdown.
+AI-readable specifications for automated processing.
+Clinicians: The above reference section summarizes this data in readable format.
 -->
 
 ```yaml
 # === IDENTIFIERS ===
 card_id: [CARD_ID]
-name: [Name]
+generic: [Generic name]
+brand: [Brand name if applicable]
 class: [Class/Category]
 path: [Hierarchy > Path > To > Card]
+
+# === CARE PLAN CONTEXT ===
+care_plan:
+  typical_plan_type: [chronic|subacute|acute]
+  clinical_intent: [stabilize|restore|protect|optimize]
+  time_interval: [daily|weekly|monthly|quarterly|annually]
+  specialist_owner: [Specialist_AI_Agent]  # e.g., Cardiologist_AI, Nutritionist_AI
+  max_concurrent_behavioral: 3  # 3-card rule for behavioral cards
 
 # === AUTONOMY ===
 # See AUTONOMY_AND_AI_AGENT_SPECIFICATION.md for tier definitions
@@ -508,19 +537,16 @@ feasibility:
 
 **END OF TEMPLATE**
 
----
+### Version History
+| Version | Date | Changes |
+|---------|------|---------|
+| 0.5 | 2025-12-13 | Major restructure: Clarified audience for each section (Patient vs Clinician vs AI); replaced NOTES with CLINICIAN & AI REFERENCE; condensed Evidence for patients |
+| 0.4 | 2025-12-12 | Added care_plan context block, Care Plan Integration section |
+| 0.3 | 2025-12-08 | Added AT-A-GLANCE quick card, visual dose ladder, decision pathway |
+| 0.2 | 2025-12-07 | Converted to tables, added Evidence section structure |
+| 0.1 | 2024-11-23 | Initial template structure |
 
-## Quick Reference: v4.0 Changes from v3.0
-
-| Section | v3.0 | v4.0 |
-|---------|------|------|
-| **New: AT-A-GLANCE** | N/A | 20-second quick card with visual dose ladder |
-| **CONDENSED VIEW** | Separate sections | Added DOSE PROGRESSION with color coding |
-| **EXPANDED VIEW** | Paragraph-heavy | Converted to tables for scannability |
-| **New: DECISION PATHWAY** | Buried in FOLLOW-UP | Promoted to visual ASCII flowchart |
-| **EVIDENCE** | Verbose citations | Condensed to table + key stats |
-| **NOTES** | Inline in EVIDENCE | Separate section with Feasibility breakdown |
-| **AI METADATA** | Basic YAML | Complete YAML with autonomy tiers, alerts, lifecycle |
+**Note:** v1.0 will be assigned at first production deployment with real patients.
 
 ---
 
@@ -528,10 +554,11 @@ feasibility:
 
 ### For Card Authors:
 1. Start with the AT-A-GLANCE - if it doesn't fit in 20 seconds, the card is too complex
-2. Use tables over paragraphs for scannability
-3. Color-code progression with 🟢🟡🟣 emoji
-4. Include ASCII decision pathway for any titratable card
-5. ALWAYS cite evidence with specific studies/NNT
+2. Write Condensed and Expanded views in patient-friendly language (6th-8th grade)
+3. Keep Evidence brief - just enough to build trust, not a literature review
+4. Put detailed clinical information in Clinician & AI Reference
+5. Specify which Care Plan Type and Clinical Intent this card serves
+6. Use tables over paragraphs for scannability
 
 ### For AI Agents:
 - Parse YAML metadata for decision-making
@@ -539,14 +566,17 @@ feasibility:
 - Use checkins schedule for proactive outreach
 - Reference alerts for safety monitoring
 - Follow lifecycle for de-loading decisions
+- Check `care_plan.specialist_owner` to route to correct specialist agent
+- Apply `clinical_intent` hierarchy when selecting cards
 
 ### For Clinicians:
-- NOTES section contains Feasibility Score for prescribing decisions
-- Patient Confidence Assessment guides readiness
-- Decision Pathway shows escalation triggers
-- Evidence section provides citation backup
+- **Patient Views (Condensed/Expanded):** Read these to understand how to guide patients in their language
+- **Evidence:** Use to answer patient questions about trustworthiness
+- **Clinician & AI Reference:** Use for clinical decision-making (like UpToDate)
+- Feasibility Score and Patient Confidence Assessment guide prescribing decisions
+- See CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md for care plan organization
 
 ---
 
-*Template: Universal Card Template v4.0*
+*Template: Universal Card Template v0.5*
 *Reference: MED_DM_BIG_001_Metformin_IR.md*

@@ -1,7 +1,9 @@
 # CMO PLATFORM - START HERE
 **Welcome to the Comprehensive Medical Optimization Platform**
 
-**Last Updated:** 2025-12-07
+**Last Updated:** 2025-12-12
+**Version:** 0.2
+**Status:** Pre-release (v1.0 = first production deployment)
 
 ---
 
@@ -17,9 +19,15 @@ This repository contains **three interconnected healthcare innovation projects**
 
 ## CURRENT STATUS
 
-**Foundation Phase: 100% Complete ✅**
+**Foundation Phase + v3.0 Architecture: 100% Complete ✅**
 
 All architecture, frameworks, and specifications are finished. The platform is ready for implementation.
+
+**New in v3.0 (December 2025):**
+- Three Care Plan Types (Chronic/Subacute/Acute)
+- 90/10 Self-Directed Model
+- Multi-Specialty AI Selection (14 specialist agents)
+- Clinical Intent Hierarchy
 
 **Next Phase: Content Creation & Development 🔄**
 
@@ -141,9 +149,13 @@ Writing SMART Cards, building database, piloting with real patients.
 
 ## KEY DOCUMENTS
 
+### Architecture:
+- **[CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md](CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md)** - 3 Care Plan Types, 90/10 Model, Multi-Specialty AI
+- **[MULTI_AGENT_AI_PLATFORM_ARCHITECTURE.md](MULTI_AGENT_AI_PLATFORM_ARCHITECTURE.md)** - 5 core + 14 specialist agents
+
 ### Master Planning:
 - **[MASTER_ROADMAP.md](MASTER_ROADMAP.md)** - Unified development roadmap
-- **[INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md)** - How projects connect (includes update checklist)
+- **[INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md)** - How projects connect
 - **[SOURCE_DOCUMENT_REGISTRY.md](SOURCE_DOCUMENT_REGISTRY.md)** - Canonical source tracking
 
 ### Project Specifications:
@@ -224,17 +236,28 @@ Writing SMART Cards, building database, piloting with real patients.
    - Progressive unlocking prevents overwhelm
    - Trackable adherence and outcomes
 
-3. **Capacity, Resilience, Flexibility Framework**
+3. **Three Care Plan Types**
+   - **Chronic:** 12-month baseline care plan (always active)
+   - **Subacute:** Days-weeks overlay for emerging issues
+   - **Acute:** Emergency overlay for critical situations
+   - Care Plan = Organized collection of SMART Cards
+
+4. **90/10 Self-Directed Model**
+   - 90% patient autonomous (behavioral cards, pre-authorized adjustments)
+   - 10% clinician intervention (complex cases, new prescriptions)
+   - Pre-authorization framework increases patient autonomy
+
+5. **Multi-Specialty AI Selection**
+   - 14 specialist AI agents query card library
+   - PCP AI orchestrates and resolves conflicts
+   - Clinical Intent Hierarchy: Stabilize → Restore → Protect → Optimize
+
+6. **Capacity, Resilience, Flexibility Framework**
    - Shifts focus from "disease control" to "performance optimization"
    - Measurable endpoints beyond traditional lab values
    - Integrates medical + lifestyle interventions
 
-4. **Unified Care Planning**
-   - Single prescription combining medications + lifestyle cards
-   - Life-stage customized templates
-   - Quarterly progression model
-
-5. **Transparent Scoring**
+7. **Transparent Scoring**
    - Every composite score decomposable to parameters
    - "What's Working Well" + "What Needs Work" visibility
    - Patient-centered, understandable
@@ -271,6 +294,7 @@ C:\Users\taylo\Desktop\CMO - HEALTH OVERVIEW\
 ├── MASTER_ROADMAP.md
 ├── INTEGRATION_ARCHITECTURE.md
 ├── SOURCE_DOCUMENT_REGISTRY.md
+├── CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md
 ├── MULTI_AGENT_AI_PLATFORM_ARCHITECTURE.md
 ├── CLAUDE.md (Project context for Claude - read at session start)
 ├── VERSION_UPDATE_2025-12-05.md (Team meeting notes)
@@ -320,8 +344,10 @@ C:\Users\taylo\Desktop\CMO - HEALTH OVERVIEW\
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.0 | 2025-11-26 | Initial START HERE document created |
-| 1.1 | 2025-12-07 | Updated card counts (531 behavioral v2.1), added Claude management, removed obsolete references |
+| 0.2 | 2025-12-12 | Added 3 Care Plan Types, 90/10 Model, Multi-Specialty AI, updated structure |
+| 0.1 | 2025-11-26 | Initial START HERE document |
+
+**Note:** v1.0 will be assigned at first production deployment with real patients.
 
 ---
 

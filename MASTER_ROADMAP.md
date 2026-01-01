@@ -1,17 +1,23 @@
 # CMO PLATFORM - MASTER ROADMAP
-**Version:** 1.0
-**Date:** 2025-11-26
+**Version:** 0.2
+**Date:** 2025-12-12
+**Status:** Pre-release (v1.0 = first production deployment)
 **Purpose:** Unified development roadmap across all three CMO projects
 
 ---
 
 ## EXECUTIVE SUMMARY
 
-**Current State:** Foundation Phase Complete (100%)
+**Current State:** Foundation Phase Complete + v3.0 Architecture Upgrade (100%)
 - All architecture and documentation complete
 - All frameworks defined
 - Patient intake system production-ready
-- ~1,014 intervention cards enumerated (but not written)
+- ~1,030+ intervention cards (531 behavioral + ~500 medical enumerated)
+- **NEW v3.0 Architecture:**
+  - Three Care Plan Types (Chronic/Subacute/Acute)
+  - 90/10 Self-Directed Model
+  - Multi-Specialty AI Selection (14+ specialist agents)
+  - Clinical Intent Hierarchy (Stabilize → Restore → Protect → Optimize)
 
 **Next Phase:** Content Creation & Initial Implementation
 **Estimated Timeline:** 6-12 months to working MVP
@@ -38,12 +44,21 @@
 - Patient intake form specification
 - Parameter libraries (150 MVP parameters)
 - Medical history library (132 diagnoses)
-- Lifestyle assessment questionnaires
+- Lifestyle assessment questionnaires v2.1
 - Dashboard specifications (3 levels)
-- SMART Card templates and structure (~1,014 cards enumerated)
+- SMART Card templates and structure (~1,030+ cards)
 - Care planning methodology and templates
 - Evidence base and clinical protocols
-- Integration architecture defined
+- Integration architecture v3.0 defined
+
+**v3.0 Architecture Additions (December 2025):**
+- Three Care Plan Types: Chronic (12-month baseline), Subacute (days-weeks overlay), Acute (emergency overlay)
+- 90/10 Self-Directed Model: 90% patient autonomous, 10% clinician intervention
+- Multi-Specialty AI Selection: 14+ domain-specific specialist agents with PCP AI orchestrator
+- Clinical Intent Hierarchy: Stabilize → Restore → Protect → Optimize
+- Pre-Authorization Framework: Clinicians pre-approve patient actions
+- Data Reactivity Model: More data input = smarter care plan response
+- Progressive Disclosure: Daily Focus → Quarterly View → Full Care Plan
 
 **Status:** 100% Complete
 
@@ -409,8 +424,10 @@ Success in Phase 2 will validate the entire vision and unlock the full potential
 
 ## RELATED DOCUMENTS
 
-- [INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md) - How the three projects connect
-- [CROSS_PROJECT_UPDATE_CHECKLIST.md](CROSS_PROJECT_UPDATE_CHECKLIST.md) - Maintaining consistency
+- [INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md) - How the three projects connect (v3.0)
+- [CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md](CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md) - 3 Care Plan Types, 90/10 Model
+- [MULTI_AGENT_AI_PLATFORM_ARCHITECTURE.md](MULTI_AGENT_AI_PLATFORM_ARCHITECTURE.md) - Multi-Specialty AI Selection (v3.0)
+- [SOURCE_DOCUMENT_REGISTRY.md](SOURCE_DOCUMENT_REGISTRY.md) - Canonical source tracking
 - Individual project roadmaps and specifications
 
 ---
@@ -421,4 +438,7 @@ Success in Phase 2 will validate the entire vision and unlock the full potential
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.0 | 2025-11-26 | Initial unified roadmap created |
+| 0.2 | 2025-12-12 | Added 3 Care Plan Types, 90/10 Model, Multi-Specialty AI, Clinical Intent Hierarchy |
+| 0.1 | 2025-11-26 | Initial unified roadmap |
+
+**Note:** v1.0 will be assigned at first production deployment with real patients.

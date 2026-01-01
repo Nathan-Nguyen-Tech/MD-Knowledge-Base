@@ -1,7 +1,7 @@
 # SOURCE DOCUMENT REGISTRY & VERIFICATION PROTOCOL
-**Version:** 1.5
-**Date:** 2025-12-08
-**Updated:** Added AUTONOMY_AND_AI_AGENT_SPECIFICATION.md and EVIDENCE_SECTION_SPECIFICATION.md
+**Version:** 0.7
+**Date:** 2025-12-14
+**Status:** Pre-release (v1.0 = first production deployment)
 **Purpose:** Prevent information loss by maintaining canonical source documents for every critical specification
 
 ---
@@ -44,7 +44,12 @@
 
 | Topic | Canonical Source | Current Version | What It Defines |
 |-------|-----------------|----------------|-----------------|
-| **4-Section Workflow** | [INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md) | 2.0 | How all 4 sections work together |
+| **4-Section Workflow** | [INTEGRATION_ARCHITECTURE.md](INTEGRATION_ARCHITECTURE.md) | 3.0 | How all 4 sections work together + 90/10 Self-Directed Model |
+| **3 Care Plan Types** | [CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md](CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md) | 1.0 | Chronic/Subacute/Acute care plans, Data Reactivity Model |
+| **Care Plan Digital Interface** | [CARE_PLAN_DIGITAL_INTERFACE_SPEC.md](CARE_PLAN_DIGITAL_INTERFACE_SPEC.md) | 0.1 | **NEW** Time-interval views (Daily/Weekly/Monthly/Quarterly/Annual), Card list display, Interactive expansion |
+| **Multi-Specialty AI Selection** | [CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md](CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md) | 1.0 | **NEW** 14+ specialist agents, PCP AI orchestrator, Clinical Intent Hierarchy |
+| **Multi-Agent AI Platform** | [MULTI_AGENT_AI_PLATFORM_ARCHITECTURE.md](MULTI_AGENT_AI_PLATFORM_ARCHITECTURE.md) | 3.0 | 5 core agents + 14 specialists, 4-tier automation |
+| **90/10 Self-Directed Model** | [CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md](CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md) | 1.0 | **NEW** 90% patient autonomous, 10% clinician intervention |
 | **8 Health Systems** | [health-matrix-framework.md](CMO - PERFORMANCE MEDICINE/architecture/health-matrix-framework.md) | Latest | Neurological, Cardiovascular, Respiratory, Metabolic, Renal, Musculoskeletal, Immune, Reproductive/Endocrine |
 | **3 Clinical Domains** | [health-matrix-framework.md](CMO - PERFORMANCE MEDICINE/architecture/health-matrix-framework.md) | Latest | Structure, Function, Risk |
 | **5 Lifestyle Pillars** | [LIFESTYLE_PILLAR_QUESTIONNAIRES_v2.1](CMO - DATA INPUT/04_LIFESTYLE_ASSESSMENT/LIFESTYLE_PILLAR_QUESTIONNAIRES_v2.1_OPTIMIZED.md) | 2.1 | Nutrition, Movement, Sleep/Recovery, Mental/Emotional, Environment/Social |
@@ -78,8 +83,8 @@
 
 | Topic | Canonical Source | Current Version | What It Defines |
 |-------|-----------------|----------------|-----------------|
-| **12 Card Types** | [CARD_TYPE_SPECIFICATIONS.md](CMO - SMART SYSTEM/docs/core/03_CARD_TYPE_SPECIFICATIONS.md) | 2.0 | **ALL 12 types** - MUST be read before writing about card types |
-| **Universal Card Template** | [UNIVERSAL_CARD_TEMPLATE.md](CMO - SMART SYSTEM/docs/core/02_UNIVERSAL_CARD_TEMPLATE.md) | 2.0 | WHO-WHAT-WHEN-WHERE-WHY-HOW + Lifecycle phases (Initiation/Maintenance/De-loading) |
+| **12 Card Types** | [CARD_TYPE_SPECIFICATIONS.md](CMO - SMART SYSTEM/docs/core/03_CARD_TYPE_SPECIFICATIONS.md) | 0.2 | **ALL 12 types** - MUST be read before writing about card types |
+| **Universal Card Template** | [UNIVERSAL_CARD_TEMPLATE.md](CMO - SMART SYSTEM/docs/core/02_UNIVERSAL_CARD_TEMPLATE.md) | 0.5 | Patient Views (Condensed/Expanded) + Evidence (brief) + Clinician & AI Reference + YAML Metadata |
 | **Card Lifecycle & AI Parameters** | [CARD_LIFECYCLE_AND_AI_PARAMETERS.md](CMO - SMART SYSTEM/docs/core/CARD_LIFECYCLE_AND_AI_PARAMETERS.md) | 1.0 | **NEW** - Bracket `[ ]` notation for AI-modifiable fields, 3-phase lifecycle |
 | **Card De-prescribing & AI Oversight** | [CARD_DEPRESCRIBING_AND_AI_OVERSIGHT_SPEC.md](CMO - SMART SYSTEM/CARD_DEPRESCRIBING_AND_AI_OVERSIGHT_SPEC.md) | 1.1 | De-prescribing for ALL 12 types, AI agent (Dr. ADAPT), patient autonomy levels |
 | **Card Generation Specification** | [CARD_GENERATION_SPECIFICATION.md](CMO - SMART SYSTEM/docs/core/CARD_GENERATION_SPECIFICATION.md) | 1.0 | **DETERMINISTIC GENERATION** - Seed inputs, canonical sources, phrase libraries, validation rules |
@@ -92,36 +97,63 @@
 
 ### **Section 3: SMART Card Libraries (Tier 5 Enumerations)**
 
-#### **Behavioral Card Libraries (v2.1 - Updated 2025-12-05)**
+#### **Behavioral Card Libraries - THE 5 LIFESTYLE PILLARS (v2.4 - Updated 2025-12-14)**
 
-| Topic | Canonical Source | Current Version | Card Count |
-|-------|-----------------|----------------|------------|
-| **Movement/Exercise Cards** | [TIER5_MOVEMENT_EXERCISE_v2.md](CMO - SMART SYSTEM/library/behavioral/movement/TIER5_MOVEMENT_EXERCISE_v2.md) | 2.1 | 150 atomic cards |
-| **Nutrition Cards** | [TIER5_NUTRITION_v2.md](CMO - SMART SYSTEM/library/behavioral/nutrition/TIER5_NUTRITION_v2.md) | 2.1 | 102 atomic cards |
-| **Recovery Cards** | [TIER5_RECOVERY_v2.md](CMO - SMART SYSTEM/library/behavioral/recovery/TIER5_RECOVERY_v2.md) | 2.1 | 78 atomic cards |
-| **Mind-Body Cards** | [TIER5_MIND_BODY_v2.md](CMO - SMART SYSTEM/library/behavioral/mind_body/TIER5_MIND_BODY_v2.md) | 2.1 | 62 atomic cards |
-| **Environmental/Social Cards** | [TIER5_ENVIRONMENTAL_SOCIAL_v2.md](CMO - SMART SYSTEM/library/behavioral/environmental_social/TIER5_ENVIRONMENTAL_SOCIAL_v2.md) | 2.1 | 85 atomic cards |
-| **Micro-Learning Cards** | [TIER5_MICRO_LEARNING.md](CMO - SMART SYSTEM/library/behavioral/micro_learning/TIER5_MICRO_LEARNING.md) | 1.0 | 54 atomic cards |
-| **Behavioral Library Changelog** | [BEHAVIORAL_LIBRARY_v2_CHANGELOG.md](CMO - SMART SYSTEM/library/BEHAVIORAL_LIBRARY_v2_CHANGELOG.md) | 2.1 | Documents v1→v2.1 changes |
+| Pillar | Library File | Current Version | Card Count | Coverage |
+|--------|--------------|----------------|------------|----------|
+| **1. Nutrition** | [TIER5_NUTRITION_v2.md](CMO - SMART SYSTEM/library/behavioral/nutrition/TIER5_NUTRITION_v2.md) | 2.2 | 168 cards | ~67% |
+| **2. Movement** | [TIER5_MOVEMENT_EXERCISE_v2.md](CMO - SMART SYSTEM/library/behavioral/movement/TIER5_MOVEMENT_EXERCISE_v2.md) | 2.4 | 378 cards | ~84% |
+| **3. Recovery** | [TIER5_RECOVERY_v2.md](CMO - SMART SYSTEM/library/behavioral/recovery/TIER5_RECOVERY_v2.md) | 2.3 | 114 cards | ~76% |
+| **4. Emotion** | [TIER5_EMOTION_v2.md](CMO - SMART SYSTEM/library/behavioral/emotion/TIER5_EMOTION_v2.md) | 2.1 | 86 cards | ~57% |
+| **5. Environment** | [TIER5_ENVIRONMENTAL_SOCIAL_v2.md](CMO - SMART SYSTEM/library/behavioral/environmental_social/TIER5_ENVIRONMENTAL_SOCIAL_v2.md) | 2.3 | 137 cards | ~69% |
+| **Educational** | [TIER5_MICRO_LEARNING.md](CMO - SMART SYSTEM/library/behavioral/micro_learning/TIER5_MICRO_LEARNING.md) | 1.0 | 54 cards | ~7% |
 
-**IMPORTANT v2.0 PRINCIPLES:**
-- Each card = ONE atomic action (not a routine/program/deck)
+**TOTAL BEHAVIORAL CARDS: 883** (excluding Micro-Learning educational content)
+**WITH MICRO-LEARNING: 937 cards**
+
+**v2.4 MAJOR EXPANSION (2025-12-14):**
+- **ALL 5 ACTION TYPES now in every pillar:**
+  - Treatment/Intervention (original cards - behaviors, exercises, techniques)
+  - Monitoring (tracking metrics, logging data)
+  - Assessment/Screening (standardized tests, questionnaires)
+  - Preparation (pre-activity setup)
+  - Maintenance (equipment care, habit sustainability)
+- **Movement expanded:** Yoga (23→92), Tai Chi (6→37), Qigong (4→36)
+- **Mind-Body library DELETED** - Cards redistributed to Movement, Emotion pillars
+
+**v2.3 RESTRUCTURING (Earlier 2025-12-14):**
+- **Mind-Body library DISSOLVED** - Cards redistributed to correct pillars
+- **Duplicate cards removed** across all libraries
+- **Cross-references added** between pillars for related cards
+- Each card belongs to exactly ONE pillar (no duplicates)
+
+**PILLAR PLACEMENT RULES:**
+- **Movement** = Physical exertion (exercise, poses, physical movements)
+- **Recovery** = Physical rest/restoration (sleep, thermal, physical relaxation)
+- **Emotion** = Mental/psychological (meditation, cognitive, mood, stress management)
+- **Environment** = External factors (social, surroundings, substances, workspace)
+- **Nutrition** = Food/drink behaviors
+
+**IMPORTANT PRINCIPLES:**
+- **ONE ACTION = ONE CARD** (if you can't describe it as verb + object, it's not a card)
+- Yoga, Tai Chi, Qigong = DECKS (collections of movement cards)
+- Each yoga pose, each tai chi movement = individual CARD
 - Duration/intensity/frequency are TEMPLATE PARAMETERS, not separate cards
-- "Mediterranean Diet" is a DECK, not a card
 - Supplements belong in Medication category, not Behavioral
 
-#### **Medical Card Libraries (v1.0 - Already Correct)**
+#### **Medical Card Libraries (In Progress)**
 
-| Topic | Canonical Source | Current Version | Card Count |
-|-------|-----------------|----------------|------------|
-| **Cardiovascular Medications** | [TIER5_CARDIOVASCULAR_MEDICATIONS.md](CMO - SMART SYSTEM/library/medical/medications/TIER5_CARDIOVASCULAR_MEDICATIONS.md) | 1.0 | 95 cards |
-| **Diabetes Medications** | [TIER5_DIABETES_MEDICATIONS.md](CMO - SMART SYSTEM/library/medical/medications/TIER5_DIABETES_MEDICATIONS.md) | 1.0 | ~40 cards |
-| **OTC & Supplements** | [TIER5_OTC_SUPPLEMENTS.md](CMO - SMART SYSTEM/library/medical/medications/TIER5_OTC_SUPPLEMENTS.md) | 1.0 | 60 cards |
-| **Diagnostic Testing** | [TIER5_DIAGNOSTIC_TESTING.md](CMO - SMART SYSTEM/library/medical/diagnostic_testing/TIER5_DIAGNOSTIC_TESTING.md) | 1.0 | 94 cards |
-| **Imaging Studies** | [TIER5_IMAGING_STUDIES.md](CMO - SMART SYSTEM/library/medical/imaging/TIER5_IMAGING_STUDIES.md) | 1.0 | 56 cards |
-| **Procedures** | [TIER5_PROCEDURES.md](CMO - SMART SYSTEM/library/medical/procedures/TIER5_PROCEDURES.md) | 1.0 | 65 cards |
-| **DME** | [TIER5_DME.md](CMO - SMART SYSTEM/library/medical/dme/TIER5_DME.md) | 1.0 | 40 cards |
-| **Referrals** | [TIER5_REFERRALS.md](CMO - SMART SYSTEM/library/medical/referrals/TIER5_REFERRALS.md) | 1.0 | 49 cards |
+| Topic | Canonical Source | Current Version | Card Count | Status |
+|-------|-----------------|----------------|------------|--------|
+| **Prescription Medications** | [T3.1_prescription_pharmaceuticals.md](CMO - SMART SYSTEM/tier5_cards/medications/T3.1_prescription_pharmaceuticals.md) | 0.1 | 484 entries | 🟡 Cardio/DM/Resp only |
+| **Metformin Reference Card** | [MED_DM_BIG_001_Metformin_IR.md](CMO - SMART SYSTEM/tier5_cards/medications/MED_DM_BIG_001_Metformin_IR.md) | 0.5 | 1 full card | 🟢 Reference implementation |
+| **Diagnostic Testing** | Not created | - | 0 | 🔴 Not started |
+| **Imaging Studies** | Not created | - | 0 | 🔴 Not started |
+| **Procedures** | Not created | - | 0 | 🔴 Not started |
+| **DME** | Not created | - | 0 | 🔴 Not started |
+| **Referrals** | Not created | - | 0 | 🔴 Not started |
+
+**NOTE:** The medical card libraries listed in previous versions were PLANNED but NOT YET CREATED. Only T3.1_prescription_pharmaceuticals.md and the Metformin reference card exist. See CLAUDE.md "SMART CARD LIBRARY COMPLETION STATUS" for full gap analysis.
 
 ---
 
@@ -204,8 +236,15 @@
 
 ### **When Writing About These Topics, ALWAYS Read Source First:**
 
+**v3.0 Architecture (NEW 2025-12-12):**
+- [ ] 3 Care Plan Types → CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md (CRITICAL!)
+- [ ] 90/10 Self-Directed Model → CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md
+- [ ] Multi-Specialty AI Selection → CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md
+- [ ] Multi-Agent AI Platform → MULTI_AGENT_AI_PLATFORM_ARCHITECTURE.md v3.0
+- [ ] Clinical Intent Hierarchy → CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md
+
 **Platform Architecture:**
-- [ ] 4-Section Workflow → INTEGRATION_ARCHITECTURE.md
+- [ ] 4-Section Workflow → INTEGRATION_ARCHITECTURE.md v3.0
 - [ ] 8 Health Systems → health-matrix-framework.md
 - [ ] 3 Clinical Domains → health-matrix-framework.md
 - [ ] 5 Lifestyle Pillars → LIFESTYLE_PILLAR_QUESTIONNAIRES
@@ -213,7 +252,8 @@
 **Card System:**
 - [ ] 12 Card Types → CARD_TYPE_SPECIFICATIONS.md (CRITICAL - often missed!)
 - [ ] Card Template → UNIVERSAL_CARD_TEMPLATE.md
-- [ ] Evidence Grades → CARD_TYPE_SPECIFICATIONS.md
+- [ ] Card Lifecycle → CARD_LIFECYCLE_AND_AI_PARAMETERS.md
+- [ ] Evidence Grades → EVIDENCE_SECTION_SPECIFICATION.md
 
 **Clinical Data:**
 - [ ] 132 Diagnoses → MEDICAL_HISTORY_TIER1_LIBRARY
@@ -245,22 +285,50 @@ When you UPDATE a canonical source document:
 ```
 BEFORE WRITING ABOUT...          MUST READ...
 ─────────────────────────────────────────────────────────────
-Card Types (12 types)            → CARD_TYPE_SPECIFICATIONS.md
-Card Template Structure          → UNIVERSAL_CARD_TEMPLATE.md v2.0
-Card Lifecycle Phases            → CARD_LIFECYCLE_AND_AI_PARAMETERS.md (NEW!)
+** NEW v3.0 ARCHITECTURE (2025-12-12) **
+3 Care Plan Types                → CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md
+  • Chronic (12-month baseline)
+  • Subacute (days-weeks overlay)
+  • Acute (emergency overlay)
+Care Plan Digital Interface      → CARE_PLAN_DIGITAL_INTERFACE_SPEC.md (NEW!)
+  • Time-interval views (Daily/Weekly/Monthly/Quarterly/Annual)
+  • Card list display with expandable AT-A-GLANCE
+  • Contextual guidance per interval
+90/10 Self-Directed Model        → CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md (NEW!)
+Multi-Specialty AI Selection     → CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md (NEW!)
+  • 14 specialist agents
+  • PCP AI orchestrator
+  • Clinical Intent Hierarchy
+Multi-Agent AI Platform          → MULTI_AGENT_AI_PLATFORM_ARCHITECTURE.md v3.0
+4-Section Workflow               → INTEGRATION_ARCHITECTURE.md v3.0
+─────────────────────────────────────────────────────────────
+** CARD SYSTEM **
+Card Types (12 types)            → CARD_TYPE_SPECIFICATIONS.md v0.2
+Card Template Structure          → UNIVERSAL_CARD_TEMPLATE.md v0.5
+  • AT-A-GLANCE (patient quick ref)
+  • CONDENSED VIEW (patient everyday)
+  • EXPANDED VIEW (patient deep-dive)
+  • EVIDENCE (patient trust-builder)
+  • CLINICIAN & AI REFERENCE (like UpToDate)
+  • AI METADATA (YAML)
+Card Lifecycle Phases            → CARD_LIFECYCLE_AND_AI_PARAMETERS.md
   • Initiation Guide
   • Maintenance Guide
   • De-loading/De-prescribing
-AI-Modifiable Parameters [ ]     → CARD_LIFECYCLE_AND_AI_PARAMETERS.md (NEW!)
+AI-Modifiable Parameters [ ]     → CARD_LIFECYCLE_AND_AI_PARAMETERS.md
 De-prescribing Criteria          → CARD_DEPRESCRIBING_AND_AI_OVERSIGHT_SPEC.md
-Autonomy Tiers (4 tiers)         → AUTONOMY_AND_AI_AGENT_SPECIFICATION.md (NEW!)
-AI Agent Ecosystem               → AUTONOMY_AND_AI_AGENT_SPECIFICATION.md (NEW!)
-Evidence Grading & Sources       → EVIDENCE_SECTION_SPECIFICATION.md (NEW!)
+Autonomy Tiers (4 tiers)         → AUTONOMY_AND_AI_AGENT_SPECIFICATION.md
+AI Agent Ecosystem               → AUTONOMY_AND_AI_AGENT_SPECIFICATION.md
+Evidence Grading & Sources       → EVIDENCE_SECTION_SPECIFICATION.md
 Card Generation/Mass Production  → CARD_GENERATION_SPECIFICATION.md
 DME + Home Monitoring Workflow   → DME_MONITORING_WORKFLOW_PATTERN.md
+─────────────────────────────────────────────────────────────
+** LIBRARIES **
 Behavioral Card Libraries        → TIER5_*_v2.md files (v2.0!)
 Medical Card Libraries           → TIER5_*.md files
 Card vs Deck distinction         → BEHAVIORAL_LIBRARY_v2_CHANGELOG.md
+─────────────────────────────────────────────────────────────
+** CLINICAL DATA **
 Diagnoses                        → MEDICAL_HISTORY_TIER1_LIBRARY
 Parameters                       → PARAMETER_NORMALIZATION_v2.md
 8 Health Systems                 → health-matrix-framework.md
@@ -340,6 +408,21 @@ RIGHT: "Walk" as ONE card with duration as template parameter
 - 4-step process before writing about any topic
 - Ensures completeness and accuracy
 - Catches errors like "missing 3 card types"
+
+---
+
+## VERSION HISTORY
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 0.6 | 2025-12-14 | **5 LIFESTYLE PILLARS RESTRUCTURING**: Dissolved Mind-Body library, created Emotion pillar (TIER5_EMOTION_v2.md), redistributed all cards to correct pillars, removed duplicates, added cross-references. Total: 528 behavioral cards across 5 pillars. |
+| 0.5 | 2025-12-14 | Added Library Coverage tracking, corrected medical library status (most were planned, not created), added coverage % column |
+| 0.4 | 2025-12-13 | Added CARE_PLAN_DIGITAL_INTERFACE_SPEC.md for time-interval Care Plan views |
+| 0.3 | 2025-12-13 | Updated UNIVERSAL_CARD_TEMPLATE to v0.5 with audience-specific sections |
+| 0.2 | 2025-12-12 | Added CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md, updated architecture references |
+| 0.1 | 2025-11-26 | Initial source document registry |
+
+**Note:** v1.0 will be assigned at first production deployment with real patients.
 
 ---
 

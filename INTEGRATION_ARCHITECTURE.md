@@ -1,13 +1,19 @@
 # CMO PLATFORM - INTEGRATION ARCHITECTURE
-**Version:** 1.0
-**Date:** 2025-11-26
-**Status:** Living Document - Update with any cross-project changes
+**Version:** 0.3
+**Date:** 2025-12-12
+**Status:** Pre-release (v1.0 = first production deployment)
 
 ---
 
 ## PURPOSE
 
 This document defines how the three CMO projects integrate into a unified Performance Medicine platform. It serves as the **single source of truth** for cross-project dependencies, data flows, and update protocols.
+
+**Key Integration Concepts:**
+- **4-Section Workflow** - How data flows through the platform
+- **3 Care Plan Types** - Chronic, Subacute, Acute (coexisting care plans)
+- **90/10 Self-Directed Model** - 90% patient autonomous, 10% clinician
+- **Multi-Specialty AI Selection** - Domain-specific agents selecting cards
 
 ---
 
@@ -48,14 +54,16 @@ The CMO Platform operates through four interconnected sections that create a con
 **Patient Incentive:** More frequent data updates = more accurate dashboard = better health insights
 
 ### **SECTION 3: SMART CARD/DECK CARE PLAN SYSTEM**
-**Purpose:** Generate actionable, interactable care plans
+**Purpose:** Generate actionable, interactable care plans through organized SMART Cards
 **Components:** Evidence-based intervention cards, progressive decks, adherence tracking
 **Processing:** Uses outputs from Section 1 (clinical data) + Section 2 (dashboard scores)
 **Key Features:**
+- **Care Plan = Organized Collection of SMART Cards** (not separate from cards)
+- **Three Care Plan Types:** Chronic (12-month baseline), Subacute (days-weeks overlay), Acute (emergency overlay)
 - **Creation Process:** AI-driven recommendations based on dashboard + clinical data
-- **Management Process:** Patient self-directed with clinician guidance
+- **Management Process:** Patient self-directed with clinician guidance (90/10 model)
 - **De-loading/De-prescribing Process:** Cards automatically retire when goals achieved
-**Output:** Personalized SMART Cards that feed back into Section 2 dashboard
+**Output:** Personalized Care Plans (containing SMART Cards) that feed back into Section 2 dashboard
 
 ### **SECTION 4: PERFORMANCE MEDICINE PHILOSOPHY**
 **Purpose:** Guide the specialty philosophy of care across all life stages
@@ -117,6 +125,74 @@ The CMO Platform operates through four interconnected sections that create a con
 ```
 
 **KEY PRINCIPLE:** The more frequently patients update their data (Section 1), the more accurate and dynamic their dashboard becomes (Section 2), creating a powerful incentive for active health engagement.
+
+---
+
+## THREE CARE PLAN TYPES
+
+A **Care Plan IS a grouping of SMART Cards**, organized clinically and temporally. Three types of care plans coexist and interact:
+
+### Type 1: CHRONIC CARE PLAN (Baseline)
+- **Timeframe:** 12 months, reviewed quarterly
+- **Trigger:** Comprehensive assessment, annual review
+- **Focus:** Prevention, Maintenance, Enhancement, Treatment
+- **Cards:** Organized by quarter (Q1 active, Q2-4 queued)
+- **Status:** Always active for every patient
+- **Card Organization:** By time interval (daily/weekly/monthly/quarterly/annually) + by clinical intent
+
+### Type 2: SUBACUTE CARE PLAN (Overlay)
+- **Timeframe:** Days to weeks
+- **Trigger:** Trend change, new symptom, life event, lab result
+- **Focus:** Investigate, Adjust, Transition, Monitor
+- **Cards:** Temporary additions to address emerging issue
+- **Status:** Active when triggered, resolves back to chronic
+- **Examples:** Glucose trending up → add investigation cards for 7 days
+
+### Type 3: ACUTE CARE PLAN (Emergency Overlay)
+- **Timeframe:** Minutes to hours
+- **Trigger:** Critical value, emergency symptom, urgent need
+- **Focus:** Immediate intervention, Triage, Crisis response
+- **Cards:** Urgent action cards, may pause non-essential chronic cards
+- **Status:** Active during emergency, documents to chronic plan after resolution
+
+### Care Plan Interaction Rules
+
+```
+NORMAL STATE:
+└── CHRONIC CARE PLAN (Active) - All systems stable
+
+SUBACUTE TRIGGERED:
+├── CHRONIC CARE PLAN (Active - continues unchanged)
+└── + SUBACUTE OVERLAY (Temporary) - Investigation cards
+
+ACUTE TRIGGERED:
+├── CHRONIC CARE PLAN (Partially paused - medications continue)
+└── + ACUTE OVERLAY (Priority) - Crisis protocol active
+```
+
+**Resolution:** All subacute/acute events document back to chronic plan and may trigger adjustments.
+
+For detailed specifications, see: [CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md](CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md)
+
+---
+
+## 90/10 SELF-DIRECTED MODEL
+
+### Decision Tier Distribution
+
+| Tier | Description | % of Decisions | Examples |
+|------|-------------|----------------|----------|
+| **Tier 1** | Patient + AI Autonomous | 65% | Behavioral cards, pre-authorized med titrations, standing labs |
+| **Tier 2** | Patient + AI + Allied Health | 25% | OTC requests, complex nutrition, post-injury exercise |
+| **Tier 3** | Physician Required | 10% | New prescriptions, treatment failures, safety events |
+
+**Goal:** 90% of patient actions happen immediately or within hours. Clinicians focus on complex 10%.
+
+### Pre-Authorization Framework
+Clinicians can pre-authorize actions to increase patient autonomy:
+- Medication titration ranges (e.g., "Lisinopril 10-40mg, increase 10mg/week if tolerating")
+- Standing lab orders (patient schedules within ±2 weeks of due date)
+- Formulation switches (e.g., IR to ER for GI symptoms)
 
 ---
 
@@ -512,11 +588,13 @@ When making ANY change to ANY section:
 
 ## VERSION HISTORY
 
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 2.0 | 2025-11-26 | Consolidated cross-project update checklist and version control protocol as appendices | Claude |
-| 1.1 | 2025-11-26 | Revised to reflect four-section workflow, added workflow rules, clarified SMART card lifecycle | Claude |
-| 1.0 | 2025-11-26 | Initial integration architecture created | Claude |
+| Version | Date | Changes |
+|---------|------|---------|
+| 0.3 | 2025-12-12 | Added THREE CARE PLAN TYPES, 90/10 Self-Directed Model, Pre-Authorization Framework |
+| 0.2 | 2025-11-26 | Added cross-project update checklist and version control protocol |
+| 0.1 | 2025-11-26 | Initial integration architecture |
+
+**Note:** v1.0 will be assigned at first production deployment with real patients.
 
 ---
 
@@ -640,6 +718,7 @@ SMART SYSTEM behavioral cards
 
 **MASTER GOVERNANCE:**
 - [SOURCE_DOCUMENT_REGISTRY.md](SOURCE_DOCUMENT_REGISTRY.md) ⚠️ **Read FIRST to find canonical sources**
+- [CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md](CARE_PLAN_SMART_CARD_INTEGRATION_SPEC.md) ⚠️ **3 Care Plan Types, 90/10 Model, Multi-Specialty AI**
 - [MULTI_AGENT_AI_PLATFORM_ARCHITECTURE.md](MULTI_AGENT_AI_PLATFORM_ARCHITECTURE.md) - Platform-wide AI (all 4 sections)
 - [MASTER_ROADMAP.md](MASTER_ROADMAP.md)
 - [00_START_HERE.md](00_START_HERE.md)
