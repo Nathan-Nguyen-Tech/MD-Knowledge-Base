@@ -24,7 +24,14 @@
 
 This document enumerates ALL individual Tier 5 cards for Nutrition interventions. Each entry represents ONE SMART card - a single, specific, atomic food action.
 
-**Total Cards**: 89 cards
+**Total Cards**: 168 cards
+
+**Action Types Included**:
+- Treatment/Intervention (food actions, behaviors)
+- Monitoring (tracking intake)
+- Preparation (meal prep, shopping)
+- Assessment (diet evaluation)
+- Maintenance (sustaining habits)
 
 ---
 
@@ -373,6 +380,203 @@ This document enumerates ALL individual Tier 5 cards for Nutrition interventions
 
 ---
 
+## TIER 3: MONITORING & TRACKING
+
+> **Purpose:** These cards track nutrition metrics. Patient performs action to gather data for dashboard/care plan.
+
+### Tier 4: Intake Tracking
+
+| Card ID | Card Name | Description | Action Type |
+|---------|-----------|-------------|-------------|
+| NUT_MON_001 | Log Food Intake | Record all food eaten in diary/app | Monitoring |
+| NUT_MON_002 | Track Calories | Record daily caloric intake | Monitoring |
+| NUT_MON_003 | Track Macros | Record protein/carbs/fat intake | Monitoring |
+| NUT_MON_004 | Track Fiber Intake | Record daily fiber grams | Monitoring |
+| NUT_MON_005 | Track Sodium Intake | Record daily sodium mg | Monitoring |
+| NUT_MON_006 | Track Sugar Intake | Record added sugar grams | Monitoring |
+| NUT_MON_007 | Track Water Intake | Record daily fluid oz/ml | Monitoring |
+| NUT_MON_008 | Track Caffeine Intake | Record daily caffeine mg | Monitoring |
+| NUT_MON_009 | Track Vegetable Servings | Count daily vegetable portions | Monitoring |
+| NUT_MON_010 | Track Fruit Servings | Count daily fruit portions | Monitoring |
+
+**Subtotal: 10 cards**
+
+---
+
+### Tier 4: Weight & Body Tracking
+
+| Card ID | Card Name | Description | Action Type |
+|---------|-----------|-------------|-------------|
+| NUT_MON_011 | Weigh Self | Step on scale to record weight | Monitoring |
+| NUT_MON_012 | Take Progress Photo | Photograph body for visual tracking | Monitoring |
+| NUT_MON_013 | Track Hunger Levels | Rate hunger before/after meals 1-10 | Monitoring |
+| NUT_MON_014 | Track Satiety Levels | Rate fullness after meals 1-10 | Monitoring |
+| NUT_MON_015 | Track Eating Triggers | Note emotional/situational eating cues | Monitoring |
+
+**Subtotal: 5 cards**
+
+---
+
+### Tier 4: Glucose Monitoring
+
+| Card ID | Card Name | Description | Action Type |
+|---------|-----------|-------------|-------------|
+| NUT_MON_016 | Check Blood Glucose | Use glucometer to test blood sugar | Monitoring |
+| NUT_MON_017 | Check Fasting Glucose | Test blood sugar in morning before eating | Monitoring |
+| NUT_MON_018 | Check Post-Meal Glucose | Test blood sugar 1-2 hours after eating | Monitoring |
+| NUT_MON_019 | Review CGM Data | Check continuous glucose monitor readings | Monitoring |
+| NUT_MON_020 | Log Glucose-Food Correlation | Note which foods spike glucose | Monitoring |
+
+**Subtotal: 5 cards**
+
+---
+
+**MONITORING SUBTOTAL: 20 cards**
+
+---
+
+## TIER 3: PREPARATION & SETUP
+
+> **Purpose:** These cards prepare for healthy eating. Patient performs action BEFORE meals/shopping.
+
+### Tier 4: Meal Preparation
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| NUT_PREP_001 | Batch Cook Protein | Cook multiple protein servings at once | Weekly prep |
+| NUT_PREP_002 | Wash and Cut Vegetables | Prep vegetables for easy use | After grocery shopping |
+| NUT_PREP_003 | Portion Snacks | Divide bulk snacks into single servings | Weekly prep |
+| NUT_PREP_004 | Prepare Overnight Oats | Make next-day breakfast night before | Night before |
+| NUT_PREP_005 | Make Salad in Jar | Prepare grab-and-go salads | Weekly prep |
+| NUT_PREP_006 | Cook Grains in Bulk | Prepare rice/quinoa for week | Weekly prep |
+| NUT_PREP_007 | Freeze Meal Components | Store prepped foods in freezer | Batch prep |
+| NUT_PREP_008 | Pack Lunch | Prepare lunch for next day | Night before |
+| NUT_PREP_009 | Set Out Supplements | Organize daily supplements/vitamins | Night before or morning |
+| NUT_PREP_010 | Fill Water Bottle | Prepare water for hydration goals | Morning |
+
+**Subtotal: 10 cards**
+
+---
+
+### Tier 4: Shopping Preparation
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| NUT_PREP_011 | Create Grocery List | Write list based on meal plan | Before shopping |
+| NUT_PREP_012 | Check Pantry Inventory | Review what's already at home | Before shopping |
+| NUT_PREP_013 | Plan Meals for Week | Decide meals for upcoming week | Weekly planning |
+| NUT_PREP_014 | Review Restaurant Menu | Check nutrition info before dining out | Before restaurant visit |
+| NUT_PREP_015 | Choose Healthier Restaurant Option | Pre-select healthy menu item | Before ordering |
+
+**Subtotal: 5 cards**
+
+---
+
+### Tier 4: Environment Setup
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| NUT_PREP_016 | Organize Pantry | Arrange pantry with healthy foods visible | Monthly setup |
+| NUT_PREP_017 | Organize Refrigerator | Place healthy options at eye level | After shopping |
+| NUT_PREP_018 | Set Up Fruit Bowl | Place visible fruit bowl on counter | Ongoing |
+| NUT_PREP_019 | Remove Trigger Foods | Take unhealthy snacks out of home | After decision |
+| NUT_PREP_020 | Stock Emergency Healthy Snacks | Keep healthy options at work/car | Weekly |
+
+**Subtotal: 5 cards**
+
+---
+
+**PREPARATION SUBTOTAL: 20 cards**
+
+---
+
+## TIER 3: ASSESSMENT & SCREENING
+
+> **Purpose:** These cards assess nutrition status. Patient completes assessment, result informs care plan.
+
+### Tier 4: Dietary Assessments
+
+| Card ID | Card Name | Description | Assessment |
+|---------|-----------|-------------|------------|
+| NUT_ASSESS_001 | Complete 24-Hour Food Recall | Report all food eaten yesterday | Recall accuracy |
+| NUT_ASSESS_002 | Complete Food Frequency Questionnaire | Report usual eating patterns | Pattern assessment |
+| NUT_ASSESS_003 | Rate Diet Quality (1-10) | Self-assess current eating quality | Self-assessment |
+| NUT_ASSESS_004 | Identify Problem Eating Times | Note when unhealthy eating occurs | Pattern identification |
+| NUT_ASSESS_005 | Identify Trigger Foods | List foods that lead to overeating | Trigger identification |
+
+**Subtotal: 5 cards**
+
+---
+
+### Tier 4: Nutrient Deficiency Screening
+
+| Card ID | Card Name | Description | Assessment |
+|---------|-----------|-------------|------------|
+| NUT_ASSESS_006 | Review Lab Results for Deficiencies | Check vitamin/mineral levels | Lab review |
+| NUT_ASSESS_007 | Assess Protein Adequacy | Evaluate if eating enough protein | Intake check |
+| NUT_ASSESS_008 | Assess Fiber Adequacy | Evaluate if eating enough fiber | Intake check |
+| NUT_ASSESS_009 | Assess Calcium Adequacy | Evaluate if getting enough calcium | Intake check |
+| NUT_ASSESS_010 | Assess Iron Adequacy | Evaluate if getting enough iron | Intake check |
+
+**Subtotal: 5 cards**
+
+---
+
+**ASSESSMENT SUBTOTAL: 10 cards**
+
+---
+
+## TIER 3: MAINTENANCE & SUSTAINABILITY
+
+> **Purpose:** These cards maintain healthy eating capacity. Patient performs action to sustain nutrition success.
+
+### Tier 4: Kitchen Maintenance
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| NUT_MAINT_001 | Clean Out Refrigerator | Remove expired/spoiled foods | Weekly |
+| NUT_MAINT_002 | Clean Out Pantry | Remove expired/stale foods | Monthly |
+| NUT_MAINT_003 | Rotate Food Stock (FIFO) | First-in-first-out organization | After shopping |
+| NUT_MAINT_004 | Sharpen Kitchen Knives | Maintain cutting tools | As needed |
+| NUT_MAINT_005 | Clean Blender/Food Processor | Maintain food prep equipment | After use |
+| NUT_MAINT_006 | Restock Healthy Staples | Replace used healthy basics | As needed |
+
+**Subtotal: 6 cards**
+
+---
+
+### Tier 4: Habit Maintenance
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| NUT_MAINT_007 | Review Weekly Eating Patterns | Reflect on week's nutrition | Weekly review |
+| NUT_MAINT_008 | Adjust Goals Based on Progress | Modify targets as needed | Monthly review |
+| NUT_MAINT_009 | Plan Recovery After Slip | Get back on track after deviation | After slip |
+| NUT_MAINT_010 | Celebrate Nutrition Wins | Acknowledge healthy eating success | Ongoing |
+| NUT_MAINT_011 | Update Food Preferences | Note new liked/disliked healthy foods | Ongoing |
+| NUT_MAINT_012 | Renew Meal Plan Variety | Add new recipes to prevent boredom | Monthly |
+
+**Subtotal: 6 cards**
+
+---
+
+### Tier 4: Special Situation Maintenance
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| NUT_MAINT_013 | Plan for Travel Eating | Prepare nutrition strategy for trips | Before travel |
+| NUT_MAINT_014 | Plan for Holiday Eating | Prepare strategy for holidays | Before events |
+| NUT_MAINT_015 | Stock Sick-Day Foods | Keep easy, nourishing foods for illness | Ongoing |
+| NUT_MAINT_016 | Update Allergy/Restriction List | Keep dietary restrictions current | As needed |
+
+**Subtotal: 4 cards**
+
+---
+
+**MAINTENANCE SUBTOTAL: 16 cards**
+
+---
+
 ## GRAND SUMMARY
 
 | Tier 3 Category | Card Count |
@@ -383,7 +587,21 @@ This document enumerates ALL individual Tier 5 cards for Nutrition interventions
 | **GLUCOSE OPTIMIZATION** | 4 |
 | **TIME-RESTRICTED EATING** | 4 |
 | **MINDFUL EATING MICRO-ACTIONS** | 5 |
-| **TOTAL** | **102 cards** |
+| **MONITORING & TRACKING** | 20 |
+| **PREPARATION & SETUP** | 20 |
+| **ASSESSMENT & SCREENING** | 10 |
+| **MAINTENANCE & SUSTAINABILITY** | 16 |
+| **TOTAL** | **168 cards** |
+
+### Action Type Breakdown
+
+| Action Type | Card Count | Description |
+|-------------|------------|-------------|
+| **Treatment/Intervention** | 102 | Food actions, behaviors, timing |
+| **Monitoring** | 20 | Tracking intake and metrics |
+| **Preparation** | 20 | Meal prep and environment setup |
+| **Assessment** | 10 | Diet quality evaluation |
+| **Maintenance** | 16 | Sustaining healthy eating habits |
 
 ---
 
@@ -398,6 +616,10 @@ This document enumerates ALL individual Tier 5 cards for Nutrition interventions
 - `GLUC` = Glucose Optimization
 - `TRE` = Time-Restricted Eating
 - `MIND` = Mindful Eating Micro-Actions
+- `MON` = Monitoring & Tracking
+- `PREP` = Preparation & Setup
+- `ASSESS` = Assessment & Screening
+- `MAINT` = Maintenance & Sustainability
 
 ---
 
@@ -457,7 +679,108 @@ All nutrition cards are evidence-based:
 
 ---
 
-*Version 2.1 | Updated: 2025-12-05*
+## TIER 3: PEDIATRIC NUTRITION CARDS
+
+> **Age Tags:** All cards in this section include age classification tags.
+> **Executor Tags:** Most pediatric cards are `#caregiver-executed` or `#caregiver-supervised`.
+
+### Tier 4: Structured Eating - Pediatric
+
+| Card ID | Card Name | Description | Age Tags | Executor |
+|---------|-----------|-------------|----------|----------|
+| NUT_PED_001 | Establish Structured Mealtimes | Set consistent meal times (breakfast, lunch, dinner) | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_002 | Establish Structured Snack Times | Set 2 snack times only (no grazing) | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_003 | Serve Family Meals Together | Eat at table as family when possible | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_004 | Model Healthy Eating | Caregiver eats healthy foods visibly | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_005 | Offer New Food Without Pressure | Present new foods 10-15 times without forcing | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_006 | Let Child Self-Regulate Fullness | Allow child to stop when full (don't force finish plate) | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_007 | Serve Protein First | Offer protein and vegetables before carbs | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_008 | Use Age-Appropriate Portions | Serve child-sized portions (1 tbsp per year of age rule) | `#toddler #preschool` | `#caregiver-executed` |
+
+**Subtotal: 8 cards**
+
+---
+
+### Tier 4: Food Rules for Caregivers
+
+| Card ID | Card Name | Description | Age Tags | Executor |
+|---------|-----------|-------------|----------|----------|
+| NUT_PED_009 | Remove Trigger Foods from Home | Don't keep unhealthy snacks where child can access | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_010 | No Food as Reward | Don't use food (especially sweets) as reward/bribe | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_011 | No Food as Comfort | Don't use food to calm emotions | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_012 | Limit Sugary Drinks | Eliminate or severely restrict juice, soda, sweetened drinks | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_013 | Offer Water as Primary Drink | Make water the default drink option | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_014 | Keep Healthy Snacks Visible | Put fruits/vegetables at child's eye level | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_015 | Involve Child in Food Prep | Age-appropriate kitchen participation (washing, mixing) | `#preschool #school-age` | `#caregiver-supervised` |
+
+**Subtotal: 7 cards**
+
+---
+
+### Tier 4: Sensory-Sensitive Feeding (ASD/SPD)
+
+| Card ID | Card Name | Description | Age Tags | Executor |
+|---------|-----------|-------------|----------|----------|
+| NUT_PED_016 | Respect Texture Sensitivities | Adapt food textures to child's tolerance | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_017 | Food Chaining | Introduce new foods similar to accepted foods | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_018 | Offer Predictable Foods | Include familiar "safe food" at every meal | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_019 | Reduce Mealtime Sensory Load | Minimize distractions, noise, bright lights at meals | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_020 | Use Visual Food Menu | Show pictures of meal options | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_021 | Separate Foods on Plate | Don't let foods touch (if child prefers) | `#toddler #preschool #school-age` | `#caregiver-executed` |
+
+**Subtotal: 6 cards**
+
+---
+
+### Tier 4: Pediatric Weight Management
+
+| Card ID | Card Name | Description | Age Tags | Executor |
+|---------|-----------|-------------|----------|----------|
+| NUT_PED_022 | Monthly Pediatric Weight Check | Weigh child monthly, track percentile | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_023 | Track Growth Curve | Plot weight/height on growth chart | `#infant #toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_024 | Assess BMI-for-Age | Calculate and track pediatric BMI percentile | `#preschool #school-age` | `#caregiver-executed` |
+
+**Subtotal: 3 cards**
+
+---
+
+### Tier 4: Caregiver Training - Nutrition
+
+| Card ID | Card Name | Description | Age Tags | Executor |
+|---------|-----------|-------------|----------|----------|
+| NUT_PED_025 | Educate Caregiver on Structured Eating | Train hired caregiver on meal/snack rules | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_026 | Weekly Caregiver Nutrition Check-In | Parent reviews caregiver's food choices | `#toddler #preschool #school-age` | `#caregiver-executed` |
+| NUT_PED_027 | Post Nutrition Rules in Kitchen | Print and display feeding rules for all caregivers | `#toddler #preschool #school-age` | `#caregiver-executed` |
+
+**Subtotal: 3 cards**
+
+---
+
+**PEDIATRIC NUTRITION SUBTOTAL: 27 cards**
+
+---
+
+## GRAND SUMMARY (Updated)
+
+| Tier 3 Category | Card Count |
+|-----------------|------------|
+| **SPECIFIC FOOD ACTIONS (ADD)** | 33 |
+| **REDUCE/LIMIT FOODS** | 29 |
+| **EATING BEHAVIORS** | 27 |
+| **GLUCOSE OPTIMIZATION** | 4 |
+| **TIME-RESTRICTED EATING** | 4 |
+| **MINDFUL EATING MICRO-ACTIONS** | 5 |
+| **MONITORING & TRACKING** | 20 |
+| **PREPARATION & SETUP** | 20 |
+| **ASSESSMENT & SCREENING** | 10 |
+| **MAINTENANCE & SUSTAINABILITY** | 16 |
+| **PEDIATRIC NUTRITION** | 27 |
+| **TOTAL** | **195 cards** |
+
+---
+
+*Version 2.3 | Updated: 2025-12-14*
 *Source: CARD_TYPE_SPECIFICATIONS.md v2.0, CARD_GENERATION_SPECIFICATION.md v1.0*
-*Previous version: TIER5_NUTRITION_v2.md v2.0 (2024-11-26)*
+*Previous version: v2.1 (2025-12-05)*
+*v2.2 Changes: Added 4 new action type categories: Monitoring (+20), Preparation (+20), Assessment (+10), Maintenance (+16). Total: 102 → 168 cards*
 *v2.1 Changes: Added Glucose Optimization (+4), Time-Restricted Eating (+4), Mindful Eating Micro-Actions (+5) = +13 cards*

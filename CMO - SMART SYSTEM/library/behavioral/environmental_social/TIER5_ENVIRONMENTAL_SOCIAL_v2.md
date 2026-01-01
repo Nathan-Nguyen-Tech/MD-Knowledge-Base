@@ -20,7 +20,14 @@
 
 This document enumerates ALL individual Tier 5 cards for Environmental and Social Health interventions. Each entry represents ONE SMART card.
 
-**Total Cards**: 74 cards
+**Total Cards**: 137 cards
+
+**Action Types Included**:
+- Treatment/Intervention (social, environmental, substance use)
+- Monitoring (tracking environment and social metrics)
+- Assessment (substance use and social screening)
+- Preparation (environmental and quit prep)
+- Maintenance (home and relationship maintenance)
 
 ---
 
@@ -30,16 +37,15 @@ This document enumerates ALL individual Tier 5 cards for Environmental and Socia
 
 | Card ID | Card Name | Description | Action |
 |---------|-----------|-------------|--------|
-| ENV_SOC_001 | Call a Friend or Family Member | Phone/video call with loved one | Initiate conversation |
-| ENV_SOC_002 | Text/Message Someone | Send message to maintain connection | Send check-in text |
-| ENV_SOC_003 | Schedule Social Activity | Plan time with others | Put on calendar |
-| ENV_SOC_004 | Have Meal with Others | Eat with family/friends | Shared mealtime |
-| ENV_SOC_005 | Express Appreciation | Tell someone why you value them | Verbal gratitude |
-| ENV_SOC_006 | Ask for Help | Reach out when struggling | Request support |
-| ENV_SOC_007 | Offer Help to Others | Assist someone in need | Give support |
-| ENV_SOC_008 | Reconcile Conflict | Address relationship tension | Have difficult conversation |
+| ENV_SOC_001 | Contact a Friend or Family Member | Phone call, video call, or text to loved one | Initiate conversation |
+| ENV_SOC_002 | Schedule Social Activity | Plan time with others | Put on calendar |
+| ENV_SOC_003 | Have Meal with Others | Eat with family/friends | Shared mealtime |
+| ENV_SOC_004 | Express Appreciation | Tell someone why you value them | Verbal gratitude |
+| ENV_SOC_005 | Ask for Help | Reach out when struggling | Request support |
+| ENV_SOC_006 | Offer Help to Others | Assist someone in need | Give support |
+| ENV_SOC_007 | Reconcile Conflict | Address relationship tension | Have difficult conversation |
 
-**Subtotal: 8 cards**
+**Subtotal: 7 cards**
 
 ---
 
@@ -47,19 +53,19 @@ This document enumerates ALL individual Tier 5 cards for Environmental and Socia
 
 | Card ID | Card Name | Description | Action |
 |---------|-----------|-------------|--------|
-| ENV_SOC_009 | Join Support Group | Attend peer support meeting | In-person or online group |
-| ENV_SOC_010 | Attend Community Event | Participate in local gathering | Festivals, meetings, classes |
-| ENV_SOC_011 | Volunteer | Give time to organization | Regular volunteer work |
-| ENV_SOC_012 | Join Club or Organization | Membership in group | Book club, hobby group, etc. |
-| ENV_SOC_013 | Attend Religious/Spiritual Service | Participate in faith community | If aligned with beliefs |
-| ENV_SOC_014 | Take Class/Workshop | Learn with others | Group learning |
-| ENV_SOC_015 | Greet Neighbors | Say hello to those nearby | Build local connections |
+| ENV_SOC_008 | Join Support Group | Attend peer support meeting | In-person or online group |
+| ENV_SOC_009 | Attend Community Event | Participate in local gathering | Festivals, meetings, classes |
+| ENV_SOC_010 | Volunteer | Give time to organization | Regular volunteer work |
+| ENV_SOC_011 | Join Club or Organization | Membership in group | Book club, hobby group, etc. |
+| ENV_SOC_012 | Attend Religious/Spiritual Service | Participate in faith community | If aligned with beliefs |
+| ENV_SOC_013 | Take Class/Workshop | Learn with others | Group learning |
+| ENV_SOC_014 | Greet Neighbors | Say hello to those nearby | Build local connections |
 
 **Subtotal: 7 cards**
 
 ---
 
-**SOCIAL CONNECTION SUBTOTAL: 15 cards**
+**SOCIAL CONNECTION SUBTOTAL: 14 cards**
 
 ---
 
@@ -175,12 +181,13 @@ This document enumerates ALL individual Tier 5 cards for Environmental and Socia
 | ENV_WORK_001 | Adjust Chair Height | Set proper desk chair height | Feet flat, knees 90° |
 | ENV_WORK_002 | Position Monitor at Eye Level | Screen top at eye height | Reduce neck strain |
 | ENV_WORK_003 | Use Keyboard/Mouse at Elbow Height | Arms at 90° angle | Neutral wrist position |
-| ENV_WORK_004 | Take Microbreaks | Brief pauses from work | Every 20-30 minutes |
-| ENV_WORK_005 | Stand Periodically | Stand/walk during work | Sit-stand routine |
-| ENV_WORK_006 | Use Headset for Calls | Hands-free phone use | Avoid neck cradling |
-| ENV_WORK_007 | Follow 20-20-20 Rule | Eye breaks (20 sec at 20 ft every 20 min) | Screen eye strain |
+| ENV_WORK_004 | Stand Periodically | Stand/walk during work | Sit-stand routine |
+| ENV_WORK_005 | Use Headset for Calls | Hands-free phone use | Avoid neck cradling |
+| ENV_WORK_006 | Follow 20-20-20 Rule | Eye breaks (20 sec at 20 ft every 20 min) | Screen eye strain |
 
-**Subtotal: 7 cards**
+**Subtotal: 6 cards**
+
+> **Cross-Reference:** For take breaks/microbreaks, see Recovery library (REC_STRESS_002). For standing reminders, see Movement library (MOV_NEAT_007).
 
 ---
 
@@ -188,17 +195,17 @@ This document enumerates ALL individual Tier 5 cards for Environmental and Socia
 
 | Card ID | Card Name | Description | Action |
 |---------|-----------|-------------|--------|
-| ENV_WORK_008 | Set Work Hours Boundary | Define work start/end times | Protected personal time |
-| ENV_WORK_009 | Take Lunch Break | Step away from work for lunch | Full break daily |
-| ENV_WORK_010 | Use Vacation Days | Take time off work | Use entitled leave |
-| ENV_WORK_011 | Limit After-Hours Email | Avoid work email at night | Disconnect from work |
-| ENV_WORK_012 | Create Dedicated Workspace | Separate work area at home | Physical boundary |
+| ENV_WORK_007 | Set Work Hours Boundary | Define work start/end times | Protected personal time |
+| ENV_WORK_008 | Take Lunch Break | Step away from work for lunch | Full break daily |
+| ENV_WORK_009 | Use Vacation Days | Take time off work | Use entitled leave |
+| ENV_WORK_010 | Limit After-Hours Email | Avoid work email at night | Disconnect from work |
+| ENV_WORK_011 | Create Dedicated Workspace | Separate work area at home | Physical boundary |
 
 **Subtotal: 5 cards**
 
 ---
 
-**OCCUPATIONAL HEALTH SUBTOTAL: 12 cards**
+**OCCUPATIONAL HEALTH SUBTOTAL: 11 cards**
 
 ---
 
@@ -255,14 +262,15 @@ This document enumerates ALL individual Tier 5 cards for Environmental and Socia
 |---------|-----------|-------------|--------|------|
 | ENV_NATURE_001 | Barefoot Grounding | Walk barefoot on earth/grass | 10-20 min on natural surface | #biohacking |
 | ENV_NATURE_002 | Forest Bathing (Shinrin-yoku) | Mindful time in nature/forest | 20-120 min in green space | |
-| ENV_NATURE_003 | Listen to Nature Sounds | Play nature sounds during work | Rain, birds, waves | |
-| ENV_NATURE_004 | Keep Desk Plant | Maintain live plant on/near workspace | Visible greenery | |
+| ENV_NATURE_003 | Keep Desk Plant | Maintain live plant on/near workspace | Visible greenery | |
 
-**Subtotal: 4 cards**
+**Subtotal: 3 cards**
+
+> **Cross-Reference:** For nature sounds listening (relaxation), see Recovery library (REC_RELAX_008).
 
 ---
 
-**GROUNDING & NATURE SUBTOTAL: 4 cards**
+**GROUNDING & NATURE SUBTOTAL: 3 cards**
 
 ---
 
@@ -272,14 +280,202 @@ This document enumerates ALL individual Tier 5 cards for Environmental and Socia
 
 | Card ID | Card Name | Description | Action | Tags |
 |---------|-----------|-------------|--------|------|
-| ENV_MICRO_001 | Set Hourly Stand Alert | Timer reminder to stand every hour | Stand for 1-2 min | #micro |
-| ENV_MICRO_002 | Two-Minute Tidy | Quick workspace declutter | Clear desk surface | #micro |
+| ENV_MICRO_001 | Two-Minute Tidy | Quick workspace declutter | Clear desk surface | #micro |
 
-**Subtotal: 2 cards**
+**Subtotal: 1 card**
+
+> **Cross-Reference:** For hourly stand alerts, see Movement library (MOV_NEAT_007).
 
 ---
 
-**WORKPLACE MICRO-ACTIONS SUBTOTAL: 2 cards**
+**WORKPLACE MICRO-ACTIONS SUBTOTAL: 1 card**
+
+---
+
+## TIER 3: MONITORING & TRACKING
+
+> **Purpose:** These cards track environmental/social metrics. Patient performs action to gather data for dashboard/care plan.
+
+### Tier 4: Environmental Tracking
+
+| Card ID | Card Name | Description | Action Type |
+|---------|-----------|-------------|-------------|
+| ENV_MON_001 | Track Air Quality Index | Check daily AQI | Monitoring |
+| ENV_MON_002 | Track UV Index | Check daily UV exposure level | Monitoring |
+| ENV_MON_003 | Track Indoor Humidity | Monitor home humidity levels | Monitoring |
+| ENV_MON_004 | Track Screen Time | Monitor daily screen hours | Monitoring |
+| ENV_MON_005 | Track Outdoor Time | Log daily time outside | Monitoring |
+
+**Subtotal: 5 cards**
+
+---
+
+### Tier 4: Social Tracking
+
+| Card ID | Card Name | Description | Action Type |
+|---------|-----------|-------------|-------------|
+| ENV_MON_006 | Track Social Interactions | Log meaningful conversations | Monitoring |
+| ENV_MON_007 | Track Loneliness Level (1-10) | Rate feelings of isolation | Monitoring |
+| ENV_MON_008 | Track Community Engagement | Log group activities attended | Monitoring |
+| ENV_MON_009 | Track Relationship Quality | Rate key relationships 1-10 | Monitoring |
+
+**Subtotal: 4 cards**
+
+---
+
+### Tier 4: Substance Use Tracking
+
+| Card ID | Card Name | Description | Action Type |
+|---------|-----------|-------------|-------------|
+| ENV_MON_010 | Track Cigarettes/Day | Count daily cigarettes | Monitoring |
+| ENV_MON_011 | Track Drinks/Week | Count weekly alcoholic drinks | Monitoring |
+| ENV_MON_012 | Track Smoke-Free Days | Count consecutive days without smoking | Monitoring |
+| ENV_MON_013 | Track Cravings | Log craving intensity and timing | Monitoring |
+| ENV_MON_014 | Track Substance Use Triggers | Note what triggers use | Monitoring |
+
+**Subtotal: 5 cards**
+
+---
+
+**MONITORING SUBTOTAL: 14 cards**
+
+---
+
+## TIER 3: ASSESSMENT & SCREENING
+
+> **Purpose:** These cards assess environmental/social status. Patient completes assessment, result informs care plan.
+
+### Tier 4: Substance Use Screening
+
+| Card ID | Card Name | Description | Assessment |
+|---------|-----------|-------------|------------|
+| ENV_ASSESS_001 | Complete Fagerstrom Test | Nicotine dependence screening | Dependence score |
+| ENV_ASSESS_002 | Complete CAGE Questionnaire | Alcohol problem screening | CAGE score |
+| ENV_ASSESS_003 | Complete AUDIT | Alcohol use assessment | AUDIT score |
+| ENV_ASSESS_004 | Complete DAST-10 | Drug abuse screening | DAST score |
+| ENV_ASSESS_005 | Assess Readiness to Quit | Rate motivation to quit 1-10 | Readiness stage |
+
+**Subtotal: 5 cards**
+
+---
+
+### Tier 4: Environmental/Social Assessments
+
+| Card ID | Card Name | Description | Assessment |
+|---------|-----------|-------------|------------|
+| ENV_ASSESS_006 | Complete Social Support Survey | Assess support network | Support score |
+| ENV_ASSESS_007 | Complete UCLA Loneliness Scale | Measure social isolation | Loneliness score |
+| ENV_ASSESS_008 | Assess Home Safety | Review fall/hazard risks | Safety checklist |
+| ENV_ASSESS_009 | Assess Work-Life Balance | Rate work/personal balance 1-10 | Balance score |
+| ENV_ASSESS_010 | Complete Occupational Burnout Scale | Assess work-related burnout | Burnout score |
+
+**Subtotal: 5 cards**
+
+---
+
+**ASSESSMENT SUBTOTAL: 10 cards**
+
+---
+
+## TIER 3: PREPARATION & SETUP
+
+> **Purpose:** These cards prepare for environmental/social wellness. Patient performs action BEFORE activities.
+
+### Tier 4: Environmental Preparation
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| ENV_PREP_001 | Set Up Air Purifier | Install and configure air filter | Setup |
+| ENV_PREP_002 | Install Carbon Monoxide Detector | Set up CO detector | Setup |
+| ENV_PREP_003 | Install Grab Bars | Mount bathroom safety bars | Setup |
+| ENV_PREP_004 | Set Up Humidifier/Dehumidifier | Configure humidity control | Setup |
+| ENV_PREP_005 | Schedule Home Safety Assessment | Book home safety evaluation | Planning |
+
+**Subtotal: 5 cards**
+
+---
+
+### Tier 4: Social Preparation
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| ENV_PREP_006 | Schedule Social Activity | Put social event on calendar | Planning |
+| ENV_PREP_007 | Research Support Groups | Find relevant groups to join | Planning |
+| ENV_PREP_008 | Prepare Conversation Topics | Think of things to discuss | Before social event |
+| ENV_PREP_009 | Set Reminder to Contact Friend | Create alert to reach out | Planning |
+
+**Subtotal: 4 cards**
+
+---
+
+### Tier 4: Quit Preparation
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| ENV_PREP_010 | Set Quit Date | Choose specific date to stop | Planning |
+| ENV_PREP_011 | Tell Support People About Quit | Inform friends/family of plan | Before quit date |
+| ENV_PREP_012 | Stock Nicotine Replacement | Have NRT ready | Before quit date |
+| ENV_PREP_013 | Remove All Tobacco Products | Clear home, car, work | Before quit date |
+| ENV_PREP_014 | Download Quit App | Install cessation support app | Before quit date |
+
+**Subtotal: 5 cards**
+
+---
+
+**PREPARATION SUBTOTAL: 14 cards**
+
+---
+
+## TIER 3: MAINTENANCE & SUSTAINABILITY
+
+> **Purpose:** These cards maintain environmental/social health. Patient performs action to sustain wellness.
+
+### Tier 4: Home Maintenance
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| ENV_MAINT_001 | Replace HVAC Filter | Change furnace/AC filter | Per schedule |
+| ENV_MAINT_002 | Replace Water Filter | Change water filtration | Per schedule |
+| ENV_MAINT_003 | Test Smoke Detectors | Check smoke alarms work | Monthly |
+| ENV_MAINT_004 | Test Carbon Monoxide Detectors | Check CO detectors work | Monthly |
+| ENV_MAINT_005 | Service HVAC System | Schedule maintenance | Annually |
+| ENV_MAINT_006 | Clean Air Purifier Filter | Maintain air filter | Per schedule |
+| ENV_MAINT_007 | Check Fire Extinguisher | Ensure extinguisher ready | Annually |
+| ENV_MAINT_008 | Review Home Safety Checklist | Re-evaluate home hazards | Quarterly |
+
+**Subtotal: 8 cards**
+
+---
+
+### Tier 4: Social Relationship Maintenance
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| ENV_MAINT_009 | Schedule Regular Check-In with Friend | Set recurring contact | Monthly |
+| ENV_MAINT_010 | Review Social Calendar | Ensure social activities planned | Weekly |
+| ENV_MAINT_011 | Update Emergency Contacts | Keep contacts current | Annually |
+| ENV_MAINT_012 | Renew Group Memberships | Maintain club/org memberships | Annually |
+
+**Subtotal: 4 cards**
+
+---
+
+### Tier 4: Recovery Maintenance (Substance Use)
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| ENV_MAINT_013 | Attend AA/NA Meeting | Participate in recovery support | Ongoing |
+| ENV_MAINT_014 | Call Sponsor | Contact recovery sponsor | As needed |
+| ENV_MAINT_015 | Reorder NRT Supplies | Get nicotine replacement refills | Before running out |
+| ENV_MAINT_016 | Review Quit Progress | Assess smoking cessation status | Weekly |
+| ENV_MAINT_017 | Update Relapse Prevention Plan | Refresh strategies | Quarterly |
+| ENV_MAINT_018 | Celebrate Sobriety Milestones | Acknowledge recovery progress | At milestones |
+
+**Subtotal: 6 cards**
+
+---
+
+**MAINTENANCE SUBTOTAL: 18 cards**
 
 ---
 
@@ -287,15 +483,31 @@ This document enumerates ALL individual Tier 5 cards for Environmental and Socia
 
 | Tier 3 Category | Card Count |
 |-----------------|------------|
-| **SOCIAL CONNECTION** | 15 |
+| **SOCIAL CONNECTION** | 14 |
 | **ENVIRONMENTAL QUALITY** | 26 |
 | **SUBSTANCE USE** | 20 |
-| **OCCUPATIONAL HEALTH** | 12 |
+| **OCCUPATIONAL HEALTH** | 11 |
 | **FINANCIAL HEALTH** | 1 |
 | **LIGHT EXPOSURE & CIRCADIAN** | 5 |
-| **GROUNDING & NATURE EXPOSURE** | 4 |
-| **WORKPLACE MICRO-ACTIONS** | 2 |
-| **TOTAL** | **85 cards** |
+| **GROUNDING & NATURE EXPOSURE** | 3 |
+| **WORKPLACE MICRO-ACTIONS** | 1 |
+| **MONITORING & TRACKING** | 14 |
+| **ASSESSMENT & SCREENING** | 10 |
+| **PREPARATION & SETUP** | 14 |
+| **MAINTENANCE & SUSTAINABILITY** | 18 |
+| **TOTAL** | **137 cards** |
+
+### Action Type Breakdown
+
+| Action Type | Card Count | Description |
+|-------------|------------|-------------|
+| **Treatment/Intervention** | 81 | Social, environmental, substance use actions |
+| **Monitoring** | 14 | Tracking environment and social health |
+| **Assessment** | 10 | Substance use and social screening |
+| **Preparation** | 14 | Environmental and quit preparation |
+| **Maintenance** | 18 | Home and relationship maintenance |
+
+> **Note:** 4 duplicate cards removed in v2.2. Cross-references added to Movement and Recovery libraries.
 
 ---
 
@@ -315,6 +527,10 @@ This document enumerates ALL individual Tier 5 cards for Environmental and Socia
 - `LIGHT` = Light Exposure & Circadian
 - `NATURE` = Grounding & Nature Exposure
 - `MICRO` = Workplace Micro-Actions
+- `MON` = Monitoring & Tracking
+- `ASSESS` = Assessment & Screening
+- `PREP` = Preparation & Setup
+- `MAINT` = Maintenance & Sustainability
 
 ---
 
@@ -393,7 +609,9 @@ All environmental/social cards are evidence-based:
 
 ---
 
-*Version 2.1 | Updated: 2025-12-05*
+*Version 2.3 | Updated: 2025-12-14*
 *Source: CARD_TYPE_SPECIFICATIONS.md v2.0, CARD_GENERATION_SPECIFICATION.md v1.0*
-*Previous version: TIER5_ENVIRONMENTAL_SOCIAL_v2.md v2.0 (2024-11-26)*
+*Previous version: v2.2 (2025-12-14)*
+*v2.3 Changes: Added 4 new action type categories: Monitoring (+14), Assessment (+10), Preparation (+14), Maintenance (+18). Total: 81 → 137 cards*
+*v2.2 Changes: Removed 4 duplicate cards (text vs call merged, nature sounds → Recovery, microbreaks → Recovery, stand alert → Movement). Added cross-references. 85 → 81 cards.*
 *v2.1 Changes: Added Light Exposure (+5), Grounding/Nature (+4), Workplace Micro-Actions (+2) = +11 cards*

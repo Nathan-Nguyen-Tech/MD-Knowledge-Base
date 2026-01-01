@@ -19,9 +19,16 @@
 
 ## Overview
 
-This document enumerates ALL individual Tier 5 cards for Movement and Exercise interventions. Each entry represents ONE SMART card - a single, specific, atomic exercise that patients can perform.
+This document enumerates ALL individual Tier 5 cards for Movement and Exercise interventions. Each entry represents ONE SMART card - a single, specific, atomic action that patients can perform.
 
-**Total Cards**: 127 cards
+**Total Cards**: 378 cards
+
+**Action Types Included**:
+- Treatment/Intervention (exercises, poses, movements)
+- Monitoring (tracking metrics)
+- Assessment (fitness testing)
+- Preparation (pre-exercise setup)
+- Maintenance (equipment care, recovery)
 
 ---
 
@@ -367,6 +374,499 @@ This document enumerates ALL individual Tier 5 cards for Movement and Exercise i
 
 ---
 
+## TIER 3: YOGA POSES
+
+> **Note:** Yoga is a DECK (collection of poses). Each pose below is ONE atomic movement card.
+> **Cross-Reference:** For meditation/mindfulness aspects of yoga, see Emotion library (EMO_MED_*).
+
+### Tier 4: Standing Poses
+
+| Card ID | Card Name | Description | Sanskrit |
+|---------|-----------|-------------|----------|
+| MOV_YOGA_001 | Mountain Pose | Standing alignment pose | Tadasana |
+| MOV_YOGA_002 | Warrior I | Front knee bent, arms up | Virabhadrasana I |
+| MOV_YOGA_003 | Warrior II | Arms parallel, gaze over front hand | Virabhadrasana II |
+| MOV_YOGA_004 | Warrior III | Single-leg balance, torso parallel to floor | Virabhadrasana III |
+| MOV_YOGA_005 | Tree Pose | Single-leg balance, foot on thigh/calf | Vrksasana |
+| MOV_YOGA_006 | Triangle Pose | Side stretch with arm extended | Trikonasana |
+| MOV_YOGA_007 | Extended Triangle | Deep side stretch with bind option | Utthita Trikonasana |
+| MOV_YOGA_008 | Revolved Triangle | Twisted triangle pose | Parivrtta Trikonasana |
+| MOV_YOGA_009 | Chair Pose | Squat with arms raised | Utkatasana |
+| MOV_YOGA_010 | Extended Side Angle | Deep lunge with side stretch | Utthita Parsvakonasana |
+| MOV_YOGA_011 | Revolved Side Angle | Twisted lunge with arm extension | Parivrtta Parsvakonasana |
+| MOV_YOGA_012 | Half Moon Pose | Single-leg balance with side body open | Ardha Chandrasana |
+| MOV_YOGA_013 | Revolved Half Moon | Twisted single-leg balance | Parivrtta Ardha Chandrasana |
+| MOV_YOGA_014 | Eagle Pose | Wrapped arms and legs balance | Garudasana |
+| MOV_YOGA_015 | Standing Forward Fold | Forward bend from standing | Uttanasana |
+| MOV_YOGA_016 | Wide-Legged Forward Fold | Wide stance forward bend | Prasarita Padottanasana |
+| MOV_YOGA_017 | Pyramid Pose | Forward fold over front leg | Parsvottanasana |
+| MOV_YOGA_018 | Standing Split | One leg raised vertical | Urdhva Prasarita Eka Padasana |
+| MOV_YOGA_019 | Dancer Pose | Standing backbend balance | Natarajasana |
+| MOV_YOGA_020 | Standing Hand-to-Big-Toe | Hold toe, extend leg | Utthita Hasta Padangusthasana |
+| MOV_YOGA_021 | Humble Warrior | Forward fold in warrior stance | Baddha Virabhadrasana |
+| MOV_YOGA_022 | Goddess Pose | Wide squat with arms raised | Utkata Konasana |
+| MOV_YOGA_023 | High Lunge | Deep lunge, back heel raised | Ashta Chandrasana |
+| MOV_YOGA_024 | Crescent Lunge | High lunge with backbend | Anjaneyasana |
+
+**Subtotal: 24 cards**
+
+---
+
+### Tier 4: Seated Poses
+
+| Card ID | Card Name | Description | Sanskrit |
+|---------|-----------|-------------|----------|
+| MOV_YOGA_025 | Easy Pose | Cross-legged seated | Sukhasana |
+| MOV_YOGA_026 | Staff Pose | Seated with legs extended | Dandasana |
+| MOV_YOGA_027 | Seated Forward Fold | Forward bend over straight legs | Paschimottanasana |
+| MOV_YOGA_028 | Bound Angle Pose | Soles together, knees out | Baddha Konasana |
+| MOV_YOGA_029 | Seated Twist | Spinal rotation seated | Ardha Matsyendrasana |
+| MOV_YOGA_030 | Head-to-Knee Pose | Forward bend over one leg | Janu Sirsasana |
+| MOV_YOGA_031 | Revolved Head-to-Knee | Twisted side stretch | Parivrtta Janu Sirsasana |
+| MOV_YOGA_032 | Wide-Angle Seated Forward Fold | Straddle forward bend | Upavistha Konasana |
+| MOV_YOGA_033 | Hero Pose | Sitting between heels | Virasana |
+| MOV_YOGA_034 | Thunderbolt Pose | Kneeling seated | Vajrasana |
+| MOV_YOGA_035 | Fire Log Pose | Stacked shins seated | Agnistambhasana |
+| MOV_YOGA_036 | Cow Face Pose | Stacked knees, arm bind | Gomukhasana |
+| MOV_YOGA_037 | Lotus Pose | Cross-legged with feet on thighs | Padmasana |
+| MOV_YOGA_038 | Half Lotus Pose | One foot on opposite thigh | Ardha Padmasana |
+| MOV_YOGA_039 | Boat Pose | V-shape core hold | Navasana |
+| MOV_YOGA_040 | Half Boat Pose | Modified V-shape | Ardha Navasana |
+| MOV_YOGA_041 | Compass Pose | Extended leg behind shoulder | Parivrtta Surya Yantrasana |
+
+**Subtotal: 17 cards**
+
+---
+
+### Tier 4: Floor/Supine Poses
+
+| Card ID | Card Name | Description | Sanskrit |
+|---------|-----------|-------------|----------|
+| MOV_YOGA_042 | Corpse Pose | Final relaxation lying flat | Savasana |
+| MOV_YOGA_043 | Knees-to-Chest Pose | Hug knees to chest | Apanasana |
+| MOV_YOGA_044 | Supine Twist | Lying spinal rotation | Supta Matsyendrasana |
+| MOV_YOGA_045 | Bridge Pose | Hip lift from supine | Setu Bandhasana |
+| MOV_YOGA_046 | Supported Bridge Pose | Bridge with block under sacrum | Setu Bandhasana (supported) |
+| MOV_YOGA_047 | Wheel Pose | Full backbend from supine | Urdhva Dhanurasana |
+| MOV_YOGA_048 | Legs Up the Wall | Legs elevated on wall | Viparita Karani |
+| MOV_YOGA_049 | Happy Baby Pose | Grab feet, knees to armpits | Ananda Balasana |
+| MOV_YOGA_050 | Reclined Bound Angle | Supine with soles together | Supta Baddha Konasana |
+| MOV_YOGA_051 | Reclined Hero Pose | Supine with legs in hero | Supta Virasana |
+| MOV_YOGA_052 | Reclined Hand-to-Big-Toe | Supine leg stretch | Supta Padangusthasana |
+| MOV_YOGA_053 | Fish Pose | Chest opener lying down | Matsyasana |
+| MOV_YOGA_054 | Plow Pose | Legs over head to floor | Halasana |
+| MOV_YOGA_055 | Shoulderstand | Supported inverted pose | Sarvangasana |
+| MOV_YOGA_056 | Supported Shoulderstand | Shoulderstand with wall/props | Salamba Sarvangasana |
+
+**Subtotal: 15 cards**
+
+---
+
+### Tier 4: Kneeling/Prone Poses
+
+| Card ID | Card Name | Description | Sanskrit |
+|---------|-----------|-------------|----------|
+| MOV_YOGA_057 | Child's Pose | Kneeling forward fold | Balasana |
+| MOV_YOGA_058 | Extended Child's Pose | Arms extended forward | Utthita Balasana |
+| MOV_YOGA_059 | Cat Pose | Spinal flexion (rounding) | Marjaryasana |
+| MOV_YOGA_060 | Cow Pose | Spinal extension (arching) | Bitilasana |
+| MOV_YOGA_061 | Downward-Facing Dog | Inverted V shape | Adho Mukha Svanasana |
+| MOV_YOGA_062 | Three-Legged Dog | Down dog with one leg raised | Eka Pada Adho Mukha Svanasana |
+| MOV_YOGA_063 | Puppy Pose | Extended kneeling heart opener | Uttana Shishosana |
+| MOV_YOGA_064 | Cobra Pose | Prone back extension | Bhujangasana |
+| MOV_YOGA_065 | Upward-Facing Dog | Full arm extension backbend | Urdhva Mukha Svanasana |
+| MOV_YOGA_066 | Sphinx Pose | Forearm-supported backbend | Salamba Bhujangasana |
+| MOV_YOGA_067 | Locust Pose | Prone with limbs lifted | Salabhasana |
+| MOV_YOGA_068 | Bow Pose | Holding ankles in prone backbend | Dhanurasana |
+| MOV_YOGA_069 | Pigeon Pose | Deep hip opener | Eka Pada Rajakapotasana |
+| MOV_YOGA_070 | King Pigeon Pose | Pigeon with quad stretch | Raja Kapotasana |
+| MOV_YOGA_071 | Thread the Needle | Kneeling shoulder stretch | Parsva Balasana |
+| MOV_YOGA_072 | Gate Pose | Kneeling side stretch | Parighasana |
+| MOV_YOGA_073 | Camel Pose | Kneeling backbend | Ustrasana |
+| MOV_YOGA_074 | Low Lunge | Back knee down, hip stretch | Anjaneyasana |
+| MOV_YOGA_075 | Lizard Pose | Deep hip flexor lunge | Utthan Pristhasana |
+
+**Subtotal: 19 cards**
+
+---
+
+### Tier 4: Arm Balances & Inversions
+
+| Card ID | Card Name | Description | Sanskrit |
+|---------|-----------|-------------|----------|
+| MOV_YOGA_076 | Plank Pose | High plank position | Phalakasana |
+| MOV_YOGA_077 | Four-Limbed Staff | Low plank/chaturanga | Chaturanga Dandasana |
+| MOV_YOGA_078 | Side Plank | One-arm side balance | Vasisthasana |
+| MOV_YOGA_079 | Dolphin Pose | Forearm down dog | Ardha Pincha Mayurasana |
+| MOV_YOGA_080 | Forearm Plank | Plank on forearms | Makara Adho Mukha Svanasana |
+| MOV_YOGA_081 | Crow Pose | Arm balance with knees on arms | Bakasana |
+| MOV_YOGA_082 | Side Crow | Twisted arm balance | Parsva Bakasana |
+| MOV_YOGA_083 | Firefly Pose | Arm balance with legs extended | Tittibhasana |
+| MOV_YOGA_084 | Headstand | Inverted on head and forearms | Sirsasana |
+| MOV_YOGA_085 | Supported Headstand | Headstand against wall | Salamba Sirsasana |
+| MOV_YOGA_086 | Forearm Stand | Inverted on forearms | Pincha Mayurasana |
+| MOV_YOGA_087 | Handstand | Full arm inversion | Adho Mukha Vrksasana |
+| MOV_YOGA_088 | Handstand (Wall-Supported) | Handstand with wall assist | Adho Mukha Vrksasana (wall) |
+
+**Subtotal: 13 cards**
+
+---
+
+### Tier 4: Restorative Poses
+
+| Card ID | Card Name | Description | Sanskrit |
+|---------|-----------|-------------|----------|
+| MOV_YOGA_089 | Supported Child's Pose | Child's pose with bolster | Salamba Balasana |
+| MOV_YOGA_090 | Supported Fish Pose | Fish pose with block/bolster | Salamba Matsyasana |
+| MOV_YOGA_091 | Supported Reclined Twist | Twisted pose with props | Salamba Supta Matsyendrasana |
+| MOV_YOGA_092 | Supported Forward Fold | Seated fold with props | Salamba Paschimottanasana |
+
+**Subtotal: 4 cards**
+
+---
+
+**YOGA SUBTOTAL: 92 cards**
+
+---
+
+## TIER 3: TAI CHI MOVEMENTS
+
+> **Note:** Tai Chi is a DECK (a form/sequence). Each movement below is ONE atomic movement card.
+> **Cross-Reference:** For meditation/mindfulness aspects of Tai Chi, see Emotion library.
+
+### Tier 4: Foundation Movements
+
+| Card ID | Card Name | Description | Movement |
+|---------|-----------|-------------|----------|
+| MOV_TC_001 | Tai Chi Standing Meditation | Wu Chi standing posture | Still standing, weight centered |
+| MOV_TC_002 | Opening Movement | Raising and lowering arms | Arms rise with breath, settle |
+| MOV_TC_003 | Closing Movement | Final gathering energy | Arms draw inward, settle |
+| MOV_TC_004 | Tai Chi Walking | Basic stepping pattern | Heel-toe with weight shift |
+| MOV_TC_005 | Bow Stance | Forward-weighted stance | Front knee bent, 70/30 weight |
+| MOV_TC_006 | Cat Stance | Rear-weighted stance | Back leg weighted, front light |
+| MOV_TC_007 | Horse Stance | Wide parallel stance | Feet wider than shoulders |
+
+**Subtotal: 7 cards**
+
+---
+
+### Tier 4: Yang Style Movements
+
+| Card ID | Card Name | Description | Movement |
+|---------|-----------|-------------|----------|
+| MOV_TC_008 | Grasp Sparrow's Tail | Core Tai Chi sequence | Ward off, roll back, press, push |
+| MOV_TC_009 | Ward Off (Peng) | Defensive arm expansion | Arm rises to protect |
+| MOV_TC_010 | Roll Back (Lu) | Yielding redirection | Turn waist, redirect force |
+| MOV_TC_011 | Press (Ji) | Two-hand pressing forward | Hands together, press out |
+| MOV_TC_012 | Push (An) | Double palm push | Palms push forward |
+| MOV_TC_013 | Single Whip | Extending arm movement | Hook hand to push |
+| MOV_TC_014 | White Crane Spreads Wings | Rising arm separation | Arms lift and separate |
+| MOV_TC_015 | Brush Knee Twist Step | Walking with arm brushing | Step, brush knee, push |
+| MOV_TC_016 | Play Guitar (Strum Lute) | Holding position | Arms frame like holding guitar |
+| MOV_TC_017 | Parry and Punch | Block then strike | Deflect and punch |
+| MOV_TC_018 | Apparent Close Up | Crossing arms withdrawal | Arms cross, step back |
+| MOV_TC_019 | Cross Hands | Crossed wrists position | Wrists cross at center |
+| MOV_TC_020 | Embrace Tiger, Return to Mountain | Sweeping arm movement | Wide arm circle |
+| MOV_TC_021 | Fist Under Elbow | Striking position | Fist held under opposite elbow |
+| MOV_TC_022 | Step Back Repulse Monkey | Stepping backward movement | Retreat with alternating arms |
+| MOV_TC_023 | Slant Flying | Diagonal spreading movement | Arms spread diagonally |
+| MOV_TC_024 | Needle at Sea Bottom | Downward reaching | Fingers point down |
+| MOV_TC_025 | Fan Through Back | Rising arm behind | Arm lifts behind body |
+| MOV_TC_026 | Turn Body and Chop | Rotating strike | Body turns, arm chops |
+| MOV_TC_027 | Wave Hands Like Clouds | Side-to-side flowing arms | Continuous arm circles |
+| MOV_TC_028 | High Pat on Horse | Hand over elbow position | Palm pats above elbow |
+| MOV_TC_029 | Kick with Right Heel | Right heel kick | Extend right leg, heel strike |
+| MOV_TC_030 | Kick with Left Heel | Left heel kick | Extend left leg, heel strike |
+| MOV_TC_031 | Strike Ears with Fists | Double fist strike | Both fists swing to ears level |
+| MOV_TC_032 | Turn and Kick | Spinning kick movement | Body turns, leg kicks |
+| MOV_TC_033 | Fair Lady Works Shuttles | Four corners movement | Step and push diagonally |
+| MOV_TC_034 | Snake Creeps Down | Low crouching movement | Sink low, extend leg |
+| MOV_TC_035 | Golden Rooster Stands on One Leg | Single-leg balance | Lift knee, raise arm |
+| MOV_TC_036 | Step Up Seven Stars | Rising step with fists | Step forward, fists rise |
+| MOV_TC_037 | Step Back Ride Tiger | Retreating stance | Step back into fighting stance |
+
+**Subtotal: 30 cards**
+
+---
+
+**TAI CHI SUBTOTAL: 37 cards**
+
+---
+
+## TIER 3: QIGONG EXERCISES
+
+> **Note:** Qigong is a DECK (a practice system). Each exercise below is ONE atomic movement card.
+
+### Tier 4: Standing Qigong (Zhan Zhuang)
+
+| Card ID | Card Name | Description | Movement |
+|---------|-----------|-------------|----------|
+| MOV_QG_001 | Standing Like a Tree (Zhan Zhuang) | Wu Chi standing meditation | Still standing, arms at sides |
+| MOV_QG_002 | Holding the Ball | Arms as if holding large ball | Arms rounded at chest height |
+| MOV_QG_003 | Embracing the Tree | Arms circle a tree | Arms rounded, shoulder height |
+| MOV_QG_004 | Supporting the Sky | Arms raised overhead | Palms up, supporting |
+
+**Subtotal: 4 cards**
+
+---
+
+### Tier 4: Ba Duan Jin (Eight Brocades)
+
+| Card ID | Card Name | Description | Movement |
+|---------|-----------|-------------|----------|
+| MOV_QG_005 | Two Hands Hold Up the Sky | Arms rise overhead stretching | Interlace fingers, palms up |
+| MOV_QG_006 | Drawing the Bow | Archer pulling bowstring | Arms extend opposite directions |
+| MOV_QG_007 | Separate Heaven and Earth | One hand up, one down | Alternating hand positions |
+| MOV_QG_008 | Wise Owl Gazes Backward | Head turn looking behind | Turn head, twist spine |
+| MOV_QG_009 | Sway Head and Shake Tail | Horse stance with sway | Wide stance, side bending |
+| MOV_QG_010 | Two Hands Touch Feet | Forward fold touching feet | Bend forward, hands to feet |
+| MOV_QG_011 | Clench Fists and Glare | Punching with fierce look | Horse stance punch |
+| MOV_QG_012 | Bouncing on Toes | Rising on balls of feet | Lift heels, drop |
+
+**Subtotal: 8 cards**
+
+---
+
+### Tier 4: Five Animal Frolics (Wu Qin Xi)
+
+| Card ID | Card Name | Description | Movement |
+|---------|-----------|-------------|----------|
+| MOV_QG_013 | Tiger Springing | Tiger pouncing movement | Arms claw forward |
+| MOV_QG_014 | Tiger Seizing | Tiger grabbing movement | Hands grasp, pull back |
+| MOV_QG_015 | Deer Running | Deer galloping movement | Hands twist behind back |
+| MOV_QG_016 | Deer Looking Back | Deer turning head | Turn, look over shoulder |
+| MOV_QG_017 | Bear Swaying | Bear rocking side to side | Weight shift, arm swing |
+| MOV_QG_018 | Bear Walking | Bear lumber movement | Heavy stepping, arms swing |
+| MOV_QG_019 | Monkey Stealing Fruit | Quick reaching movement | Dart forward, grab |
+| MOV_QG_020 | Monkey Squatting | Deep squat, alert | Low squat, hands ready |
+| MOV_QG_021 | Crane Flying | Arms spread like wings | Arms rise and lower |
+| MOV_QG_022 | Crane Standing | Single-leg crane pose | One leg raised, arms spread |
+
+**Subtotal: 10 cards**
+
+---
+
+### Tier 4: Six Healing Sounds (Liu Zi Jue)
+
+| Card ID | Card Name | Description | Movement |
+|---------|-----------|-------------|----------|
+| MOV_QG_023 | Xu Sound (Liver) | "Shhhh" sound for liver | Arms spread, exhale "Xu" |
+| MOV_QG_024 | He Sound (Heart) | "Haaa" sound for heart | Arms raise, exhale "He" |
+| MOV_QG_025 | Hu Sound (Spleen) | "Whooo" sound for spleen | Arms circle, exhale "Hu" |
+| MOV_QG_026 | Si Sound (Lungs) | "Sssss" sound for lungs | Arms extend forward, exhale "Si" |
+| MOV_QG_027 | Chui Sound (Kidneys) | "Chwee" sound for kidneys | Hands to lower back, exhale "Chui" |
+| MOV_QG_028 | Xi Sound (Triple Burner) | "Shee" sound for metabolism | Arms rise overhead, exhale "Xi" |
+
+**Subtotal: 6 cards**
+
+---
+
+### Tier 4: Moving Qigong
+
+| Card ID | Card Name | Description | Movement |
+|---------|-----------|-------------|----------|
+| MOV_QG_029 | Lifting the Sky | Arms rise overhead, return | Palms up, lift and lower |
+| MOV_QG_030 | Carrying the Moon | Side bending with arms | Lateral stretch with arms |
+| MOV_QG_031 | Separating Water | Arms push outward | Palms press to sides |
+| MOV_QG_032 | Plucking Stars | Reaching upward alternately | Arms reach up alternating |
+| MOV_QG_033 | Big Windmill Arms | Large arm circles | Full arm circumduction |
+| MOV_QG_034 | Pushing Mountains | Double palm push | Palms push forward |
+| MOV_QG_035 | Gathering Qi | Drawing energy to dantian | Hands scoop inward to belly |
+| MOV_QG_036 | Circulating Qi | Hands circle body | Palms orbit around torso |
+
+**Subtotal: 8 cards**
+
+---
+
+**QIGONG SUBTOTAL: 36 cards**
+
+---
+
+## TIER 3: MONITORING & TRACKING
+
+> **Purpose:** These cards track fitness metrics. Patient performs the action to gather data for dashboard/care plan.
+
+### Tier 4: Activity Tracking
+
+| Card ID | Card Name | Description | Action Type |
+|---------|-----------|-------------|-------------|
+| MOV_MON_001 | Track Daily Steps | Record step count | Monitoring |
+| MOV_MON_002 | Log Workout | Record exercise session details | Monitoring |
+| MOV_MON_003 | Record Exercise Duration | Log total exercise time | Monitoring |
+| MOV_MON_004 | Record Exercise Heart Rate | Log HR during/after exercise | Monitoring |
+| MOV_MON_005 | Calculate Weekly Exercise Minutes | Sum total weekly activity | Monitoring |
+| MOV_MON_006 | Track Active Minutes | Record moderate-vigorous activity time | Monitoring |
+| MOV_MON_007 | Log Strength Training Sets | Record sets/reps completed | Monitoring |
+| MOV_MON_008 | Record Weight Lifted | Log resistance amounts | Monitoring |
+| MOV_MON_009 | Track Exercise Consistency | Log days exercised per week | Monitoring |
+| MOV_MON_010 | Record Perceived Exertion (RPE) | Rate workout intensity 1-10 | Monitoring |
+
+**Subtotal: 10 cards**
+
+---
+
+### Tier 4: Body Measurement Tracking
+
+| Card ID | Card Name | Description | Action Type |
+|---------|-----------|-------------|-------------|
+| MOV_MON_011 | Measure Body Weight | Weigh self on scale | Monitoring |
+| MOV_MON_012 | Measure Waist Circumference | Measure waist at navel | Monitoring |
+| MOV_MON_013 | Measure Hip Circumference | Measure hips at widest | Monitoring |
+| MOV_MON_014 | Calculate Waist-to-Hip Ratio | Divide waist by hip measurement | Monitoring |
+| MOV_MON_015 | Track Body Composition | Record body fat % if available | Monitoring |
+
+**Subtotal: 5 cards**
+
+---
+
+**MONITORING SUBTOTAL: 15 cards**
+
+---
+
+## TIER 3: ASSESSMENT & TESTING
+
+> **Purpose:** These cards assess fitness capacity. Patient performs test, result informs care plan modifications.
+
+### Tier 4: Cardiovascular Assessments
+
+| Card ID | Card Name | Description | Test |
+|---------|-----------|-------------|------|
+| MOV_ASSESS_001 | 6-Minute Walk Test | Walk as far as possible in 6 min | Distance covered |
+| MOV_ASSESS_002 | 2-Minute Step Test | Steps in place for 2 min | Step count |
+| MOV_ASSESS_003 | Resting Heart Rate Check | Measure HR at rest | BPM |
+| MOV_ASSESS_004 | Heart Rate Recovery Test | HR drop 1 min post-exercise | BPM drop |
+| MOV_ASSESS_005 | Talk Test (Ventilatory Threshold) | Can you talk during exercise? | Yes/No/Barely |
+
+**Subtotal: 5 cards**
+
+---
+
+### Tier 4: Strength & Muscular Assessments
+
+| Card ID | Card Name | Description | Test |
+|---------|-----------|-------------|------|
+| MOV_ASSESS_006 | Chair Stand Test (30-Second) | Sit-to-stand repetitions in 30 sec | Rep count |
+| MOV_ASSESS_007 | Push-Up Test | Max push-ups (standard or modified) | Rep count |
+| MOV_ASSESS_008 | Plank Hold Test | Max time holding plank | Seconds |
+| MOV_ASSESS_009 | Wall Sit Test | Max time in wall sit | Seconds |
+| MOV_ASSESS_010 | Grip Strength Test | Squeeze dynamometer | kg/lbs |
+
+**Subtotal: 5 cards**
+
+---
+
+### Tier 4: Flexibility Assessments
+
+| Card ID | Card Name | Description | Test |
+|---------|-----------|-------------|------|
+| MOV_ASSESS_011 | Sit-and-Reach Test | Reach toward toes seated | cm past toes |
+| MOV_ASSESS_012 | Shoulder Flexibility Test | Reach behind back, hands meet | Fingers overlap/gap |
+| MOV_ASSESS_013 | Trunk Rotation Test | Seated twist range | Degrees or hand position |
+| MOV_ASSESS_014 | Hip Flexor Length Test (Thomas) | Leg position lying supine | Thigh angle |
+| MOV_ASSESS_015 | Hamstring Length Test | Straight leg raise angle | Degrees |
+
+**Subtotal: 5 cards**
+
+---
+
+### Tier 4: Balance & Functional Assessments
+
+| Card ID | Card Name | Description | Test |
+|---------|-----------|-------------|------|
+| MOV_ASSESS_016 | Single-Leg Stand Test | Time balancing on one leg | Seconds |
+| MOV_ASSESS_017 | Timed Up and Go Test (TUG) | Stand, walk 3m, return, sit | Seconds |
+| MOV_ASSESS_018 | Berg Balance Scale (Item) | Specific balance task | Score |
+| MOV_ASSESS_019 | Functional Reach Test | Forward reach without stepping | cm/inches |
+| MOV_ASSESS_020 | 4-Stage Balance Test | Feet positions held 10 sec | Stage achieved |
+
+**Subtotal: 5 cards**
+
+---
+
+**ASSESSMENT SUBTOTAL: 20 cards**
+
+---
+
+## TIER 3: PREPARATION & SETUP
+
+> **Purpose:** These cards prepare for exercise. Patient performs action BEFORE the workout.
+
+### Tier 4: Pre-Exercise Preparation
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| MOV_PREP_001 | Pack Gym Bag | Prepare exercise clothing/equipment | Night before or morning |
+| MOV_PREP_002 | Set Out Workout Clothes | Lay out exercise clothing | Night before |
+| MOV_PREP_003 | Schedule Exercise Session | Block time for workout in calendar | Planning action |
+| MOV_PREP_004 | Fill Water Bottle | Prepare hydration for exercise | Before workout |
+| MOV_PREP_005 | Charge Fitness Tracker | Ensure device is charged | Night before |
+| MOV_PREP_006 | Check Weather for Outdoor Exercise | Review weather before outdoor workout | Before outdoor activity |
+| MOV_PREP_007 | Apply Sunscreen Before Outdoor Exercise | Protect skin before outdoor workout | Before outdoor activity |
+| MOV_PREP_008 | Set Exercise Reminder/Alarm | Create alert for workout time | Planning action |
+| MOV_PREP_009 | Review Workout Plan | Look at planned exercises | Before workout |
+| MOV_PREP_010 | Pre-Exercise Snack | Eat light snack 30-60 min before | Timing nutrition |
+
+**Subtotal: 10 cards**
+
+---
+
+### Tier 4: Warm-Up Activities
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| MOV_PREP_011 | General Warm-Up | Light cardio 5-10 min | Before main workout |
+| MOV_PREP_012 | Dynamic Stretching Warm-Up | Moving stretches before exercise | Before main workout |
+| MOV_PREP_013 | Joint Circles Warm-Up | Rotate all major joints | Before any exercise |
+| MOV_PREP_014 | Sport-Specific Warm-Up | Movements mimicking main activity | Before sport/activity |
+
+**Subtotal: 4 cards**
+
+---
+
+**PREPARATION SUBTOTAL: 14 cards**
+
+---
+
+## TIER 3: MAINTENANCE & EQUIPMENT CARE
+
+> **Purpose:** These cards maintain exercise capacity and equipment. Patient performs action to sustain ability to exercise.
+
+### Tier 4: Equipment Maintenance
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| MOV_MAINT_001 | Clean Exercise Equipment | Wipe down home gym equipment | Weekly or after use |
+| MOV_MAINT_002 | Check Bicycle Tire Pressure | Ensure proper inflation | Before cycling |
+| MOV_MAINT_003 | Replace Running Shoes | Get new shoes when worn | Every 300-500 miles |
+| MOV_MAINT_004 | Inspect Resistance Bands | Check for wear/damage | Before use |
+| MOV_MAINT_005 | Oil Stationary Bike/Treadmill | Maintain home cardio equipment | Per manufacturer |
+| MOV_MAINT_006 | Wash Exercise Clothing | Clean workout clothes | After each use |
+| MOV_MAINT_007 | Replace Yoga Mat | Get new mat when worn | When grip/cushion fails |
+| MOV_MAINT_008 | Organize Exercise Space | Maintain clear workout area | Weekly |
+
+**Subtotal: 8 cards**
+
+---
+
+### Tier 4: Recovery & Cool-Down
+
+| Card ID | Card Name | Description | Action |
+|---------|-----------|-------------|--------|
+| MOV_MAINT_009 | Cool-Down Walk | Light walking after exercise | 5-10 min post-workout |
+| MOV_MAINT_010 | Post-Exercise Stretching | Static stretching after workout | 5-10 min post-workout |
+| MOV_MAINT_011 | Foam Roll After Exercise | Self-myofascial release | Post-workout |
+| MOV_MAINT_012 | Post-Exercise Hydration | Drink water after workout | Immediately post-workout |
+| MOV_MAINT_013 | Post-Exercise Nutrition | Eat protein/carbs after workout | Within 30-60 min |
+| MOV_MAINT_014 | Log Post-Exercise Recovery | Record how you feel after | Post-workout |
+
+**Subtotal: 6 cards**
+
+---
+
+**MAINTENANCE SUBTOTAL: 14 cards**
+
+---
+
 ## GRAND SUMMARY
 
 | Tier 3 Category | Card Count |
@@ -376,7 +876,24 @@ This document enumerates ALL individual Tier 5 cards for Movement and Exercise i
 | **FLEXIBILITY & STRETCHING** | 23 |
 | **BALANCE TRAINING** | 10 |
 | **NEAT & MICRO-MOVEMENTS** | 14 |
-| **TOTAL** | **150 cards** |
+| **YOGA POSES** | 92 |
+| **TAI CHI MOVEMENTS** | 37 |
+| **QIGONG EXERCISES** | 36 |
+| **MONITORING & TRACKING** | 15 |
+| **ASSESSMENT & TESTING** | 20 |
+| **PREPARATION & SETUP** | 14 |
+| **MAINTENANCE & EQUIPMENT CARE** | 14 |
+| **TOTAL** | **378 cards** |
+
+### Action Type Breakdown
+
+| Action Type | Card Count | Description |
+|-------------|------------|-------------|
+| **Treatment/Intervention** | 315 | Exercises, poses, movements |
+| **Monitoring** | 15 | Tracking metrics and data |
+| **Assessment** | 20 | Testing fitness capacity |
+| **Preparation** | 14 | Pre-exercise setup |
+| **Maintenance** | 14 | Equipment care and recovery |
 
 ---
 
@@ -392,6 +909,13 @@ This document enumerates ALL individual Tier 5 cards for Movement and Exercise i
 - `NEAT` = Non-Exercise Activity Thermogenesis
 - `MICRO` = Seated Micro-Movements
 - `TIME` = Movement Timing
+- `YOGA` = Yoga Poses
+- `TC` = Tai Chi Movements
+- `QG` = Qigong Exercises
+- `MON` = Monitoring & Tracking
+- `ASSESS` = Assessment & Testing
+- `PREP` = Preparation & Setup
+- `MAINT` = Maintenance & Equipment Care
 
 ---
 
@@ -404,6 +928,10 @@ The following are **DECKS** (collections of cards), NOT individual cards:
 - ❌ "Otago Exercise Programme" → This is a DECK of balance exercises
 - ❌ "HIIT Workout" → This is a DECK with interval structure
 - ❌ "Upper Body Day" → This is a DECK
+- ❌ "Yoga" → This is a DECK of yoga pose cards
+- ❌ "Tai Chi" → This is a DECK of Tai Chi movement cards
+- ❌ "Qigong" → This is a DECK of Qigong exercise cards
+- ❌ "Sun Salutation" → This is a DECK (sequence of yoga poses)
 
 ---
 
@@ -446,7 +974,92 @@ All exercises included have evidence supporting their use in clinical population
 
 ---
 
-*Version 2.1 | Updated: 2025-12-05*
+## LIBRARY COVERAGE CHECKLIST
+
+**Purpose:** Track what populations and conditions this library covers vs. what's missing.
+
+### Population Coverage
+
+| Population | Status | Current Cards | Gaps / Needs |
+|------------|--------|---------------|--------------|
+| **General Adult (18-64)** | 🟢 80% | Most cards apply | Workplace ergonomics |
+| **Older Adult (65-74)** | 🟡 60% | Balance, low-impact | More seated options, arthritis-specific |
+| **Elderly (75+)** | 🟡 40% | Chair-assisted, balance | Frailty-specific, bed exercises |
+| **Pediatric (0-5)** | 🔴 0% | None | Gross motor development, play-based |
+| **Pediatric (6-12)** | 🔴 5% | Basic exercises apply | Sport skills, coordination games |
+| **Adolescent (13-17)** | 🟡 50% | Most apply | Growth plate safety, sport-specific |
+| **Pregnancy** | 🔴 10% | Walking, swimming | Prenatal modifications, pelvic floor |
+| **Postpartum** | 🔴 5% | Basic apply | Diastasis recti, gradual return |
+| **Wheelchair Users** | 🔴 10% | Arm ergometer only | Upper body seated, wheelchair sports |
+| **Bed-Bound** | 🔴 0% | None | Bed exercises, passive ROM |
+
+### Condition Coverage
+
+| Condition | Status | Current Cards | Gaps / Needs |
+|-----------|--------|---------------|--------------|
+| **Cardiovascular Disease** | 🟡 50% | Low-impact cardio | Cardiac rehab phases, rate limits |
+| **Heart Failure** | 🟡 30% | Walking, light | HF-specific progression, monitoring |
+| **Diabetes** | 🟡 60% | Walking, strength, timing | Hypoglycemia protocols, neuropathy mods |
+| **Hypertension** | 🟡 50% | Cardio, avoid straining | BP-specific guidance |
+| **Obesity** | 🟡 50% | Low-impact, aquatic | Weight-bearing modifications |
+| **Osteoarthritis** | 🟡 40% | Aquatic, low-impact | Joint-specific, ROM exercises |
+| **Osteoporosis** | 🟡 30% | Weight-bearing | Fall risk, impact guidelines |
+| **Low Back Pain** | 🟡 40% | Core, flexibility | McKenzie, pain-specific |
+| **Neck Pain** | 🔴 20% | Neck stretches | Postural, strengthening |
+| **Shoulder Injury** | 🔴 20% | Basic stretches | Rotator cuff, rehab progression |
+| **Hip/Knee Replacement** | 🔴 10% | Basic movements | Post-surgical phases, precautions |
+| **Stroke/Neuro** | 🔴 5% | Balance basics | Hemiparesis, coordination |
+| **Parkinson's** | 🔴 5% | Balance | Big movements, gait training |
+| **Multiple Sclerosis** | 🔴 5% | Aquatic | Fatigue management, heat sensitivity |
+| **COPD** | 🟡 30% | Low-impact cardio | Breathing coordination, dyspnea scale |
+| **Chronic Fatigue** | 🔴 10% | Pacing concepts | Energy envelope, graded activity |
+| **Fibromyalgia** | 🔴 10% | Low-impact | Pain pacing, gentle progression |
+| **Cancer/Survivorship** | 🔴 5% | Basic | Fatigue-specific, lymphedema |
+| **Mental Health** | 🔴 10% | General exercise | Mood-specific, anxiety-reducing |
+| **Fall Risk/Prevention** | 🟡 50% | Balance section | Otago deck, home safety |
+| **Vestibular/Dizziness** | 🔴 5% | Basic balance | Vestibular rehab |
+| **Pelvic Floor** | 🔴 0% | None | Kegels, prolapse-safe |
+
+### Cards Needed (Priority Gaps)
+
+**HIGH PRIORITY (Common conditions, easy to add):**
+- [ ] Kegel exercises (pelvic floor)
+- [ ] Bed exercises (heel slides, ankle pumps, etc.)
+- [ ] Seated full-body exercises for elderly/wheelchair
+- [ ] Post-meal walking protocol card
+- [ ] Cardiac rehab phase cards (Phase I-IV)
+- [ ] Prenatal modifications cards
+- [ ] Rotator cuff strengthening cards
+
+**MEDIUM PRIORITY (Specialty populations):**
+- [ ] Parkinson's BIG movement cards
+- [ ] Vestibular rehab exercises (gaze stabilization, etc.)
+- [ ] Post-surgical hip/knee cards with precautions
+- [ ] Lymphedema-safe upper body cards
+- [ ] Neuropathy-safe lower body cards
+
+**LOWER PRIORITY (Niche but needed):**
+- [ ] Wheelchair sports/exercise cards
+- [ ] Pediatric gross motor development cards
+- [ ] Sport-specific conditioning cards
+- [ ] Occupational/work-specific ergonomic cards
+
+### Summary
+
+| Category | Covered | Missing | % Complete |
+|----------|---------|---------|------------|
+| **Populations** | 3/10 | 7/10 | 30% |
+| **Conditions** | 5/22 | 17/22 | 23% |
+| **Overall Library Readiness** | | | **~50%** |
+
+**Note:** Current 150 cards cover general fitness well but lack condition-specific and population-specific modifications. Most gaps can be addressed by adding modifier cards or new specialized cards.
+
+---
+
+*Version 2.4 | Updated: 2025-12-14*
 *Source: CARD_TYPE_SPECIFICATIONS.md v2.0, CARD_GENERATION_SPECIFICATION.md v1.0*
-*Previous version: TIER5_MOVEMENT_EXERCISE_v2.md v2.0 (2024-11-26)*
+*Previous version: v2.3 (2025-12-14)*
+*v2.4 Changes: Major expansion - Yoga (23→92), Tai Chi (6→37), Qigong (4→36). Added 4 new action type categories: Monitoring (+15), Assessment (+20), Preparation (+14), Maintenance (+14). Total: 183 → 378 cards*
+*v2.3 Changes: Added Yoga Poses (+23), Tai Chi (+6), Qigong (+4) from Mind-Body library redistribution. Total: 150 → 183 cards*
+*v2.2 Changes: Added LIBRARY COVERAGE CHECKLIST section with population/condition gaps*
 *v2.1 Changes: Added NEAT & Micro-Movements tier (+14 cards), movement timing cards*
